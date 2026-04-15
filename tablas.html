@@ -1,0 +1,1190 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Introducción al lenguaje ECMASCRIPT 6 a través de ejemplos">
+      
+      
+        <meta name="author" content="Serge Tahé">
+      
+      
+        <link rel="canonical" href="https://stahe.github.io/es-ecmascript6-oct-2019/tablas.html">
+      
+      
+        <link rel="prev" href="los-fundamentos-de-javascript.html">
+      
+      
+        <link rel="next" href="objetos-literales.html">
+      
+      
+        
+      
+      
+      <link rel="icon" href="assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.0">
+    
+    
+      
+        <title>4. Tablas - Introducción al lenguaje ECMASCRIPT 6 a través de ejemplos</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.618322db.min.css">
+      
+        
+        <link rel="stylesheet" href="assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="stylesheets/focus.css">
+    
+    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-EBZC3JVJNR"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    var siteName = "Introducción al lenguaje ECMASCRIPT 6 a través de ejemplos";
+    gtag('config', 'G-EBZC3JVJNR', {
+        'page_title': siteName
+    });
+  </script>
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="purple">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#4-tablas" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="index.html" title="Introducción al lenguaje ECMASCRIPT 6 a través de ejemplos" class="md-header__button md-logo" aria-label="Introducción al lenguaje ECMASCRIPT 6 a través de ejemplos" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Introducción al lenguaje ECMASCRIPT 6 a través de ejemplos
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              4. Tablas
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="purple"  aria-label="Cambiar a modo oscuro"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Cambiar a modo oscuro" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="blue" data-md-color-accent="purple"  aria-label="Cambiar a modo claro"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Cambiar a modo claro" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/stahe/es-ecmascript6-oct-2019" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="index.html" title="Introducción al lenguaje ECMASCRIPT 6 a través de ejemplos" class="md-nav__button md-logo" aria-label="Introducción al lenguaje ECMASCRIPT 6 a través de ejemplos" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Introducción al lenguaje ECMASCRIPT 6 a través de ejemplos
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/stahe/es-ecmascript6-oct-2019" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bienvenidos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="introduccion-al-lenguaje-ecmascript-6.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. Introducción al lenguaje ECMASCRIPT 6
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="configurar-un-entorno-de-desarrollo.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2. Configurar un entorno de desarrollo
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="los-fundamentos-de-javascript.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3. Los fundamentos de JavaScript
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4. Tablas
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="tablas.html" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4. Tablas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#41-script-tab-01" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1. script [tab-01]
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#42-script-tab-02" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2. script [tab-02]
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#43-script-tab-03" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.3. script [tab-03]
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#44-script-tab-04" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.4. script [tab-04]
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="objetos-literales.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5. Objetos literales
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="cadenas.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    6. Cadenas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="expresiones-regulares.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    7. Expresiones regulares
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="las-funciones.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    8. Las funciones
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="errores-y-excepciones.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    9. Errores y excepciones
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="modulos-es6.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    10. Módulos ES6
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="programacion-basada-en-eventos-y-funciones-asincronas.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    11. Programación basada en eventos y funciones asíncronas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="funciones-http-javascript.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    12. Funciones HTTP JavaScript
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="clases.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    13. Clases
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="clientes-http-javascript-del-servicio-de-calculo-de-impuestos.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    14. Clientes HTTP javascript del servicio de cálculo de impuestos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<p><a id="refheadingtoc2041993980233556"></a></p>
+<h1 id="4-tablas">4. Tablas</h1>
+<p><img src="images/10000000000000F7000000DA0354C5DC.png" style="width:2.619cm;height:2.3cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000000F7000000DA0354C5DC.png" /></p>
+<p><a id="refheadingtoc2042013980233556"></a></p>
+<h2 id="41-script-tab-01">4.1. script [tab-01]</h2>
+<p>El siguiente script ilustra algunas características de las matrices de JavaScript. Se parecen a las matrices de PHP, pero con una diferencia importante: se manipulan mediante punteros y se consideran objetos.</p>
+<div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
+<span class="odt-code-line">1. <span style="color:#a31515">&#x27;use strict&#x27;</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line">2. </span>
+<span class="odt-code-line">3. // An array is an object manipulated via its address</span>
+<span class="odt-code-line">4. <span style="color:#0000ff">const </span><span style="color:#000000">tab1 = </span><span style="font-weight:bold"><span style="color:#000000">[1, 2, 3]</span></span><span style="color:#000000">;</span></span>
+<span class="odt-code-line">5. // copying addresses</span>
+<span class="odt-code-line">6. <span style="color:#0000ff">const </span><span style="color:#000000">tab2 = tab1;</span></span>
+<span class="odt-code-line">7. // tab1 and tab2 point to the same array</span>
+<span class="odt-code-line">8. <span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;tab1===tab2 :&quot;</span><span style="color:#000000">, tab1 === tab2);</span></span>
+<span class="odt-code-line">9. // You can modify the array using either tab1 or tab2</span>
+<span class="odt-code-line">10. tab2<span style="font-weight:bold">[1] </span>= 10;</span>
+<span class="odt-code-line">11. <span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;tab1=&quot;</span><span style="color:#000000">, tab1);</span></span>
+<span class="odt-code-line">12. <span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;tab2=&quot;</span><span style="color:#000000">, tab2);</span></span>
+</code></pre></div>
+
+<p><strong>Ejecución</strong></p>
+<div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<span class="odt-code-line">1. <span style="font-weight:bold"><span style="color:#316bcd">[Running] </span></span><span style="color:#a31515">C:\myprograms\laragon-lite\bin\nodejs\node-v10\node.exe &quot;c:\Temp\19-09-01\javascript\tableaux\tab-01.js&quot;</span></span>
+<span class="odt-code-line">2. tab1===tab2: true</span>
+<span class="odt-code-line">3. tab1= <span style="font-weight:bold">[ 1, 10, 3 ]</span></span>
+<span class="odt-code-line">4. tab2= <span style="font-weight:bold">[ 1, 10, 3 ]</span></span>
+</code></pre></div>
+
+<p><strong>Comentarios</strong></p>
+<ul>
+  <li>La línea 2 de los resultados muestra que <b>[tab1] </b>y <b>[tab2] </b>son dos entidades iguales, de hecho dos punteros iguales;
+  </li>
+  <li>Las líneas 4 y 5 de los resultados muestran que estos dos punteros apuntan al mismo array;
+  </li>
+</ul>
+
+<p><a id="refheadingtoc2042033980233556"></a></p>
+<h2 id="42-script-tab-02">4.2. script [tab-02]</h2>
+<p>Este script demuestra que las matrices de JavaScript difieren de las matrices de los lenguajes compilados.</p>
+<div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
+<span class="odt-code-line">1. <span style="color:#a31515">&#x27;use strict&#x27;</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line">2. </span>
+<span class="odt-code-line">3. // array</span>
+<span class="odt-code-line">4. <span style="color:#0000ff">const </span><span style="color:#000000">tab = [];</span></span>
+<span class="odt-code-line">5. <span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;tab=&quot;</span><span style="color:#000000">, tab, </span><span style="color:#a31515">&quot;, length=</span><span style="font-weight:bold"><span style="color:#a31515">[&quot;, tab.length, &quot;]</span></span><span style="color:#a31515">&quot;</span><span style="color:#000000">);</span></span>
+<span class="odt-code-line">6. <span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;-------------------------------&quot;</span><span style="color:#000000">);</span></span>
+<span class="odt-code-line">7. // initializing an element</span>
+<span class="odt-code-line">8. tab<span style="font-weight:bold">[3] </span>= 100;</span>
+<span class="odt-code-line">9. <span style="color:#000000">tab</span><span style="font-weight:bold"><span style="color:#000000">[1] </span></span><span style="color:#000000">= </span><span style="color:#a31515">&quot;eight&quot;</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line">10. // array</span>
+<span class="odt-code-line">11. <span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;tab=&quot;</span><span style="color:#000000">, tab, </span><span style="color:#a31515">&quot;, length=</span><span style="font-weight:bold"><span style="color:#a31515">[&quot;, tab.length, &quot;]</span></span><span style="color:#a31515">&quot;</span><span style="color:#000000">);</span></span>
+<span class="odt-code-line">12. <span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;-------------------------------&quot;</span><span style="color:#000000">);</span></span>
+<span class="odt-code-line">13. // toString</span>
+<span class="odt-code-line">14. <span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;tab.toString=</span><span style="font-weight:bold"><span style="color:#a31515">[&quot;, tab.toString(), &quot;]</span></span><span style="color:#a31515">&quot;</span><span style="color:#000000">);</span></span>
+<span class="odt-code-line">15. <span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;-------------------------------&quot;</span><span style="color:#000000">);</span></span>
+<span class="odt-code-line">16. // the keys of the array are its indices</span>
+<span class="odt-code-line">17. <span style="color:#0000ff">for </span><span style="color:#000000">(</span><span style="color:#0000ff">let </span><span style="color:#000000">key </span><span style="color:#0000ff">of </span><span style="color:#000000">tab.keys()) {</span></span>
+<span class="odt-code-line">18. <span style="color:#000000">  console.log(</span><span style="color:#a31515">&quot;key=</span><span style="font-weight:bold"><span style="color:#a31515">[&quot;, key, &quot;]</span></span><span style="color:#a31515">, value=</span><span style="font-weight:bold"><span style="color:#a31515">[&quot;, tab[key]</span></span><span style="color:#000000">, </span><span style="color:#a31515">&quot;]&quot;</span><span style="color:#000000">);</span></span>
+<span class="odt-code-line">19. }</span>
+<span class="odt-code-line">20. <span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;-------------------------------&quot;</span><span style="color:#000000">);</span></span>
+<span class="odt-code-line">21. // the array&#x27;s values</span>
+<span class="odt-code-line">22. <span style="color:#0000ff">for </span><span style="color:#000000">(</span><span style="color:#0000ff">let </span><span style="color:#000000">value </span><span style="color:#0000ff">of </span><span style="color:#000000">tab.values()) {</span></span>
+<span class="odt-code-line">23. <span style="color:#000000">  console.log(</span><span style="color:#a31515">&quot;value=</span><span style="font-weight:bold"><span style="color:#a31515">[&quot;, value, &quot;]</span></span><span style="color:#a31515">&quot;</span><span style="color:#000000">);</span></span>
+<span class="odt-code-line">24. }</span>
+</code></pre></div>
+
+<ul>
+  <li>línea 4: una matriz vacía;
+  </li>
+  <li>línea 8: un array no tiene un tamaño fijo. Es simplemente una secuencia de elementos indexados por un número. Puedes inicializar el elemento #3 incluso si los elementos <b>[0, 1, 2] </b>aún no están definidos;
+  </li>
+  <li>líneas 16-24: Un array JavaScript se comporta de forma similar a un array PHP;
+  </li>
+</ul>
+
+<p><strong>Ejecución</strong></p>
+<div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-python">
+<span class="odt-code-line">1. <span style="font-weight:bold"><span style="color:#316bcd">[Running] </span></span><span style="color:#a31515">C:\myprograms\laragon-lite\bin\nodejs\node-v10\node.exe &quot;c:\Temp\19-09-01\javascript\tableaux\tab-02.js&quot;</span></span>
+<span class="odt-code-line">2. tab= <span style="font-weight:bold">[] , length=[ 0 ]</span></span>
+<span class="odt-code-line">3. -------------------------------</span>
+<span class="odt-code-line">4. tab= <span style="font-weight:bold">[ &lt;1 empty item&gt;, &#x27;eight&#x27;, &lt;1 empty item&gt;, 100 ] </span>, length=<span style="font-weight:bold">[ 4 ]</span></span>
+<span class="odt-code-line">5. -------------------------------</span>
+<span class="odt-code-line">6. tab.toString=<span style="font-weight:bold">[ ,eight,,100 ]</span></span>
+<span class="odt-code-line">7. -------------------------------</span>
+<span class="odt-code-line">8. key=<span style="font-weight:bold">[ 0 ]</span>, value=<span style="font-weight:bold">[ undefined ]</span></span>
+<span class="odt-code-line">9. key=<span style="font-weight:bold">[ 1 ]</span>, value=<span style="font-weight:bold">[ eight ]</span></span>
+<span class="odt-code-line">10. key=<span style="font-weight:bold">[ 2 ]</span>, value=<span style="font-weight:bold">[ undefined ]</span></span>
+<span class="odt-code-line">11. key=<span style="font-weight:bold">[ 3 ]</span>, value=<span style="font-weight:bold">[ 100 ]</span></span>
+<span class="odt-code-line">12. -------------------------------</span>
+<span class="odt-code-line">13. value=<span style="font-weight:bold">[ undefined ]</span></span>
+<span class="odt-code-line">14. value=<span style="font-weight:bold">[ eight ]</span></span>
+<span class="odt-code-line">15. value=<span style="font-weight:bold">[ undefined ]</span></span>
+<span class="odt-code-line">16. value=<span style="font-weight:bold">[ 100 ]</span></span>
+</code></pre></div>
+
+<p><a id="refheadingtoc2042053980233556"></a></p>
+<h2 id="43-script-tab-03">4.3. script [tab-03]</h2>
+<p>Este script demuestra varios métodos del <strong>[array]</strong> objeto.</p>
+<div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
+<span class="odt-code-line">1. <span style="color:#a31515">&#x27;use strict&#x27;</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line">2. // An array can contain different types of data</span>
+<span class="odt-code-line">3. <span style="color:#0000ff">const </span><span style="color:#000000">tab = </span><span style="font-weight:bold"><span style="color:#000000">[1, 2, &quot;one&quot;, &quot;two&quot;, true, [10, 20]</span></span><span style="color:#000000">, { prop1: 10, prop2: </span><span style="color:#a31515">&quot;abc&quot; </span><span style="color:#000000">}];</span></span>
+<span class="odt-code-line">4. // console.log can display the contents of an array</span>
+<span class="odt-code-line">5. show(1);</span>
+<span class="odt-code-line">6. <span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;tab=&quot;</span><span style="color:#000000">, tab);</span></span>
+<span class="odt-code-line">7. show(2);</span>
+<span class="odt-code-line">8. // Iterate through the array using foreach</span>
+<span class="odt-code-line">9. tab.forEach(element =&gt; {</span>
+<span class="odt-code-line">10. <span style="color:#000000">  console.log(</span><span style="color:#a31515">&quot;element=&quot;</span><span style="color:#000000">, element, </span><span style="color:#0000ff">typeof </span><span style="color:#000000">(element));</span></span>
+<span class="odt-code-line">11. });</span>
+<span class="odt-code-line">12. <span style="color:#000000">show(</span><span style="color:#a31515">&quot;2b&quot;</span><span style="color:#000000">);</span></span>
+<span class="odt-code-line">13. // another way to do the same thing</span>
+<span class="odt-code-line">14. <span style="color:#000000">tab.forEach(</span><span style="color:#0000ff">function </span><span style="color:#000000">(element) {</span></span>
+<span class="odt-code-line">15. <span style="color:#000000">  console.log(</span><span style="color:#a31515">&quot;element=&quot;</span><span style="color:#000000">, element, </span><span style="color:#0000ff">typeof </span><span style="color:#000000">(element));</span></span>
+<span class="odt-code-line">16. });</span>
+<span class="odt-code-line">17. show(3);</span>
+<span class="odt-code-line">18. // Iterate through the array using for</span>
+<span class="odt-code-line">19. <span style="color:#0000ff">for </span><span style="color:#000000">(</span><span style="color:#0000ff">let </span><span style="color:#000000">i = 0; i &lt; tab.length; i++) {</span></span>
+<span class="odt-code-line">20. <span style="color:#000000">  console.log(</span><span style="color:#a31515">&quot;i=&quot;</span><span style="color:#000000">, i, </span><span style="color:#a31515">&quot;tab</span><span style="font-weight:bold"><span style="color:#a31515">[i]</span></span><span style="color:#a31515">=&quot;</span><span style="color:#000000">, tab</span><span style="font-weight:bold"><span style="color:#000000">[i]</span></span><span style="color:#000000">);</span></span>
+<span class="odt-code-line">21. }</span>
+<span class="odt-code-line">22. show(4);</span>
+<span class="odt-code-line">23. // modify tab<span style="font-weight:bold">[i]</span></span>
+<span class="odt-code-line">24. tab<span style="font-weight:bold">[5] </span>= [];</span>
+<span class="odt-code-line">25. // display</span>
+<span class="odt-code-line">26. <span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;tab=&quot;</span><span style="color:#000000">, tab);</span></span>
+<span class="odt-code-line">27. show(5);</span>
+<span class="odt-code-line">28. // remove the last element</span>
+<span class="odt-code-line">29. <span style="color:#0000ff">let </span><span style="color:#000000">element = tab.pop(tab);</span></span>
+<span class="odt-code-line">30. <span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;element=&quot;</span><span style="color:#000000">, element, </span><span style="color:#a31515">&quot;tab=&quot;</span><span style="color:#000000">, tab);</span></span>
+<span class="odt-code-line">31. show(6);</span>
+<span class="odt-code-line">32. <span style="color:#008000">// add an element to the end of the array</span></span>
+<span class="odt-code-line">33. <span style="color:#000000">tab.push(</span><span style="color:#a31515">&#x27;xyz&#x27;</span><span style="color:#000000">);</span></span>
+<span class="odt-code-line">34. <span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;tab=&quot;</span><span style="color:#000000">, tab);</span></span>
+<span class="odt-code-line">35. show(7);</span>
+<span class="odt-code-line">36. <span style="color:#008000">// Add an element to the beginning of the array</span></span>
+<span class="odt-code-line">37. tab.unshift(1000);</span>
+<span class="odt-code-line">38. <span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;tab=&quot;</span><span style="color:#000000">, tab);</span></span>
+<span class="odt-code-line">39. show(8);</span>
+<span class="odt-code-line">40. <span style="color:#008000">// Remove the first element from the array</span></span>
+<span class="odt-code-line">41. element = tab.shift();</span>
+<span class="odt-code-line">42. <span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;element=&quot;</span><span style="color:#000000">, element, </span><span style="color:#a31515">&quot;tab=&quot;</span><span style="color:#000000">, tab);</span></span>
+<span class="odt-code-line">43. show(9);</span>
+<span class="odt-code-line">44. <span style="color:#008000">// Remove the second element from the array</span></span>
+<span class="odt-code-line">45. element = tab.splice(2, 1);</span>
+<span class="odt-code-line">46. <span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;element=&quot;</span><span style="color:#000000">, element, </span><span style="color:#a31515">&quot;tab=&quot;</span><span style="color:#000000">, tab);</span></span>
+<span class="odt-code-line">47. show(10);</span>
+<span class="odt-code-line">48. <span style="color:#008000">// Remove two elements from the array starting with element #1</span></span>
+<span class="odt-code-line">49. element = tab.splice(1, 2);</span>
+<span class="odt-code-line">50. <span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;element=&quot;</span><span style="color:#000000">, element, </span><span style="color:#a31515">&quot;tab=&quot;</span><span style="color:#000000">, tab);</span></span>
+<span class="odt-code-line">51. </span>
+<span class="odt-code-line">52. // function</span>
+<span class="odt-code-line">53. <span style="color:#0000ff">function </span><span style="color:#000000">show(param) {</span></span>
+<span class="odt-code-line">54. <span style="color:#000000">  console.log(</span><span style="color:#a31515">&quot;</span><span style="font-weight:bold"><span style="color:#a31515">[&quot;, param, &quot;:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: ]</span></span><span style="color:#a31515">&quot;</span><span style="color:#000000">);</span></span>
+<span class="odt-code-line">55. }</span>
+</code></pre></div>
+
+<p><strong>Comentarios</strong></p>
+<ul>
+  <li>La diferencia entre las matrices PHP y las matrices JavaScript se ilustra en las líneas 3 y 24:
+    <ul>
+      <li>La línea 3 declara la variable <b>[tab] </b>como constante;
+      </li>
+      <li>La línea 24 modifica el elemento tab<b>[5]</b>;
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<p>En la línea 3, es el puntero que apunta al array el que se declara constante, no el array en sí. El array en sí puede ser modificado.</p>
+<ul>
+  <li>Líneas 14-16: Se itera sobre la <b>[tab] </b>matriz utilizando el <b>[forEach] </b>método de la <b>[tab] </b>matriz. Este método toma como parámetro la definición de una función, que podría llamarse función literal. Esta función toma un parámetro: el elemento actual de la <b>[tab] </b>matriz. La función es llamada para cada elemento del array. Este tipo de sintaxis es común en JavaScript;
+  </li>
+  <li>líneas 9-10: utilizamos una sintaxis diferente para definir la función. En lugar de escribir:
+    <ul>
+      <li><b>function(p1, p2, ..., pn){....}</b>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<p>escribimos:</p>
+<ul>
+  <li>(continuación)
+    <ul>
+      <li><b>(p1,p2, ..,pn)=&gt;{....}</b>. Esto se denomina notación &quot;flecha&quot;;
+      </li>
+    </ul>
+  </li>
+  <li>El resto del código se explica en los comentarios;
+  </li>
+</ul>
+
+<p>Desde este script, observa que:</p>
+<ul>
+  <li>un array es un objeto referenciado por un puntero;
+  </li>
+  <li>este objeto tiene métodos <b>[forEach, pop, push, shift, unshift]</b>;
+  </li>
+</ul>
+
+<p><a id="refheadingtoc2042073980233556"></a></p>
+<h2 id="44-script-tab-04">4.4. script [tab-04]</h2>
+<p>Este script introduce otros métodos de objetos array.</p>
+<div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
+<span class="odt-code-line">1. <span style="color:#a31515">&#x27;use strict&#x27;</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line">2. </span>
+<span class="odt-code-line">3. // array manipulation method</span>
+<span class="odt-code-line">4. </span>
+<span class="odt-code-line">5. // an array</span>
+<span class="odt-code-line">6. <span style="color:#0000ff">const </span><span style="color:#000000">tab = [];</span></span>
+<span class="odt-code-line">7. <span style="color:#0000ff">for </span><span style="color:#000000">(</span><span style="color:#0000ff">let </span><span style="color:#000000">i = 0; i &lt; 10; i++) {</span></span>
+<span class="odt-code-line">8.   tab<span style="font-weight:bold">[i] </span>= i * 10;</span>
+<span class="odt-code-line">9. }</span>
+<span class="odt-code-line">10. // display</span>
+<span class="odt-code-line">11. <span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;tab=&quot;</span><span style="color:#000000">, tab);</span></span>
+<span class="odt-code-line">12. // map</span>
+<span class="odt-code-line">13. <span style="color:#0000ff">const </span><span style="color:#000000">tab2 = tab.map(element =&gt; {</span></span>
+<span class="odt-code-line">14. <span style="color:#000000">  </span><span style="color:#0000ff">return </span><span style="color:#000000">{ prop1: element, prop2: element * element }</span></span>
+<span class="odt-code-line">15. });</span>
+<span class="odt-code-line">16. // display</span>
+<span class="odt-code-line">17. <span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;tab=&quot;</span><span style="color:#000000">, tab);</span></span>
+<span class="odt-code-line">18. <span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;tab2=&quot;</span><span style="color:#000000">, tab2);</span></span>
+<span class="odt-code-line">19. // reduce without initial value</span>
+<span class="odt-code-line">20. <span style="color:#0000ff">const </span><span style="color:#000000">sum = tab.reduce((accumulator, currentValue) =&gt; accumulator + currentValue);</span></span>
+<span class="odt-code-line">21. <span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;sum tab=&quot;</span><span style="color:#000000">, sum);</span></span>
+<span class="odt-code-line">22. // reduce with initial value</span>
+<span class="odt-code-line">23. <span style="color:#0000ff">const </span><span style="color:#000000">sum2 = tab.reduce((accumulator, currentValue) =&gt; accumulator + currentValue, 10);</span></span>
+<span class="odt-code-line">24. <span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;sum2 tab=&quot;</span><span style="color:#000000">, sum2);</span></span>
+<span class="odt-code-line">25. // filter</span>
+<span class="odt-code-line">26. <span style="color:#0000ff">const </span><span style="color:#000000">tab4 = tab.filter((element) =&gt; {</span></span>
+<span class="odt-code-line">27. <span style="color:#000000">  </span><span style="color:#0000ff">if </span><span style="color:#000000">(element &gt; 50) {</span></span>
+<span class="odt-code-line">28. <span style="color:#000000">    </span><span style="color:#0000ff">return </span><span style="color:#000000">element;</span></span>
+<span class="odt-code-line">29.   }</span>
+<span class="odt-code-line">30. });</span>
+<span class="odt-code-line">31. <span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;tab4=&quot;</span><span style="color:#000000">, tab4);</span></span>
+<span class="odt-code-line">32. // find</span>
+<span class="odt-code-line">33. <span style="color:#0000ff">const </span><span style="color:#000000">element1 = tab.find((element) =&gt; (element &gt; 20));</span></span>
+<span class="odt-code-line">34. <span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;element1=&quot;</span><span style="color:#000000">, element1);</span></span>
+<span class="odt-code-line">35. // findIndex</span>
+<span class="odt-code-line">36. <span style="color:#0000ff">const </span><span style="color:#000000">index1 = tab.findIndex((element) =&gt; (element === 20));</span></span>
+<span class="odt-code-line">37. <span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;index1 20=&quot;</span><span style="color:#000000">, index1);</span></span>
+<span class="odt-code-line">38. // indexOf</span>
+<span class="odt-code-line">39. <span style="color:#0000ff">const </span><span style="color:#000000">index2 = tab.indexOf(30);</span></span>
+<span class="odt-code-line">40. <span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;index2 30=&quot;</span><span style="color:#000000">, index2);</span></span>
+<span class="odt-code-line">41. <span style="color:#0000ff">const </span><span style="color:#000000">index3 = tab.indexOf(31);</span></span>
+<span class="odt-code-line">42. <span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;index3 31=&quot;</span><span style="color:#000000">, index3);</span></span>
+<span class="odt-code-line">43. // lastIndexOf</span>
+<span class="odt-code-line">44. <span style="color:#0000ff">const </span><span style="color:#000000">index4 = </span><span style="font-weight:bold"><span style="color:#000000">[4, 5, 4, 2]</span></span><span style="color:#000000">.lastIndexOf(4);</span></span>
+<span class="odt-code-line">45. <span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;index4 4=&quot;</span><span style="color:#000000">, index4);</span></span>
+<span class="odt-code-line">46. // sort</span>
+<span class="odt-code-line">47. <span style="color:#0000ff">const </span><span style="color:#000000">tab5 = </span><span style="font-weight:bold"><span style="color:#000000">[4, 5, 4, 2]</span></span><span style="color:#000000">.sort();</span></span>
+<span class="odt-code-line">48. <span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;tab5=&quot;</span><span style="color:#000000">, tab5);</span></span>
+<span class="odt-code-line">49. // reverse sort</span>
+<span class="odt-code-line">50. <span style="color:#0000ff">const </span><span style="color:#000000">tab6 = </span><span style="font-weight:bold"><span style="color:#000000">[4, 5, 4, 2]</span></span><span style="color:#000000">.sort((e1, e2) =&gt; {</span></span>
+<span class="odt-code-line">51. <span style="color:#000000">  </span><span style="color:#0000ff">if </span><span style="color:#000000">(e1 &gt; e2) {</span></span>
+<span class="odt-code-line">52. <span style="color:#000000">    </span><span style="color:#0000ff">return </span><span style="color:#000000">-1;</span></span>
+<span class="odt-code-line">53.   }</span>
+<span class="odt-code-line">54. <span style="color:#000000">  </span><span style="color:#0000ff">else if </span><span style="color:#000000">(e1 === e2) {</span></span>
+<span class="odt-code-line">55. <span style="color:#000000">    </span><span style="color:#0000ff">return</span><span style="color:#000000"> 0;</span></span>
+<span class="odt-code-line">56. <span style="color:#000000">  } </span><span style="color:#0000ff">else </span><span style="color:#000000">{</span></span>
+<span class="odt-code-line">57. <span style="color:#000000">    </span><span style="color:#0000ff">return </span><span style="color:#000000">+1;</span></span>
+<span class="odt-code-line">58.   }</span>
+<span class="odt-code-line">59. });</span>
+<span class="odt-code-line">60. <span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;tab6=&quot;</span><span style="color:#000000">, tab6);</span></span>
+</code></pre></div>
+
+<p><strong>Comentarios</strong></p>
+<ul>
+  <li>líneas 13-15: El <b>[map] </b>método toma una función de transformación como parámetro. Esta función se llama repetidamente para cada elemento de la matriz. Es responsable de transformar el elemento en otra cosa-en este caso, un objeto con las propiedades <b>[prop1, prop2]</b>. El <b>[map] </b>método devuelve una nueva matriz. La matriz original permanece inalterada:
+  </li>
+</ul>
+
+<div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<span class="odt-code-line">tab= <span style="font-weight:bold">[ 0, 10, 20, 30, 40, 50, 60, 70, 80, 90 ]</span></span>
+<span class="odt-code-line">tab2= [ { prop1: 0, prop2: 0 },</span>
+<span class="odt-code-line">{ prop1: 10, prop2: 100 },</span>
+<span class="odt-code-line">{ prop1: 20, prop2: 400 },</span>
+<span class="odt-code-line">{ prop1: 30, prop2: 900 },</span>
+<span class="odt-code-line">{ prop1: 40, prop2: 1600 },</span>
+<span class="odt-code-line">{ prop1: 50, prop2: 2500 },</span>
+<span class="odt-code-line">{ prop1: 60, prop2: 3600 },</span>
+<span class="odt-code-line">{ prop1: 70, prop2: 4900 },</span>
+<span class="odt-code-line">{ prop1: 80, prop2: 6400 },</span>
+<span class="odt-code-line">{ prop1: 90, prop2: 8100 } ]</span>
+</code></pre></div>
+
+<ul>
+  <li>línea 20: El <b>[reduce] </b>método toma como parámetro una función de dos argumentos que se llama repetidamente para cada elemento del array. Esta función toma dos argumentos:
+    <ul>
+      <li><b>[currentValue] </b>es el elemento actual de la matriz;
+      </li>
+      <li><b>[acumulador] </b>es el último resultado obtenido por la función. Si no se proporciona un valor inicial para este acumulador, entonces será 0;
+      </li>
+      <li>la primera vez que se llama a la función de acumulación, ésta devuelve <b>[0+tab[0]</b>]. Este valor se asigna al acumulador;
+      </li>
+      <li>la segunda vez, devuelve acumulador+tab<b>[1]</b>, es decir, tab<b>[0]</b>+tab<b>[1]</b>;
+      </li>
+      <li>La tercera vez, devuelve acumulador + tab<b>[2]</b>, que es tab<b>[0] </b>+ tab<b>[1] </b>+ tab<b>[2]</b>;
+      </li>
+      <li>etc. En última instancia, el acumulador representará la suma de todos los elementos de la matriz <b>[tab]</b>;
+      </li>
+    </ul>
+  </li>
+  <li>línea 26: el <b>[filtro] </b>método toma una función de filtrado como parámetro. Esta función se llama repetidamente para cada elemento del array y recibe ese elemento como parámetro. Debe devolver:
+    <ul>
+      <li><b>[true] </b>si el elemento debe conservarse;
+      </li>
+      <li><b>[false] </b>de lo contrario;
+      </li>
+    </ul>
+  </li>
+  <li>línea 33: el <b>[find] </b>método toma una función de búsqueda como parámetro. Esta función se llama repetidamente para cada elemento del array y recibe ese elemento como parámetro. Debe devolver <b>[true] </b>si el elemento recibido satisface los criterios de búsqueda. La búsqueda se detiene entonces. Por lo tanto, el método <b>[find] </b>devuelve 0 o 1 elemento;
+  </li>
+  <li>línea 36: el <b>[findIndex] </b>método funciona como el <b>[find] </b>método, pero en lugar de devolver el elemento encontrado, devuelve su índice en el array;
+  </li>
+  <li>líneas 39, 41: el <b>[indexOf(valor)] </b>método busca <b>[valor] </b>en el array y devuelve su índice, o -1 si no se encuentra;
+  </li>
+  <li>línea 44: el <b>[lastIndexOf(value)] </b>método funciona como el <b>[indexOf(value)] </b>método pero inicia su búsqueda desde el final del array;
+  </li>
+  <li>línea 47: el <b>[sort] </b>método sin parámetros devuelve un array ordenado en orden natural (números, cadenas);
+  </li>
+  <li>línea 50: cuando el orden natural no es adecuado, hay que pasar una función con dos parámetros (e1, e2) al <b>[sort] </b>método, que devuelve:
+    <ul>
+      <li>+1 si e1 debe ordenarse después de e2;
+      </li>
+      <li>-1 si e1 debe ordenarse antes que e2;
+      </li>
+      <li>0 si ambos elementos deben tener el mismo rango;
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<p>La función pasada como parámetro al <strong>[sort]</strong> método es llamada repetidamente por éste para comparar dos elementos del array;</p>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner">
+
+      <div>
+        <a href="https://tahe.developpez.com" target="_blank">
+          https://tahe.developpez.com
+        </a>
+        <br>
+        Este curso-tutorial escrito por <strong>Serge Tahé</strong> se pone a disposición del público según los términos de la
+        <em>Licencia Creative Commons Reconocimiento – Sin uso comercial –
+        Compartir en las mismas condiciones 3.0 no adaptada</em>.
+
+      </div>
+
+    </div>
+  </div>
+
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": ".", "features": ["navigation.sections", "navigation.indexes", "navigation.expand", "toc.integrate", "navigation.top"], "search": "assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="assets/javascripts/bundle.e71a0d61.min.js"></script>
+      
+        <script src="javascripts/focus.js"></script>
+      
+    
+  </body>
+</html>
