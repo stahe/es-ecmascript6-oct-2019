@@ -528,7 +528,7 @@
   <a href="#71-script-regex-01" class="md-nav__link">
     <span class="md-ellipsis">
       
-        7.1. script [regex-01]
+        7.1. script &#91;regex-01&#93;
       
     </span>
   </a>
@@ -539,7 +539,7 @@
   <a href="#72-script-regexp-02" class="md-nav__link">
     <span class="md-ellipsis">
       
-        7.2. script [regexp-02]
+        7.2. script &#91;regexp-02&#93;
       
     </span>
   </a>
@@ -763,351 +763,335 @@
   
 
 
-<p><a id="refheadingtoc2042393980233556"></a></p>
-<h1 id="7-expresiones-regulares">7. Expresiones regulares</h1>
-<p><img src="images/1000000000000111000000913AD7CFA8.png" style="width:2.88cm;height:1.529cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/1000000000000111000000913AD7CFA8.png" /></p>
-<p><a id="refheadingtoc259299196815120"></a></p>
-<h2 id="71-script-regex-01">7.1. script [regex-01]</h2>
-<p>En el curso de PHP, utilizamos el siguiente código para ilustrar las expresiones regulares de PHP 7:</p>
-<div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-php">
-<span class="odt-code-line">1. &lt;?php</span>
-<span class="odt-code-line">2. </span>
-<span class="odt-code-line">3. // strict type for function parameters</span>
-<span class="odt-code-line">4. <span style="font-weight:bold"><span style="color:#000000">declare </span></span><span style="color:#000000">(</span><span style="color:#000080">strict_types=1</span><span style="color:#000000">);</span></span>
-<span class="odt-code-line">5. </span>
-<span class="odt-code-line">6. // regular expressions in PHP</span>
-<span class="odt-code-line">7. // extract the different fields from a string</span>
-<span class="odt-code-line">8. // the pattern: a sequence of digits surrounded by any characters</span>
-<span class="odt-code-line">9. // we only want to extract the sequence of digits</span>
-<span class="odt-code-line">10. <span style="color:#0000ff">$pattern </span><span style="color:#000000">= </span><span style="color:#008000">&quot;/(\d+)/&quot;</span><span style="color:#000000">;</span></span>
-<span class="odt-code-line">11. // compare the string to the pattern</span>
-<span class="odt-code-line">12. <span style="color:#000000">comparePatternToString(</span><span style="color:#0000ff">$pattern</span><span style="color:#000000">, </span><span style="color:#008000">&quot;xyz1234abcd&quot;</span><span style="color:#000000">);</span></span>
-<span class="odt-code-line">13. <span style="color:#000000">comparePatternToString(</span><span style="color:#0000ff">$pattern</span><span style="color:#000000">, </span><span style="color:#008000">&quot;12 34&quot;</span><span style="color:#000000">);</span></span>
-<span class="odt-code-line">14. <span style="color:#000000">comparePatternToString(</span><span style="color:#0000ff">$pattern</span><span style="color:#000000">, </span><span style="color:#008000">&quot;abcd&quot;</span><span style="color:#000000">);</span></span>
-<span class="odt-code-line">15. </span>
-<span class="odt-code-line">16. // the pattern: a sequence of digits surrounded by any characters</span>
-<span class="odt-code-line">17. // We want the sequence of digits as well as the fields that follow and precede it</span>
-<span class="odt-code-line">18. <span style="color:#0000ff">$pattern </span><span style="color:#000000">= </span><span style="color:#008000">&quot;/^(.*?)(\d+)(.*?)$/&quot;</span><span style="color:#000000">;</span></span>
-<span class="odt-code-line">19. // we match the string against the pattern</span>
-<span class="odt-code-line">20. <span style="color:#000000">comparePattern2String(</span><span style="color:#0000ff">$pattern</span><span style="color:#000000">, </span><span style="color:#008000">&quot;xyz1234abcd&quot;</span><span style="color:#000000">);</span></span>
-<span class="odt-code-line">21. <span style="color:#000000">comparePattern2String(</span><span style="color:#0000ff">$pattern</span><span style="color:#000000">, </span><span style="color:#008000">&quot;12 34&quot;</span><span style="color:#000000">);</span></span>
-<span class="odt-code-line">22. <span style="color:#000000">comparePatternToString(</span><span style="color:#0000ff">$pattern</span><span style="color:#000000">, </span><span style="color:#008000">&quot;abcd&quot;</span><span style="color:#000000">);</span></span>
-<span class="odt-code-line">23. </span>
-<span class="odt-code-line">24. // the pattern - a date in dd/mm/yy format</span>
-<span class="odt-code-line">25. <span style="color:#0000ff">$pattern </span><span style="color:#000000">= </span><span style="color:#008000">&quot;/^\s*(\d\d)\/(\d\d)\/(\d\d)\s*$/&quot;</span><span style="color:#000000">;</span></span>
-<span class="odt-code-line">26. <span style="color:#000000">comparePattern2String(</span><span style="color:#0000ff">$pattern</span><span style="color:#000000">, </span><span style="color:#008000">&quot;10/05/97&quot;</span><span style="color:#000000">);</span></span>
-<span class="odt-code-line">27. <span style="color:#000000">comparePattern2String(</span><span style="color:#0000ff">$pattern</span><span style="color:#000000">, </span><span style="color:#008000">&quot;  04/04/01  &quot;</span><span style="color:#000000">);</span></span>
-<span class="odt-code-line">28. <span style="color:#000000">compareTemplate2String(</span><span style="color:#0000ff">$template</span><span style="color:#000000">, </span><span style="color:#008000">&quot;5/1/01&quot;</span><span style="color:#000000">);</span></span>
-<span class="odt-code-line">29. </span>
-<span class="odt-code-line">30. // the pattern - a decimal number</span>
-<span class="odt-code-line">31. <span style="color:#0000ff">$pattern </span><span style="color:#000000">= </span><span style="color:#008000">&quot;/^\s*(</span><span style="font-weight:bold"><span style="color:#008000">[+|-]</span></span><span style="color:#008000">?)\s*(\d+\.\d*|\.\d+|\d+)\s*/&quot;</span><span style="color:#000000">;</span></span>
-<span class="odt-code-line">32. <span style="color:#000000">comparePattern2String(</span><span style="color:#0000ff">$pattern</span><span style="color:#000000">, </span><span style="color:#008000">&quot;187.8&quot;</span><span style="color:#000000">);</span></span>
-<span class="odt-code-line">33. <span style="color:#000000">comparePattern2String(</span><span style="color:#0000ff">$pattern</span><span style="color:#000000">, </span><span style="color:#008000">&quot;-0.6&quot;</span><span style="color:#000000">);</span></span>
-<span class="odt-code-line">34. <span style="color:#000000">comparePattern2String(</span><span style="color:#0000ff">$pattern</span><span style="color:#000000">, </span><span style="color:#008000">&quot;4&quot;</span><span style="color:#000000">);</span></span>
-<span class="odt-code-line">35. <span style="color:#000000">comparePattern2String(</span><span style="color:#0000ff">$pattern</span><span style="color:#000000">, </span><span style="color:#008000">&quot;.6&quot;</span><span style="color:#000000">);</span></span>
-<span class="odt-code-line">36. <span style="color:#000000">comparePattern2String(</span><span style="color:#0000ff">$pattern</span><span style="color:#000000">, </span><span style="color:#008000">&quot;4.&quot;</span><span style="color:#000000">);</span></span>
-<span class="odt-code-line">37. <span style="color:#000000">compareModel2String(</span><span style="color:#0000ff">$model</span><span style="color:#000000">, </span><span style="color:#008000">&quot; + 4&quot;</span><span style="color:#000000">);</span></span>
-<span class="odt-code-line">38. </span>
-<span class="odt-code-line">39. // end</span>
-<span class="odt-code-line">40. <span style="font-weight:bold"><span style="color:#000000">exit</span></span><span style="color:#000000">;</span></span>
-<span class="odt-code-line">41. </span>
-<span class="odt-code-line">42. // --------------------------------------------------------------------------</span>
-<span class="odt-code-line">43. <span style="font-weight:bold"><span style="color:#000000">function </span></span><span style="color:#000000">compareTemplateToString(</span><span style="font-weight:bold"><span style="color:#000000">string </span></span><span style="color:#0000ff">$template</span><span style="color:#000000">, </span><span style="font-weight:bold"><span style="color:#000000">string </span></span><span style="color:#0000ff">$string</span><span style="color:#000000">): void {</span></span>
-<span class="odt-code-line">44. <span style="color:#008080">  </span><span style="font-style:italic"><span style="color:#808080">// compares the string $string to the pattern $pattern</span></span></span>
-<span class="odt-code-line">45. <span style="color:#008080">  </span><span style="font-style:italic"><span style="color:#808080">// compare the string to the pattern</span></span></span>
-<span class="odt-code-line">46. <span style="color:#008080">  </span><span style="color:#0000ff">$fields </span><span style="color:#000000">= [];</span></span>
-<span class="odt-code-line">47. <span style="color:#008080">  </span><span style="color:#0000ff">$match </span><span style="color:#000000">= preg_match(</span><span style="color:#0000ff">$pattern</span><span style="color:#000000">, </span><span style="color:#0000ff">$string</span><span style="color:#000000">, </span><span style="color:#0000ff">$fields</span><span style="color:#000000">);</span></span>
-<span class="odt-code-line">48. <span style="color:#008080">  </span><span style="font-style:italic"><span style="color:#808080">// display results</span></span></span>
-<span class="odt-code-line">49. <span style="color:#008080">  </span><span style="font-weight:bold"><span style="color:#000000">print </span></span><span style="color:#008000">&quot;\nResults(</span><span style="color:#0000ff">$pattern</span><span style="color:#008000">,</span><span style="color:#0000ff">$string</span><span style="color:#008000">)\n&quot;</span><span style="color:#000000">;</span></span>
-<span class="odt-code-line">50. <span style="color:#008080">  </span><span style="font-weight:bold"><span style="color:#000000">if </span></span><span style="color:#000000">(</span><span style="color:#0000ff">$match</span><span style="color:#000000">) {</span></span>
-<span class="odt-code-line">51. <span style="color:#008080">    </span><span style="font-weight:bold"><span style="color:#000000">for </span></span><span style="color:#000000">(</span><span style="color:#0000ff">$i </span><span style="color:#000000">=</span><span style="color:#000080"> 0</span><span style="color:#000000">; </span><span style="color:#0000ff">$i </span><span style="color:#000000">&lt; count(</span><span style="color:#0000ff">$fields</span><span style="color:#000000">); $i++) {</span></span>
-<span class="odt-code-line">52. <span style="color:#008080">      </span><span style="font-weight:bold"><span style="color:#000000">print </span></span><span style="color:#008000">&quot;fields</span><span style="font-weight:bold"><span style="color:#008000">[$i]</span></span><span style="color:#0000ff">=$fields</span><span style="font-weight:bold"><span style="color:#0000ff">[$i]</span></span><span style="color:#008000">\n&quot;</span><span style="color:#000000">;</span></span>
-<span class="odt-code-line">53. <span style="color:#008080">    </span><span style="color:#000000">}</span></span>
-<span class="odt-code-line">54. <span style="color:#008080">  </span><span style="color:#000000">} </span><span style="font-weight:bold"><span style="color:#000000">else </span></span><span style="color:#000000">{</span></span>
-<span class="odt-code-line">55. <span style="color:#008080">    </span><span style="font-weight:bold"><span style="color:#000000">print </span></span><span style="color:#008000">&quot;The string </span><span style="font-weight:bold"><span style="color:#008000">[$string] </span></span><span style="color:#008000">does not match the pattern </span><span style="font-weight:bold"><span style="color:#008000">[$pattern]</span></span><span style="color:#008000">\n&quot;</span><span style="color:#000000">;</span></span>
-<span class="odt-code-line">56. <span style="color:#008080">  </span><span style="color:#000000">}</span></span>
-<span class="odt-code-line">57. }</span>
+<h1 id="7-expresiones-regulares">7. <a id="refheadingtoc2042393980233556"></a><span>Expresiones regulares</span></h1>
+<p><img src="images/image89.png" class="docx-zoomable" style="width:109px;height:58px;" alt="Image" /></p>
+<h2 id="71-script-regex-01">7.1. <a id="refheadingtoc259299196815120"></a><span>script &#91;regex-01&#93;</span></h2>
+<p><span>En el curso de PHP, utilizamos el siguiente código para ilustrar las expresiones regulares de PHP 7:</span></p>
+<div class="docx-code-rich" data-linenums="true" style="counter-reset: docxline 0;"><pre><code class="language-php">
+<span class="docx-code-line">&lt;?php</span>
+<span class="docx-code-line"></span>
+<span class="docx-code-line">// strict type for function parameters</span>
+<span class="docx-code-line"><span style="font-weight:bold;color:#000000">declare </span><span style="color:#000000">(</span><span style="color:#000080">strict_types=1</span><span style="color:#000000">);</span></span>
+<span class="docx-code-line"></span>
+<span class="docx-code-line">// regular expressions in PHP</span>
+<span class="docx-code-line">// extract the different fields from a string</span>
+<span class="docx-code-line">// the pattern: a sequence of digits surrounded by any characters</span>
+<span class="docx-code-line">// we only want to extract the sequence of digits</span>
+<span class="docx-code-line"><span style="color:#0000FF">$pattern </span><span style="color:#000000">= </span><span style="color:#008000">&quot;/(\d+)/&quot;</span><span style="color:#000000">;</span></span>
+<span class="docx-code-line">// compare the string to the pattern</span>
+<span class="docx-code-line"><span style="color:#000000">comparePatternToString(</span><span style="color:#0000FF">$pattern</span><span style="color:#000000">, </span><span style="color:#008000">&quot;xyz1234abcd&quot;</span><span style="color:#000000">);</span></span>
+<span class="docx-code-line"><span style="color:#000000">comparePatternToString(</span><span style="color:#0000FF">$pattern</span><span style="color:#000000">, </span><span style="color:#008000">&quot;12 34&quot;</span><span style="color:#000000">);</span></span>
+<span class="docx-code-line"><span style="color:#000000">comparePatternToString(</span><span style="color:#0000FF">$pattern</span><span style="color:#000000">, </span><span style="color:#008000">&quot;abcd&quot;</span><span style="color:#000000">);</span></span>
+<span class="docx-code-line"></span>
+<span class="docx-code-line">// the pattern: a sequence of digits surrounded by any characters</span>
+<span class="docx-code-line">// We want the sequence of digits as well as the fields that follow and precede it</span>
+<span class="docx-code-line"><span style="color:#0000FF">$pattern </span><span style="color:#000000">= </span><span style="color:#008000">&quot;/^(.*?)(\d+)(.*?)$/&quot;</span><span style="color:#000000">;</span></span>
+<span class="docx-code-line">// we match the string against the pattern</span>
+<span class="docx-code-line"><span style="color:#000000">comparePattern2String(</span><span style="color:#0000FF">$pattern</span><span style="color:#000000">, </span><span style="color:#008000">&quot;xyz1234abcd&quot;</span><span style="color:#000000">);</span></span>
+<span class="docx-code-line"><span style="color:#000000">comparePattern2String(</span><span style="color:#0000FF">$pattern</span><span style="color:#000000">, </span><span style="color:#008000">&quot;12 34&quot;</span><span style="color:#000000">);</span></span>
+<span class="docx-code-line"><span style="color:#000000">comparePatternToString(</span><span style="color:#0000FF">$pattern</span><span style="color:#000000">, </span><span style="color:#008000">&quot;abcd&quot;</span><span style="color:#000000">);</span></span>
+<span class="docx-code-line"></span>
+<span class="docx-code-line">// the pattern - a date in dd/mm/yy format</span>
+<span class="docx-code-line"><span style="color:#0000FF">$pattern </span><span style="color:#000000">= </span><span style="color:#008000">&quot;/^\s*(\d\d)\/(\d\d)\/(\d\d)\s*$/&quot;</span><span style="color:#000000">;</span></span>
+<span class="docx-code-line"><span style="color:#000000">comparePattern2String(</span><span style="color:#0000FF">$pattern</span><span style="color:#000000">, </span><span style="color:#008000">&quot;10/05/97&quot;</span><span style="color:#000000">);</span></span>
+<span class="docx-code-line"><span style="color:#000000">comparePattern2String(</span><span style="color:#0000FF">$pattern</span><span style="color:#000000">, </span><span style="color:#008000">&quot;  04/04/01  &quot;</span><span style="color:#000000">);</span></span>
+<span class="docx-code-line"><span style="color:#000000">compareTemplate2String(</span><span style="color:#0000FF">$template</span><span style="color:#000000">, </span><span style="color:#008000">&quot;5/1/01&quot;</span><span style="color:#000000">);</span></span>
+<span class="docx-code-line"></span>
+<span class="docx-code-line">// the pattern - a decimal number</span>
+<span class="docx-code-line"><span style="color:#0000FF">$pattern </span><span style="color:#000000">= </span><span style="color:#008000">&quot;/^\s*(</span><span style="font-weight:bold;color:#008000">[+|-]</span><span style="color:#008000">?)\s*(\d+\.\d*|\.\d+|\d+)\s*/&quot;</span><span style="color:#000000">;</span></span>
+<span class="docx-code-line"><span style="color:#000000">comparePattern2String(</span><span style="color:#0000FF">$pattern</span><span style="color:#000000">, </span><span style="color:#008000">&quot;187.8&quot;</span><span style="color:#000000">);</span></span>
+<span class="docx-code-line"><span style="color:#000000">comparePattern2String(</span><span style="color:#0000FF">$pattern</span><span style="color:#000000">, </span><span style="color:#008000">&quot;-0.6&quot;</span><span style="color:#000000">);</span></span>
+<span class="docx-code-line"><span style="color:#000000">comparePattern2String(</span><span style="color:#0000FF">$pattern</span><span style="color:#000000">, </span><span style="color:#008000">&quot;4&quot;</span><span style="color:#000000">);</span></span>
+<span class="docx-code-line"><span style="color:#000000">comparePattern2String(</span><span style="color:#0000FF">$pattern</span><span style="color:#000000">, </span><span style="color:#008000">&quot;.6&quot;</span><span style="color:#000000">);</span></span>
+<span class="docx-code-line"><span style="color:#000000">comparePattern2String(</span><span style="color:#0000FF">$pattern</span><span style="color:#000000">, </span><span style="color:#008000">&quot;4.&quot;</span><span style="color:#000000">);</span></span>
+<span class="docx-code-line"><span style="color:#000000">compareModel2String(</span><span style="color:#0000FF">$model</span><span style="color:#000000">, </span><span style="color:#008000">&quot; + 4&quot;</span><span style="color:#000000">);</span></span>
+<span class="docx-code-line"></span>
+<span class="docx-code-line">// end</span>
+<span class="docx-code-line"><span style="font-weight:bold;color:#000000">exit</span><span style="color:#000000">;</span></span>
+<span class="docx-code-line"></span>
+<span class="docx-code-line">// --------------------------------------------------------------------------</span>
+<span class="docx-code-line"><span style="font-weight:bold;color:#000000">function </span><span style="color:#000000">compareTemplateToString(</span><span style="font-weight:bold;color:#000000">string </span><span style="color:#0000FF">$template</span><span style="color:#000000">, </span><span style="font-weight:bold;color:#000000">string </span><span style="color:#0000FF">$string</span><span style="color:#000000">): void {</span></span>
+<span class="docx-code-line"><span style="color:#008080">  </span><span style="font-style:italic;color:#808080">// compares the string $string to the pattern $pattern</span></span>
+<span class="docx-code-line"><span style="color:#008080">  </span><span style="font-style:italic;color:#808080">// compare the string to the pattern</span></span>
+<span class="docx-code-line"><span style="color:#008080">  </span><span style="color:#0000FF">$fields </span><span style="color:#000000">= [];</span></span>
+<span class="docx-code-line"><span style="color:#008080">  </span><span style="color:#0000FF">$match </span><span style="color:#000000">= preg_match(</span><span style="color:#0000FF">$pattern</span><span style="color:#000000">, </span><span style="color:#0000FF">$string</span><span style="color:#000000">, </span><span style="color:#0000FF">$fields</span><span style="color:#000000">);</span></span>
+<span class="docx-code-line"><span style="color:#008080">  </span><span style="font-style:italic;color:#808080">// display results</span></span>
+<span class="docx-code-line"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">print </span><span style="color:#008000">&quot;\nResults(</span><span style="color:#0000FF">$pattern</span><span style="color:#008000">,</span><span style="color:#0000FF">$string</span><span style="color:#008000">)\n&quot;</span><span style="color:#000000">;</span></span>
+<span class="docx-code-line"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">if </span><span style="color:#000000">(</span><span style="color:#0000FF">$match</span><span style="color:#000000">) {</span></span>
+<span class="docx-code-line"><span style="color:#008080">    </span><span style="font-weight:bold;color:#000000">for </span><span style="color:#000000">(</span><span style="color:#0000FF">$i </span><span style="color:#000000">=</span><span style="color:#000080"> 0</span><span style="color:#000000">; </span><span style="color:#0000FF">$i </span><span style="color:#000000">&lt; count(</span><span style="color:#0000FF">$fields</span><span style="color:#000000">); $i++) {</span></span>
+<span class="docx-code-line"><span style="color:#008080">      </span><span style="font-weight:bold;color:#000000">print </span><span style="color:#008000">&quot;fields</span><span style="font-weight:bold;color:#008000">[$i]</span><span style="color:#0000FF">=$fields</span><span style="font-weight:bold;color:#0000FF">[$i]</span><span style="color:#008000">\n&quot;</span><span style="color:#000000">;</span></span>
+<span class="docx-code-line"><span style="color:#008080">    </span><span style="color:#000000">}</span></span>
+<span class="docx-code-line"><span style="color:#008080">  </span><span style="color:#000000">} </span><span style="font-weight:bold;color:#000000">else </span><span style="color:#000000">{</span></span>
+<span class="docx-code-line"><span style="color:#008080">    </span><span style="font-weight:bold;color:#000000">print </span><span style="color:#008000">&quot;The string </span><span style="font-weight:bold;color:#008000">[$string] </span><span style="color:#008000">does not match the pattern </span><span style="font-weight:bold;color:#008000">[$pattern]</span><span style="color:#008000">\n&quot;</span><span style="color:#000000">;</span></span>
+<span class="docx-code-line"><span style="color:#008080">  </span><span style="color:#000000">}</span></span>
+<span class="docx-code-line">}</span>
 </code></pre></div>
 
-<p>Convertimos este código a JavaScript de la siguiente manera:</p>
-<div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-python">
-<span class="odt-code-line">1. <span style="color:#a31515">&#x27;use strict&#x27;</span><span style="color:#000000">;</span></span>
-<span class="odt-code-line">2. </span>
-<span class="odt-code-line">3. /// Regular expressions in JavaScript</span>
-<span class="odt-code-line">4. // extract the different fields from a string</span>
-<span class="odt-code-line">5. // the pattern: a sequence of digits surrounded by any characters</span>
-<span class="odt-code-line">6. // we only want to extract the sequence of digits</span>
-<span class="odt-code-line">7. <span style="color:#0000ff">let </span><span style="color:#000000">pattern = </span><span style="color:#a31515">/(\d+)/</span><span style="color:#000000">;</span></span>
-<span class="odt-code-line">8. // compare the string to the pattern</span>
-<span class="odt-code-line">9. <span style="color:#000000">comparePatternToString(pattern, </span><span style="color:#a31515">&quot;xyz1234abcd&quot;</span><span style="color:#000000">);</span></span>
-<span class="odt-code-line">10. <span style="color:#000000">comparePatternToString(pattern, </span><span style="color:#a31515">&quot;12 34&quot;</span><span style="color:#000000">);</span></span>
-<span class="odt-code-line">11. <span style="color:#000000">comparePatternToString(pattern, </span><span style="color:#a31515">&quot;abcd&quot;</span><span style="color:#000000">);</span></span>
-<span class="odt-code-line">12. </span>
-<span class="odt-code-line">13. // the pattern: a sequence of digits surrounded by any characters</span>
-<span class="odt-code-line">14. // We want the sequence of digits as well as the fields that come before and after it</span>
-<span class="odt-code-line">15. <span style="color:#000000">pattern = </span><span style="color:#a31515">/^(.*?)(\d+)(.*?)$/</span><span style="color:#000000">;</span></span>
-<span class="odt-code-line">16. // we match the string against the pattern</span>
-<span class="odt-code-line">17. <span style="color:#000000">comparePatternToString(pattern, </span><span style="color:#a31515">&quot;xyz1234abcd&quot;</span><span style="color:#000000">);</span></span>
-<span class="odt-code-line">18. <span style="color:#000000">comparePatternToString(pattern, </span><span style="color:#a31515">&quot;12 34&quot;</span><span style="color:#000000">);</span></span>
-<span class="odt-code-line">19. <span style="color:#000000">comparePatternToString(pattern, </span><span style="color:#a31515">&quot;abcd&quot;</span><span style="color:#000000">);</span></span>
-<span class="odt-code-line">20. </span>
-<span class="odt-code-line">21. // the pattern - a date in dd/mm/yy format</span>
-<span class="odt-code-line">22. <span style="color:#000000">pattern = </span><span style="color:#a31515">/^\s*(\d\d)\/(\d\d)\/(\d\d)\s*$/</span><span style="color:#000000">;</span></span>
-<span class="odt-code-line">23. <span style="color:#000000">comparePatternToString(pattern, </span><span style="color:#a31515">&quot;10/05/97&quot;</span><span style="color:#000000">);</span></span>
-<span class="odt-code-line">24. <span style="color:#000000">comparePatternToString(pattern, </span><span style="color:#a31515">&quot;  04/04/01  &quot;</span><span style="color:#000000">);</span></span>
-<span class="odt-code-line">25. <span style="color:#000000">comparePatternToString(pattern, </span><span style="color:#a31515">&quot;5/1/01&quot;</span><span style="color:#000000">);</span></span>
-<span class="odt-code-line">26. </span>
-<span class="odt-code-line">27. // the pattern - a decimal number</span>
-<span class="odt-code-line">28. <span style="color:#000000">pattern = </span><span style="color:#a31515">/^\s*(</span><span style="font-weight:bold"><span style="color:#a31515">[+|-]</span></span><span style="color:#a31515">?)\s*(\d+\.\d*|\.\d+|\d+)\s*$/</span><span style="color:#000000">;</span></span>
-<span class="odt-code-line">29. <span style="color:#000000">comparePatternToString(pattern, </span><span style="color:#a31515">&quot;187.8&quot;</span><span style="color:#000000">);</span></span>
-<span class="odt-code-line">30. <span style="color:#000000">comparePatternToString(pattern, </span><span style="color:#a31515">&quot;-0.6&quot;</span><span style="color:#000000">);</span></span>
-<span class="odt-code-line">31. <span style="color:#000000">comparePatternToString(pattern, </span><span style="color:#a31515">&quot;4&quot;</span><span style="color:#000000">);</span></span>
-<span class="odt-code-line">32. <span style="color:#000000">comparePatternToString(pattern, </span><span style="color:#a31515">&quot;.6&quot;</span><span style="color:#000000">);</span></span>
-<span class="odt-code-line">33. <span style="color:#000000">comparePatternToString(pattern, </span><span style="color:#a31515">&quot;4.&quot;</span><span style="color:#000000">);</span></span>
-<span class="odt-code-line">34. <span style="color:#000000">compareModelToString(model, </span><span style="color:#a31515">&quot; + 4&quot;</span><span style="color:#000000">);</span></span>
-<span class="odt-code-line">35. </span>
-<span class="odt-code-line">36. // --------------------------------------------------------------------------</span>
-<span class="odt-code-line">37. <span style="color:#0000ff">function </span><span style="color:#000000">comparePatternToString(pattern, string) {</span></span>
-<span class="odt-code-line">38. <span style="color:#000000">  </span><span style="color:#008000">// compares the string </span><span style="font-weight:bold"><span style="color:#008000">[string] </span></span><span style="color:#008000">to the pattern </span><span style="font-weight:bold"><span style="color:#008000">[pattern]</span></span></span>
-<span class="odt-code-line">39. <span style="color:#000000">  console.log(</span><span style="color:#a31515">`----------- </span><span style="color:#0000ff">string=${</span><span style="color:#000000">string</span><span style="color:#0000ff">}</span><span style="color:#a31515">, </span><span style="color:#0000ff">pattern=${</span><span style="color:#000000">pattern</span><span style="color:#0000ff">}</span><span style="color:#a31515">`</span><span style="color:#000000">)</span></span>
-<span class="odt-code-line">40. <span style="color:#000000">  </span><span style="color:#008000">// compare the string to the pattern</span></span>
-<span class="odt-code-line">41. <span style="color:#000000">  </span><span style="color:#0000ff">const </span><span style="color:#000000">result1 = pattern.exec(string);</span></span>
-<span class="odt-code-line">42. <span style="color:#000000">  console.log(</span><span style="color:#a31515">`comparison with exec=`</span><span style="color:#000000">, result1);</span></span>
-<span class="odt-code-line">43. <span style="color:#000000">  </span><span style="color:#008000">// another way to do it</span></span>
-<span class="odt-code-line">44. <span style="color:#000000">  </span><span style="color:#0000ff">const </span><span style="color:#000000">result2 = string.match(pattern);</span></span>
-<span class="odt-code-line">45. <span style="color:#000000">  console.log(</span><span style="color:#a31515">`comparison with match=`</span><span style="color:#000000">, result2);</span></span>
-<span class="odt-code-line">46. }</span>
+<p><span>Convertimos este código a JavaScript de la siguiente manera:</span></p>
+<div class="docx-code-rich" data-linenums="true" style="counter-reset: docxline 0;"><pre><code class="language-python">
+<span class="docx-code-line"><span style="color:#A31515">&#x27;use strict&#x27;</span><span style="color:#000000">;</span></span>
+<span class="docx-code-line"></span>
+<span class="docx-code-line">/// Regular expressions in JavaScript</span>
+<span class="docx-code-line">// extract the different fields from a string</span>
+<span class="docx-code-line">// the pattern: a sequence of digits surrounded by any characters</span>
+<span class="docx-code-line">// we only want to extract the sequence of digits</span>
+<span class="docx-code-line"><span style="color:#0000FF">let </span><span style="color:#000000">pattern = </span><span style="color:#A31515">/(\d+)/</span><span style="color:#000000">;</span></span>
+<span class="docx-code-line">// compare the string to the pattern</span>
+<span class="docx-code-line"><span style="color:#000000">comparePatternToString(pattern, </span><span style="color:#A31515">&quot;xyz1234abcd&quot;</span><span style="color:#000000">);</span></span>
+<span class="docx-code-line"><span style="color:#000000">comparePatternToString(pattern, </span><span style="color:#A31515">&quot;12 34&quot;</span><span style="color:#000000">);</span></span>
+<span class="docx-code-line"><span style="color:#000000">comparePatternToString(pattern, </span><span style="color:#A31515">&quot;abcd&quot;</span><span style="color:#000000">);</span></span>
+<span class="docx-code-line"></span>
+<span class="docx-code-line">// the pattern: a sequence of digits surrounded by any characters</span>
+<span class="docx-code-line">// We want the sequence of digits as well as the fields that come before and after it</span>
+<span class="docx-code-line"><span style="color:#000000">pattern = </span><span style="color:#A31515">/^(.*?)(\d+)(.*?)$/</span><span style="color:#000000">;</span></span>
+<span class="docx-code-line">// we match the string against the pattern</span>
+<span class="docx-code-line"><span style="color:#000000">comparePatternToString(pattern, </span><span style="color:#A31515">&quot;xyz1234abcd&quot;</span><span style="color:#000000">);</span></span>
+<span class="docx-code-line"><span style="color:#000000">comparePatternToString(pattern, </span><span style="color:#A31515">&quot;12 34&quot;</span><span style="color:#000000">);</span></span>
+<span class="docx-code-line"><span style="color:#000000">comparePatternToString(pattern, </span><span style="color:#A31515">&quot;abcd&quot;</span><span style="color:#000000">);</span></span>
+<span class="docx-code-line"></span>
+<span class="docx-code-line">// the pattern - a date in dd/mm/yy format</span>
+<span class="docx-code-line"><span style="color:#000000">pattern = </span><span style="color:#A31515">/^\s*(\d\d)\/(\d\d)\/(\d\d)\s*$/</span><span style="color:#000000">;</span></span>
+<span class="docx-code-line"><span style="color:#000000">comparePatternToString(pattern, </span><span style="color:#A31515">&quot;10/05/97&quot;</span><span style="color:#000000">);</span></span>
+<span class="docx-code-line"><span style="color:#000000">comparePatternToString(pattern, </span><span style="color:#A31515">&quot;  04/04/01  &quot;</span><span style="color:#000000">);</span></span>
+<span class="docx-code-line"><span style="color:#000000">comparePatternToString(pattern, </span><span style="color:#A31515">&quot;5/1/01&quot;</span><span style="color:#000000">);</span></span>
+<span class="docx-code-line"></span>
+<span class="docx-code-line">// the pattern - a decimal number</span>
+<span class="docx-code-line"><span style="color:#000000">pattern = </span><span style="color:#A31515">/^\s*(</span><span style="font-weight:bold;color:#A31515">[+|-]</span><span style="color:#A31515">?)\s*(\d+\.\d*|\.\d+|\d+)\s*$/</span><span style="color:#000000">;</span></span>
+<span class="docx-code-line"><span style="color:#000000">comparePatternToString(pattern, </span><span style="color:#A31515">&quot;187.8&quot;</span><span style="color:#000000">);</span></span>
+<span class="docx-code-line"><span style="color:#000000">comparePatternToString(pattern, </span><span style="color:#A31515">&quot;-0.6&quot;</span><span style="color:#000000">);</span></span>
+<span class="docx-code-line"><span style="color:#000000">comparePatternToString(pattern, </span><span style="color:#A31515">&quot;4&quot;</span><span style="color:#000000">);</span></span>
+<span class="docx-code-line"><span style="color:#000000">comparePatternToString(pattern, </span><span style="color:#A31515">&quot;.6&quot;</span><span style="color:#000000">);</span></span>
+<span class="docx-code-line"><span style="color:#000000">comparePatternToString(pattern, </span><span style="color:#A31515">&quot;4.&quot;</span><span style="color:#000000">);</span></span>
+<span class="docx-code-line"><span style="color:#000000">compareModelToString(model, </span><span style="color:#A31515">&quot; + 4&quot;</span><span style="color:#000000">);</span></span>
+<span class="docx-code-line"></span>
+<span class="docx-code-line">// --------------------------------------------------------------------------</span>
+<span class="docx-code-line"><span style="color:#0000FF">function </span><span style="color:#000000">comparePatternToString(pattern, string) {</span></span>
+<span class="docx-code-line"><span style="color:#000000">  </span><span style="color:#008000">// compares the string </span><span style="font-weight:bold;color:#008000">[string] </span><span style="color:#008000">to the pattern </span><span style="font-weight:bold;color:#008000">[pattern]</span></span>
+<span class="docx-code-line"><span style="color:#000000">  console.log(</span><span style="color:#A31515">`----------- </span><span style="color:#0000FF">string=${</span><span style="color:#000000">string</span><span style="color:#0000FF">}</span><span style="color:#A31515">, </span><span style="color:#0000FF">pattern=${</span><span style="color:#000000">pattern</span><span style="color:#0000FF">}</span><span style="color:#A31515">`</span><span style="color:#000000">)</span></span>
+<span class="docx-code-line"><span style="color:#000000">  </span><span style="color:#008000">// compare the string to the pattern</span></span>
+<span class="docx-code-line"><span style="color:#000000">  </span><span style="color:#0000FF">const </span><span style="color:#000000">result1 = pattern.exec(string);</span></span>
+<span class="docx-code-line"><span style="color:#000000">  console.log(</span><span style="color:#A31515">`comparison with exec=`</span><span style="color:#000000">, result1);</span></span>
+<span class="docx-code-line"><span style="color:#000000">  </span><span style="color:#008000">// another way to do it</span></span>
+<span class="docx-code-line"><span style="color:#000000">  </span><span style="color:#0000FF">const </span><span style="color:#000000">result2 = string.match(pattern);</span></span>
+<span class="docx-code-line"><span style="color:#000000">  console.log(</span><span style="color:#A31515">`comparison with match=`</span><span style="color:#000000">, result2);</span></span>
+<span class="docx-code-line">}</span>
 </code></pre></div>
 
-<p><strong>Comentarios</strong></p>
+<p><b>Comentarios</b></p>
 <ul>
-  <li>El código PHP y JavaScript son muy similares;
-  </li>
-  <li>línea 7: Tenga en cuenta que en JavaScript, una expresión regular no es una cadena, sino un objeto. No ponga comillas ni apóstrofes alrededor de la expresión;
-  </li>
-  <li>Líneas 41 y 44: Hay dos formas de conseguir el mismo resultado;
-  </li>
+<li><span>El código PHP y JavaScript son muy similares;</span></li>
+<li><span>línea 7: Tenga en cuenta que en JavaScript, una expresión regular no es una cadena, sino un objeto. No ponga comillas ni apóstrofes alrededor de la expresión;</span></li>
+<li><span>Líneas 41 y 44: Hay dos formas de conseguir el mismo resultado;</span></li>
 </ul>
 
-<p><strong>Ejecución</strong></p>
-<div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-python">
-<span class="odt-code-line">1. <span style="font-weight:bold"><span style="color:#316bcd">[Running] </span></span><span style="color:#a31515">C:\myprograms\laragon-lite\bin\nodejs\node-v10\node.exe -r esm &quot;c:\Data\st-2019\dev\es6\javascript\regexp\regexp-01.js&quot;</span></span>
-<span class="odt-code-line">2. type of a regular expression: object</span>
-<span class="odt-code-line">3. ----------- string=xyz1234abcd, pattern=/(\d+)/</span>
-<span class="odt-code-line">4. comparison with exec= [ &#x27;1234&#x27;,</span>
-<span class="odt-code-line">5. &#x27;1234&#x27;,</span>
-<span class="odt-code-line">6. index: 3,</span>
-<span class="odt-code-line">7. input: &#x27;xyz1234abcd&#x27;,</span>
-<span class="odt-code-line">8. groups: undefined ]</span>
-<span class="odt-code-line">9. comparison with match= [ &#x27;1234&#x27;,</span>
-<span class="odt-code-line">10. &#x27;1234&#x27;,</span>
-<span class="odt-code-line">11. index: 3,</span>
-<span class="odt-code-line">12. input: &#x27;xyz1234abcd&#x27;,</span>
-<span class="odt-code-line">13. groups: undefined ]</span>
-<span class="odt-code-line">14. ----------- string=12 34, pattern=/(\d+)/</span>
-<span class="odt-code-line">15. Comparison with exec= <span style="font-weight:bold">[ &#x27;12&#x27;, &#x27;12&#x27;, index: 0, input: &#x27;12 34&#x27;, groups: undefined ]</span></span>
-<span class="odt-code-line">16. comparison with match= <span style="font-weight:bold">[ &#x27;12&#x27;, &#x27;12&#x27;, index: 0, input: &#x27;12 34&#x27;, groups: undefined ]</span></span>
-<span class="odt-code-line">17. ----------- string=abcd, pattern=/(\d+)/</span>
-<span class="odt-code-line">18. comparison with exec= null</span>
-<span class="odt-code-line">19. comparison with match= null</span>
-<span class="odt-code-line">20. ----------- string=xyz1234abcd, pattern=/^(.*?)(\d+)(.*?)$/</span>
-<span class="odt-code-line">21. comparison with exec= [ &#x27;xyz1234abcd&#x27;,</span>
-<span class="odt-code-line">22. &#x27;xyz&#x27;,</span>
-<span class="odt-code-line">23. &#x27;1234&#x27;,</span>
-<span class="odt-code-line">24. &#x27;abcd&#x27;,</span>
-<span class="odt-code-line">25. index: 0,</span>
-<span class="odt-code-line">26. input: &#x27;xyz1234abcd&#x27;,</span>
-<span class="odt-code-line">27. groups: undefined ]</span>
-<span class="odt-code-line">28. comparison with match= [ &#x27;xyz1234abcd&#x27;,</span>
-<span class="odt-code-line">29. &#x27;xyz&#x27;,</span>
-<span class="odt-code-line">30. &#x27;1234&#x27;,</span>
-<span class="odt-code-line">31. &#x27;abcd&#x27;,</span>
-<span class="odt-code-line">32. index: 0,</span>
-<span class="odt-code-line">33. input: &#x27;xyz1234abcd&#x27;,</span>
-<span class="odt-code-line">34. groups: undefined ]</span>
-<span class="odt-code-line">35. ----------- string=12 34, pattern=/^(.*?)(\d+)(.*?)$/</span>
-<span class="odt-code-line">36. comparison with exec= [ &#x27;12 34&#x27;,</span>
-<span class="odt-code-line">37. &#x27;&#x27;,</span>
-<span class="odt-code-line">38. &#x27;12&#x27;,</span>
-<span class="odt-code-line">39. &#x27; 34&#x27;,</span>
-<span class="odt-code-line">40. index: 0,</span>
-<span class="odt-code-line">41. input: &#x27;12 34&#x27;,</span>
-<span class="odt-code-line">42. groups: undefined ]</span>
-<span class="odt-code-line">43. comparison with match= [ &#x27;12 34&#x27;,</span>
-<span class="odt-code-line">44. &#x27;&#x27;,</span>
-<span class="odt-code-line">45. &#x27;12&#x27;,</span>
-<span class="odt-code-line">46. &#x27; 34&#x27;,</span>
-<span class="odt-code-line">47. index: 0,</span>
-<span class="odt-code-line">48. input: &#x27;12 34&#x27;,</span>
-<span class="odt-code-line">49. groups: undefined ]</span>
-<span class="odt-code-line">50. ----------- string=abcd, pattern=/^(.*?)(\d+)(.*?)$/</span>
-<span class="odt-code-line">51. comparison with exec=null</span>
-<span class="odt-code-line">52. comparison with match=null</span>
-<span class="odt-code-line">53. ----------- string=10/05/97, pattern=/^\s*(\d\d)\/(\d\d)\/(\d\d)\s*$/</span>
-<span class="odt-code-line">54. comparison with exec= [ &#x27;10/05/97&#x27;,</span>
-<span class="odt-code-line">55. &#x27;10&#x27;,</span>
-<span class="odt-code-line">56. &#x27;05&#x27;,</span>
-<span class="odt-code-line">57. &#x27;97&#x27;,</span>
-<span class="odt-code-line">58. index: 0,</span>
-<span class="odt-code-line">59. input: &#x27;10/05/97&#x27;,</span>
-<span class="odt-code-line">60. groups: undefined ]</span>
-<span class="odt-code-line">61. comparison with match= [ &#x27;10/05/97&#x27;,</span>
-<span class="odt-code-line">62. &#x27;10&#x27;,</span>
-<span class="odt-code-line">63. &#x27;05&#x27;,</span>
-<span class="odt-code-line">64. &#x27;97&#x27;,</span>
-<span class="odt-code-line">65. index: 0,</span>
-<span class="odt-code-line">66. input: &#x27;10/05/97&#x27;,</span>
-<span class="odt-code-line">67. groups: undefined ]</span>
-<span class="odt-code-line">68. ----------- string= 04/04/01 , pattern=/^\s*(\d\d)\/(\d\d)\/(\d\d)\s*$/</span>
-<span class="odt-code-line">69. comparison with exec= [ &#x27; 04/04/01 &#x27;,</span>
-<span class="odt-code-line">70. &#x27;04&#x27;,</span>
-<span class="odt-code-line">71. &#x27;04&#x27;,</span>
-<span class="odt-code-line">72. &#x27;01&#x27;,</span>
-<span class="odt-code-line">73. index: 0,</span>
-<span class="odt-code-line">74. input: &#x27;04/04/01&#x27;,</span>
-<span class="odt-code-line">75. groups: undefined ]</span>
-<span class="odt-code-line">76. comparison with match= [ &#x27; 04/04/01 &#x27;,</span>
-<span class="odt-code-line">77. &#x27;04&#x27;,</span>
-<span class="odt-code-line">78. &#x27;04&#x27;,</span>
-<span class="odt-code-line">79. &#x27;01&#x27;,</span>
-<span class="odt-code-line">80. index: 0,</span>
-<span class="odt-code-line">81. input: &#x27;04/04/01&#x27;,</span>
-<span class="odt-code-line">82. groups: undefined ]</span>
-<span class="odt-code-line">83. ----------- string=5/1/01, pattern=/^\s*(\d\d)\/(\d\d)\/(\d\d)\s*$/</span>
-<span class="odt-code-line">84. comparison with exec=null</span>
-<span class="odt-code-line">85. comparison with match=null</span>
-<span class="odt-code-line">86. ----------- string=187.8, pattern=/^\s*(<span style="font-weight:bold">[+|-]</span>?)\s*(\d+\.\d*|\.\d+|\d+)\s*$/</span>
-<span class="odt-code-line">87. comparison with exec= [ &#x27;187.8&#x27;,</span>
-<span class="odt-code-line">88. &#x27;&#x27;,</span>
-<span class="odt-code-line">89. &#x27;187.8&#x27;,</span>
-<span class="odt-code-line">90. index: 0,</span>
-<span class="odt-code-line">91. input: &#x27;187.8&#x27;,</span>
-<span class="odt-code-line">92. groups: undefined ]</span>
-<span class="odt-code-line">93. comparison with match= [ &#x27;187.8&#x27;,</span>
-<span class="odt-code-line">94. &#x27;&#x27;,</span>
-<span class="odt-code-line">95. &#x27;187.8&#x27;,</span>
-<span class="odt-code-line">96. index: 0,</span>
-<span class="odt-code-line">97. input: &#x27;187.8&#x27;,</span>
-<span class="odt-code-line">98. groups: undefined ]</span>
-<span class="odt-code-line">99. ----------- string=-0.6, pattern=/^\s*(<span style="font-weight:bold">[+|-]</span>?)\s*(\d+\.\d*|\.\d+|\d+)\s*$/</span>
-<span class="odt-code-line">100. comparison with exec= <span style="font-weight:bold">[ &#x27;-0.6&#x27;, &#x27;-&#x27;, &#x27;0.6&#x27;, index: 0, input: &#x27;-0.6&#x27;, groups: undefined ]</span></span>
-<span class="odt-code-line">101. comparison with match= <span style="font-weight:bold">[ &#x27;-0.6&#x27;, &#x27;-&#x27;, &#x27;0.6&#x27;, index: 0, input: &#x27;-0.6&#x27;, groups: undefined ]</span></span>
-<span class="odt-code-line">102. ----------- string=4, pattern=/^\s*(<span style="font-weight:bold">[+|-]</span>?)\s*(\d+\.\d*|\.\d+|\d+)\s*$/</span>
-<span class="odt-code-line">103. comparison with exec= <span style="font-weight:bold">[ &#x27;4&#x27;, &#x27;&#x27;, &#x27;4&#x27;, index: 0, input: &#x27;4&#x27;, groups: undefined ]</span></span>
-<span class="odt-code-line">104. comparison with match= <span style="font-weight:bold">[ &#x27;4&#x27;, &#x27;&#x27;, &#x27;4&#x27;, index: 0, input: &#x27;4&#x27;, groups: undefined ]</span></span>
-<span class="odt-code-line">105. ----------- pattern=.6, regex=/^\s*(<span style="font-weight:bold">[+|-]</span>?)\s*(\d+\.\d*|\.\d+|\d+)\s*$/</span>
-<span class="odt-code-line">106. comparison with exec= <span style="font-weight:bold">[ &#x27;.6&#x27;, &#x27;&#x27;, &#x27;.6&#x27;, index: 0, input: &#x27;.6&#x27;, groups: undefined ]</span></span>
-<span class="odt-code-line">107. comparison with match= <span style="font-weight:bold">[ &#x27;.6&#x27;, &#x27;&#x27;, &#x27;.6&#x27;, index: 0, input: &#x27;.6&#x27;, groups: undefined ]</span></span>
-<span class="odt-code-line">108. ----------- string=4., pattern=/^\s*(<span style="font-weight:bold">[+|-]</span>?)\s*(\d+\.\d*|\.\d+|\d+)\s*$/</span>
-<span class="odt-code-line">109. comparison with exec= <span style="font-weight:bold">[ &#x27;4.&#x27;, &#x27;&#x27;, &#x27;4.&#x27;, index: 0, input: &#x27;4.&#x27;, groups: undefined ]</span></span>
-<span class="odt-code-line">110. comparison with match= <span style="font-weight:bold">[ &#x27;4.&#x27;, &#x27;&#x27;, &#x27;4.&#x27;, index: 0, input: &#x27;4.&#x27;, groups: undefined ]</span></span>
-<span class="odt-code-line">111. ----------- string= + 4, pattern=/^\s*(<span style="font-weight:bold">[+|-]</span>?)\s*(\d+\.\d*|\.\d+|\d+)\s*$/</span>
-<span class="odt-code-line">112. comparison with exec= <span style="font-weight:bold">[ &#x27; + 4&#x27;, &#x27;+&#x27;, &#x27;4&#x27;, index: 0, input: &#x27; + 4&#x27;, groups: undefined ]</span></span>
-<span class="odt-code-line">113. comparison with match= <span style="font-weight:bold">[ &#x27; + 4&#x27;, &#x27;+&#x27;, &#x27;4&#x27;, index: 0, input: &#x27; + 4&#x27;, groups: undefined ]</span></span>
+<p><b>Ejecución</b></p>
+<div class="docx-code-rich" data-linenums="true" style="counter-reset: docxline 0;"><pre><code class="language-python">
+<span class="docx-code-line"><span style="font-weight:bold;color:#316BCD">[Running] </span><span style="color:#A31515">C:\myprograms\laragon-lite\bin\nodejs\node-v10\node.exe -r esm &quot;c:\Data\st-2019\dev\es6\javascript\regexp\regexp-01.js&quot;</span></span>
+<span class="docx-code-line">type of a regular expression: object</span>
+<span class="docx-code-line">----------- string=xyz1234abcd, pattern=/(\d+)/</span>
+<span class="docx-code-line">comparison with exec= [ &#x27;1234&#x27;,</span>
+<span class="docx-code-line">&#x27;1234&#x27;,</span>
+<span class="docx-code-line">index: 3,</span>
+<span class="docx-code-line">input: &#x27;xyz1234abcd&#x27;,</span>
+<span class="docx-code-line">groups: undefined ]</span>
+<span class="docx-code-line">comparison with match= [ &#x27;1234&#x27;,</span>
+<span class="docx-code-line">&#x27;1234&#x27;,</span>
+<span class="docx-code-line">index: 3,</span>
+<span class="docx-code-line">input: &#x27;xyz1234abcd&#x27;,</span>
+<span class="docx-code-line">groups: undefined ]</span>
+<span class="docx-code-line">----------- string=12 34, pattern=/(\d+)/</span>
+<span class="docx-code-line">Comparison with exec= <span style="font-weight:bold">[ &#x27;12&#x27;, &#x27;12&#x27;, index: 0, input: &#x27;12 34&#x27;, groups: undefined ]</span></span>
+<span class="docx-code-line">comparison with match= <span style="font-weight:bold">[ &#x27;12&#x27;, &#x27;12&#x27;, index: 0, input: &#x27;12 34&#x27;, groups: undefined ]</span></span>
+<span class="docx-code-line">----------- string=abcd, pattern=/(\d+)/</span>
+<span class="docx-code-line">comparison with exec= null</span>
+<span class="docx-code-line">comparison with match= null</span>
+<span class="docx-code-line">----------- string=xyz1234abcd, pattern=/^(.*?)(\d+)(.*?)$/</span>
+<span class="docx-code-line">comparison with exec= [ &#x27;xyz1234abcd&#x27;,</span>
+<span class="docx-code-line">&#x27;xyz&#x27;,</span>
+<span class="docx-code-line">&#x27;1234&#x27;,</span>
+<span class="docx-code-line">&#x27;abcd&#x27;,</span>
+<span class="docx-code-line">index: 0,</span>
+<span class="docx-code-line">input: &#x27;xyz1234abcd&#x27;,</span>
+<span class="docx-code-line">groups: undefined ]</span>
+<span class="docx-code-line">comparison with match= [ &#x27;xyz1234abcd&#x27;,</span>
+<span class="docx-code-line">&#x27;xyz&#x27;,</span>
+<span class="docx-code-line">&#x27;1234&#x27;,</span>
+<span class="docx-code-line">&#x27;abcd&#x27;,</span>
+<span class="docx-code-line">index: 0,</span>
+<span class="docx-code-line">input: &#x27;xyz1234abcd&#x27;,</span>
+<span class="docx-code-line">groups: undefined ]</span>
+<span class="docx-code-line">----------- string=12 34, pattern=/^(.*?)(\d+)(.*?)$/</span>
+<span class="docx-code-line">comparison with exec= [ &#x27;12 34&#x27;,</span>
+<span class="docx-code-line">&#x27;&#x27;,</span>
+<span class="docx-code-line">&#x27;12&#x27;,</span>
+<span class="docx-code-line">&#x27; 34&#x27;,</span>
+<span class="docx-code-line">index: 0,</span>
+<span class="docx-code-line">input: &#x27;12 34&#x27;,</span>
+<span class="docx-code-line">groups: undefined ]</span>
+<span class="docx-code-line">comparison with match= [ &#x27;12 34&#x27;,</span>
+<span class="docx-code-line">&#x27;&#x27;,</span>
+<span class="docx-code-line">&#x27;12&#x27;,</span>
+<span class="docx-code-line">&#x27; 34&#x27;,</span>
+<span class="docx-code-line">index: 0,</span>
+<span class="docx-code-line">input: &#x27;12 34&#x27;,</span>
+<span class="docx-code-line">groups: undefined ]</span>
+<span class="docx-code-line">----------- string=abcd, pattern=/^(.*?)(\d+)(.*?)$/</span>
+<span class="docx-code-line">comparison with exec=null</span>
+<span class="docx-code-line">comparison with match=null</span>
+<span class="docx-code-line">----------- string=10/05/97, pattern=/^\s*(\d\d)\/(\d\d)\/(\d\d)\s*$/</span>
+<span class="docx-code-line">comparison with exec= [ &#x27;10/05/97&#x27;,</span>
+<span class="docx-code-line">&#x27;10&#x27;,</span>
+<span class="docx-code-line">&#x27;05&#x27;,</span>
+<span class="docx-code-line">&#x27;97&#x27;,</span>
+<span class="docx-code-line">index: 0,</span>
+<span class="docx-code-line">input: &#x27;10/05/97&#x27;,</span>
+<span class="docx-code-line">groups: undefined ]</span>
+<span class="docx-code-line">comparison with match= [ &#x27;10/05/97&#x27;,</span>
+<span class="docx-code-line">&#x27;10&#x27;,</span>
+<span class="docx-code-line">&#x27;05&#x27;,</span>
+<span class="docx-code-line">&#x27;97&#x27;,</span>
+<span class="docx-code-line">index: 0,</span>
+<span class="docx-code-line">input: &#x27;10/05/97&#x27;,</span>
+<span class="docx-code-line">groups: undefined ]</span>
+<span class="docx-code-line">----------- string= 04/04/01 , pattern=/^\s*(\d\d)\/(\d\d)\/(\d\d)\s*$/</span>
+<span class="docx-code-line">comparison with exec= [ &#x27; 04/04/01 &#x27;,</span>
+<span class="docx-code-line">&#x27;04&#x27;,</span>
+<span class="docx-code-line">&#x27;04&#x27;,</span>
+<span class="docx-code-line">&#x27;01&#x27;,</span>
+<span class="docx-code-line">index: 0,</span>
+<span class="docx-code-line">input: &#x27;04/04/01&#x27;,</span>
+<span class="docx-code-line">groups: undefined ]</span>
+<span class="docx-code-line">comparison with match= [ &#x27; 04/04/01 &#x27;,</span>
+<span class="docx-code-line">&#x27;04&#x27;,</span>
+<span class="docx-code-line">&#x27;04&#x27;,</span>
+<span class="docx-code-line">&#x27;01&#x27;,</span>
+<span class="docx-code-line">index: 0,</span>
+<span class="docx-code-line">input: &#x27;04/04/01&#x27;,</span>
+<span class="docx-code-line">groups: undefined ]</span>
+<span class="docx-code-line">----------- string=5/1/01, pattern=/^\s*(\d\d)\/(\d\d)\/(\d\d)\s*$/</span>
+<span class="docx-code-line">comparison with exec=null</span>
+<span class="docx-code-line">comparison with match=null</span>
+<span class="docx-code-line">----------- string=187.8, pattern=/^\s*(<span style="font-weight:bold">[+|-]</span>?)\s*(\d+\.\d*|\.\d+|\d+)\s*$/</span>
+<span class="docx-code-line">comparison with exec= [ &#x27;187.8&#x27;,</span>
+<span class="docx-code-line">&#x27;&#x27;,</span>
+<span class="docx-code-line">&#x27;187.8&#x27;,</span>
+<span class="docx-code-line">index: 0,</span>
+<span class="docx-code-line">input: &#x27;187.8&#x27;,</span>
+<span class="docx-code-line">groups: undefined ]</span>
+<span class="docx-code-line">comparison with match= [ &#x27;187.8&#x27;,</span>
+<span class="docx-code-line">&#x27;&#x27;,</span>
+<span class="docx-code-line">&#x27;187.8&#x27;,</span>
+<span class="docx-code-line">index: 0,</span>
+<span class="docx-code-line">input: &#x27;187.8&#x27;,</span>
+<span class="docx-code-line">groups: undefined ]</span>
+<span class="docx-code-line">----------- string=-0.6, pattern=/^\s*(<span style="font-weight:bold">[+|-]</span>?)\s*(\d+\.\d*|\.\d+|\d+)\s*$/</span>
+<span class="docx-code-line">comparison with exec= <span style="font-weight:bold">[ &#x27;-0.6&#x27;, &#x27;-&#x27;, &#x27;0.6&#x27;, index: 0, input: &#x27;-0.6&#x27;, groups: undefined ]</span></span>
+<span class="docx-code-line">comparison with match= <span style="font-weight:bold">[ &#x27;-0.6&#x27;, &#x27;-&#x27;, &#x27;0.6&#x27;, index: 0, input: &#x27;-0.6&#x27;, groups: undefined ]</span></span>
+<span class="docx-code-line">----------- string=4, pattern=/^\s*(<span style="font-weight:bold">[+|-]</span>?)\s*(\d+\.\d*|\.\d+|\d+)\s*$/</span>
+<span class="docx-code-line">comparison with exec= <span style="font-weight:bold">[ &#x27;4&#x27;, &#x27;&#x27;, &#x27;4&#x27;, index: 0, input: &#x27;4&#x27;, groups: undefined ]</span></span>
+<span class="docx-code-line">comparison with match= <span style="font-weight:bold">[ &#x27;4&#x27;, &#x27;&#x27;, &#x27;4&#x27;, index: 0, input: &#x27;4&#x27;, groups: undefined ]</span></span>
+<span class="docx-code-line">----------- pattern=.6, regex=/^\s*(<span style="font-weight:bold">[+|-]</span>?)\s*(\d+\.\d*|\.\d+|\d+)\s*$/</span>
+<span class="docx-code-line">comparison with exec= <span style="font-weight:bold">[ &#x27;.6&#x27;, &#x27;&#x27;, &#x27;.6&#x27;, index: 0, input: &#x27;.6&#x27;, groups: undefined ]</span></span>
+<span class="docx-code-line">comparison with match= <span style="font-weight:bold">[ &#x27;.6&#x27;, &#x27;&#x27;, &#x27;.6&#x27;, index: 0, input: &#x27;.6&#x27;, groups: undefined ]</span></span>
+<span class="docx-code-line">----------- string=4., pattern=/^\s*(<span style="font-weight:bold">[+|-]</span>?)\s*(\d+\.\d*|\.\d+|\d+)\s*$/</span>
+<span class="docx-code-line">comparison with exec= <span style="font-weight:bold">[ &#x27;4.&#x27;, &#x27;&#x27;, &#x27;4.&#x27;, index: 0, input: &#x27;4.&#x27;, groups: undefined ]</span></span>
+<span class="docx-code-line">comparison with match= <span style="font-weight:bold">[ &#x27;4.&#x27;, &#x27;&#x27;, &#x27;4.&#x27;, index: 0, input: &#x27;4.&#x27;, groups: undefined ]</span></span>
+<span class="docx-code-line">----------- string= + 4, pattern=/^\s*(<span style="font-weight:bold">[+|-]</span>?)\s*(\d+\.\d*|\.\d+|\d+)\s*$/</span>
+<span class="docx-code-line">comparison with exec= <span style="font-weight:bold">[ &#x27; + 4&#x27;, &#x27;+&#x27;, &#x27;4&#x27;, index: 0, input: &#x27; + 4&#x27;, groups: undefined ]</span></span>
+<span class="docx-code-line">comparison with match= <span style="font-weight:bold">[ &#x27; + 4&#x27;, &#x27;+&#x27;, &#x27;4&#x27;, index: 0, input: &#x27; + 4&#x27;, groups: undefined ]</span></span>
 </code></pre></div>
 
-<p>Los <strong>[regexp.exec]</strong> y <strong>[string.match]</strong> métodos devuelven los mismos resultados:</p>
+<p><span>Los </span><b>&#91;regexp.exec&#93; </b><span>y </span><b>&#91;string.match&#93; </b><span>métodos devuelven los mismos resultados:</span></p>
 <ul>
-  <li><b>[null] </b>si no hay coincidencias entre la cadena y su patrón;
-  </li>
-  <li>una matriz t, si hay una coincidencia con:
-    <ul>
-      <li>t<b>[0]</b>: la cadena que coincide con el patrón;
-      </li>
-      <li>t<b>[1]</b>: la cadena que coincide con el primer paréntesis del patrón;
-      </li>
-      <li>t<b>[2]</b>: la cadena que coincide con el segundo paréntesis del patrón;
-      </li>
-      <li>...
-      </li>
-      <li>t<b>[input]</b>: la cadena completa en la que se ha buscado el patrón;
-      </li>
-    </ul>
-  </li>
+<li><b>&#91;null&#93; </b><span>si no hay coincidencias entre la cadena y su patrón;</span></li>
+<li><span>una matriz t, si hay una coincidencia con:</span><ul>
+<li><span>t</span><b>&#91;0&#93;</b><span>: la cadena que coincide con el patrón;</span></li>
+<li><span>t</span><b>&#91;1&#93;</b><span>: la cadena que coincide con el primer paréntesis del patrón;</span></li>
+<li><span>t</span><b>&#91;2&#93;</b><span>: la cadena que coincide con el segundo paréntesis del patrón;</span></li>
+<li><span>...</span></li>
+<li><span>t</span><b>&#91;input&#93;</b><span>: la cadena completa en la que se ha buscado el patrón;</span></li>
+</ul>
+</li>
 </ul>
 
-<p><a id="refheadingtoc259301196815120"></a></p>
-<h2 id="72-script-regexp-02">7.2. script [regexp-02]</h2>
-<p>A veces no quieres extraer elementos de la cadena probada, sino que sólo quieres saber si coincide con el patrón:</p>
-<div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-python">
-<span class="odt-code-line">1. <span style="color:#a31515">&#x27;use strict&#x27;</span><span style="color:#000000">;</span></span>
-<span class="odt-code-line">2. </span>
-<span class="odt-code-line">3. /// regular expressions in JavaScript</span>
-<span class="odt-code-line">4. // extract the different fields from a string</span>
-<span class="odt-code-line">5. // the pattern: a sequence of digits surrounded by any characters</span>
-<span class="odt-code-line">6. // we only want to extract the sequence of digits</span>
-<span class="odt-code-line">7. <span style="color:#0000ff">let </span><span style="color:#000000">pattern = </span><span style="color:#a31515">/\d+/</span><span style="color:#000000">;</span></span>
-<span class="odt-code-line">8. <span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;Type of a regular expression: &quot;</span><span style="color:#000000">, </span><span style="color:#0000ff">typeof </span><span style="color:#000000">(pattern));</span></span>
-<span class="odt-code-line">9. // compare the string to the pattern</span>
-<span class="odt-code-line">10. <span style="color:#000000">comparePatternToString(pattern, </span><span style="color:#a31515">&quot;xyz1234abcd&quot;</span><span style="color:#000000">);</span></span>
-<span class="odt-code-line">11. <span style="color:#000000">comparePatternToString(pattern, </span><span style="color:#a31515">&quot;12 34&quot;</span><span style="color:#000000">);</span></span>
-<span class="odt-code-line">12. <span style="color:#000000">comparePatternToString(pattern, </span><span style="color:#a31515">&quot;abcd&quot;</span><span style="color:#000000">);</span></span>
-<span class="odt-code-line">13. </span>
-<span class="odt-code-line">14. // the pattern: a sequence of digits surrounded by arbitrary characters</span>
-<span class="odt-code-line">15. // We want the sequence of digits as well as the fields that follow and precede it</span>
-<span class="odt-code-line">16. <span style="color:#000000">pattern = </span><span style="color:#a31515">/^.*?\d+.*?$/</span><span style="color:#000000">;</span></span>
-<span class="odt-code-line">17. // we compare the string to the pattern</span>
-<span class="odt-code-line">18. <span style="color:#000000">comparePatternToString(pattern, </span><span style="color:#a31515">&quot;xyz1234abcd&quot;</span><span style="color:#000000">);</span></span>
-<span class="odt-code-line">19. <span style="color:#000000">comparePatternToString(pattern, </span><span style="color:#a31515">&quot;12 34&quot;</span><span style="color:#000000">);</span></span>
-<span class="odt-code-line">20. <span style="color:#000000">comparePatternToString(pattern, </span><span style="color:#a31515">&quot;abcd&quot;</span><span style="color:#000000">);</span></span>
-<span class="odt-code-line">21. </span>
-<span class="odt-code-line">22. // the pattern - a date in dd/mm/yy format</span>
-<span class="odt-code-line">23. <span style="color:#000000">pattern = </span><span style="color:#a31515">/^\s*\d\d\/\d\d\/\d\d\s*$/</span><span style="color:#000000">;</span></span>
-<span class="odt-code-line">24. <span style="color:#000000">comparePatternToString(pattern, </span><span style="color:#a31515">&quot;10/05/97&quot;</span><span style="color:#000000">);</span></span>
-<span class="odt-code-line">25. <span style="color:#000000">comparePatternToString(pattern, </span><span style="color:#a31515">&quot;  04/04/01  &quot;</span><span style="color:#000000">);</span></span>
-<span class="odt-code-line">26. <span style="color:#000000">comparePatternToString(pattern, </span><span style="color:#a31515">&quot;5/1/01&quot;</span><span style="color:#000000">);</span></span>
-<span class="odt-code-line">27. </span>
-<span class="odt-code-line">28. // the pattern - a decimal number</span>
-<span class="odt-code-line">29. <span style="color:#000000">pattern = </span><span style="color:#a31515">/^\s*</span><span style="font-weight:bold"><span style="color:#a31515">[+|-]</span></span><span style="color:#a31515">?\s*\d+\.\d*|\.\d+|\d+\s*$/</span><span style="color:#000000">;</span></span>
-<span class="odt-code-line">30. <span style="color:#000000">comparePatternToString(pattern, </span><span style="color:#a31515">&quot;187.8&quot;</span><span style="color:#000000">);</span></span>
-<span class="odt-code-line">31. <span style="color:#000000">compareModelToString(model, </span><span style="color:#a31515">&quot;-0.6&quot;</span><span style="color:#000000">);</span></span>
-<span class="odt-code-line">32. <span style="color:#000000">compareModelToString(model, </span><span style="color:#a31515">&quot;4&quot;</span><span style="color:#000000">);</span></span>
-<span class="odt-code-line">33. <span style="color:#000000">compareModelToString(model, </span><span style="color:#a31515">&quot;.6&quot;</span><span style="color:#000000">);</span></span>
-<span class="odt-code-line">34. <span style="color:#000000">compareModelToString(model, </span><span style="color:#a31515">&quot;4.&quot;</span><span style="color:#000000">);</span></span>
-<span class="odt-code-line">35. <span style="color:#000000">compareModelToString(model, </span><span style="color:#a31515">&quot; + 4&quot;</span><span style="color:#000000">);</span></span>
-<span class="odt-code-line">36. </span>
-<span class="odt-code-line">37. // --------------------------------------------------------------------------</span>
-<span class="odt-code-line">38. <span style="color:#0000ff">function </span><span style="color:#000000">comparePatternToString(pattern, string) {</span></span>
-<span class="odt-code-line">39. <span style="color:#000000">  </span><span style="color:#008000">// test</span></span>
-<span class="odt-code-line">40. <span style="color:#000000">  </span><span style="color:#0000ff">const </span><span style="color:#000000">matches = pattern.test(string);</span></span>
-<span class="odt-code-line">41. <span style="color:#000000">  </span><span style="color:#008000">// compare the string </span><span style="font-weight:bold"><span style="color:#008000">[string] </span></span><span style="color:#008000">to the pattern </span><span style="font-weight:bold"><span style="color:#008000">[pattern]</span></span></span>
-<span class="odt-code-line">42. <span style="color:#000000">  console.log(</span><span style="color:#a31515">`----------- </span><span style="color:#0000ff">string=${</span><span style="color:#000000">string</span><span style="color:#0000ff">}</span><span style="color:#a31515">, </span><span style="color:#0000ff">pattern=${</span><span style="color:#000000">pattern</span><span style="color:#0000ff">}</span><span style="color:#a31515">, </span><span style="color:#0000ff">matches=${</span><span style="color:#000000">matches</span><span style="color:#0000ff">}</span><span style="color:#a31515">`</span><span style="color:#000000">);</span></span>
-<span class="odt-code-line">43. }</span>
+<h2 id="72-script-regexp-02">7.2. <a id="refheadingtoc259301196815120"></a><span>script &#91;regexp-02&#93;</span></h2>
+<p><span>A veces no quieres extraer elementos de la cadena probada, sino que sólo quieres saber si coincide con el patrón:</span></p>
+<div class="docx-code-rich" data-linenums="true" style="counter-reset: docxline 0;"><pre><code class="language-python">
+<span class="docx-code-line"><span style="color:#A31515">&#x27;use strict&#x27;</span><span style="color:#000000">;</span></span>
+<span class="docx-code-line"></span>
+<span class="docx-code-line">/// regular expressions in JavaScript</span>
+<span class="docx-code-line">// extract the different fields from a string</span>
+<span class="docx-code-line">// the pattern: a sequence of digits surrounded by any characters</span>
+<span class="docx-code-line">// we only want to extract the sequence of digits</span>
+<span class="docx-code-line"><span style="color:#0000FF">let </span><span style="color:#000000">pattern = </span><span style="color:#A31515">/\d+/</span><span style="color:#000000">;</span></span>
+<span class="docx-code-line"><span style="color:#000000">console.log(</span><span style="color:#A31515">&quot;Type of a regular expression: &quot;</span><span style="color:#000000">, </span><span style="color:#0000FF">typeof </span><span style="color:#000000">(pattern));</span></span>
+<span class="docx-code-line">// compare the string to the pattern</span>
+<span class="docx-code-line"><span style="color:#000000">comparePatternToString(pattern, </span><span style="color:#A31515">&quot;xyz1234abcd&quot;</span><span style="color:#000000">);</span></span>
+<span class="docx-code-line"><span style="color:#000000">comparePatternToString(pattern, </span><span style="color:#A31515">&quot;12 34&quot;</span><span style="color:#000000">);</span></span>
+<span class="docx-code-line"><span style="color:#000000">comparePatternToString(pattern, </span><span style="color:#A31515">&quot;abcd&quot;</span><span style="color:#000000">);</span></span>
+<span class="docx-code-line"></span>
+<span class="docx-code-line">// the pattern: a sequence of digits surrounded by arbitrary characters</span>
+<span class="docx-code-line">// We want the sequence of digits as well as the fields that follow and precede it</span>
+<span class="docx-code-line"><span style="color:#000000">pattern = </span><span style="color:#A31515">/^.*?\d+.*?$/</span><span style="color:#000000">;</span></span>
+<span class="docx-code-line">// we compare the string to the pattern</span>
+<span class="docx-code-line"><span style="color:#000000">comparePatternToString(pattern, </span><span style="color:#A31515">&quot;xyz1234abcd&quot;</span><span style="color:#000000">);</span></span>
+<span class="docx-code-line"><span style="color:#000000">comparePatternToString(pattern, </span><span style="color:#A31515">&quot;12 34&quot;</span><span style="color:#000000">);</span></span>
+<span class="docx-code-line"><span style="color:#000000">comparePatternToString(pattern, </span><span style="color:#A31515">&quot;abcd&quot;</span><span style="color:#000000">);</span></span>
+<span class="docx-code-line"></span>
+<span class="docx-code-line">// the pattern - a date in dd/mm/yy format</span>
+<span class="docx-code-line"><span style="color:#000000">pattern = </span><span style="color:#A31515">/^\s*\d\d\/\d\d\/\d\d\s*$/</span><span style="color:#000000">;</span></span>
+<span class="docx-code-line"><span style="color:#000000">comparePatternToString(pattern, </span><span style="color:#A31515">&quot;10/05/97&quot;</span><span style="color:#000000">);</span></span>
+<span class="docx-code-line"><span style="color:#000000">comparePatternToString(pattern, </span><span style="color:#A31515">&quot;  04/04/01  &quot;</span><span style="color:#000000">);</span></span>
+<span class="docx-code-line"><span style="color:#000000">comparePatternToString(pattern, </span><span style="color:#A31515">&quot;5/1/01&quot;</span><span style="color:#000000">);</span></span>
+<span class="docx-code-line"></span>
+<span class="docx-code-line">// the pattern - a decimal number</span>
+<span class="docx-code-line"><span style="color:#000000">pattern = </span><span style="color:#A31515">/^\s*</span><span style="font-weight:bold;color:#A31515">[+|-]</span><span style="color:#A31515">?\s*\d+\.\d*|\.\d+|\d+\s*$/</span><span style="color:#000000">;</span></span>
+<span class="docx-code-line"><span style="color:#000000">comparePatternToString(pattern, </span><span style="color:#A31515">&quot;187.8&quot;</span><span style="color:#000000">);</span></span>
+<span class="docx-code-line"><span style="color:#000000">compareModelToString(model, </span><span style="color:#A31515">&quot;-0.6&quot;</span><span style="color:#000000">);</span></span>
+<span class="docx-code-line"><span style="color:#000000">compareModelToString(model, </span><span style="color:#A31515">&quot;4&quot;</span><span style="color:#000000">);</span></span>
+<span class="docx-code-line"><span style="color:#000000">compareModelToString(model, </span><span style="color:#A31515">&quot;.6&quot;</span><span style="color:#000000">);</span></span>
+<span class="docx-code-line"><span style="color:#000000">compareModelToString(model, </span><span style="color:#A31515">&quot;4.&quot;</span><span style="color:#000000">);</span></span>
+<span class="docx-code-line"><span style="color:#000000">compareModelToString(model, </span><span style="color:#A31515">&quot; + 4&quot;</span><span style="color:#000000">);</span></span>
+<span class="docx-code-line"></span>
+<span class="docx-code-line">// --------------------------------------------------------------------------</span>
+<span class="docx-code-line"><span style="color:#0000FF">function </span><span style="color:#000000">comparePatternToString(pattern, string) {</span></span>
+<span class="docx-code-line"><span style="color:#000000">  </span><span style="color:#008000">// test</span></span>
+<span class="docx-code-line"><span style="color:#000000">  </span><span style="color:#0000FF">const </span><span style="color:#000000">matches = pattern.test(string);</span></span>
+<span class="docx-code-line"><span style="color:#000000">  </span><span style="color:#008000">// compare the string </span><span style="font-weight:bold;color:#008000">[string] </span><span style="color:#008000">to the pattern </span><span style="font-weight:bold;color:#008000">[pattern]</span></span>
+<span class="docx-code-line"><span style="color:#000000">  console.log(</span><span style="color:#A31515">`----------- </span><span style="color:#0000FF">string=${</span><span style="color:#000000">string</span><span style="color:#0000FF">}</span><span style="color:#A31515">, </span><span style="color:#0000FF">pattern=${</span><span style="color:#000000">pattern</span><span style="color:#0000FF">}</span><span style="color:#A31515">, </span><span style="color:#0000FF">matches=${</span><span style="color:#000000">matches</span><span style="color:#0000FF">}</span><span style="color:#A31515">`</span><span style="color:#000000">);</span></span>
+<span class="docx-code-line">}</span>
 </code></pre></div>
 
-<p><strong>Comentarios</strong></p>
+<p><b>Comentarios</b></p>
 <ul>
-  <li><b>[regexp-02] </b>utiliza el código de <b>[regexp-01] </b>con las siguientes diferencias:
-    <ul>
-      <li>no queremos extraer elementos de la cadena analizada. Por lo tanto, hemos eliminado los paréntesis de las expresiones regulares utilizadas;
-      </li>
-      <li>Línea 40: Utilizamos el <b>[Regexp.test] </b>método para determinar si una cadena coincide con una expresión regular;
-      </li>
-    </ul>
-  </li>
+<li><b>&#91;regexp-02&#93; </b><span>utiliza el código de </span><b>&#91;regexp-01&#93; </b><span>con las siguientes diferencias:</span><ul>
+<li><span>no queremos extraer elementos de la cadena analizada. Por lo tanto, hemos eliminado los paréntesis de las expresiones regulares utilizadas;</span></li>
+<li><span>Línea 40: Utilizamos el </span><b>&#91;Regexp.test&#93; </b><span>método para determinar si una cadena coincide con una expresión regular;</span></li>
+</ul>
+</li>
 </ul>
 
-<p>Los resultados de la ejecución son los siguientes:</p>
-<div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-text">
-<span class="odt-code-line">1. <span style="font-weight:bold"><span style="color:#316bcd">[Running] </span></span><span style="color:#a31515">C:\myprograms\laragon-lite\bin\nodejs\node-v10\node.exe -r esm &quot;c:\Data\st-2019\dev\es6\cours\regexp\regexp-02.js&quot;</span></span>
-<span class="odt-code-line">2. regular expression type:  object</span>
-<span class="odt-code-line">3. ----------- string=xyz1234abcd, pattern=/\d+/, match=true</span>
-<span class="odt-code-line">4. ----------- string=12 34, pattern=/\d+/, match=true</span>
-<span class="odt-code-line">5. ----------- string=abcd, pattern=/\d+/, match=false</span>
-<span class="odt-code-line">6. ----------- string=xyz1234abcd, pattern=/^.*?\d+.*?$/, matches=true</span>
-<span class="odt-code-line">7. ----------- string=12 34, pattern=/^.*?\d+.*?$/, matches=true</span>
-<span class="odt-code-line">8. ----------- string=abcd, pattern=/^.*?\d+.*?$/, matches=false</span>
-<span class="odt-code-line">9. ----------- string=10/05/97, pattern=/^\s*\d\d\/\d\d\/\d\d\s*$/, matches=true</span>
-<span class="odt-code-line">10. ----------- string=  04/04/01  , pattern=/^\s*\d\d\/\d\d\/\d\d\s*$/, matches=true</span>
-<span class="odt-code-line">11. ----------- string=5/1/01, pattern=/^\s*\d\d\/\d\d\/\d\d\s*$/, matches=false</span>
-<span class="odt-code-line">12. ----------- string=187.8, pattern=/^\s*<span style="font-weight:bold">[+|-]</span>?\s*\d+\.\d*|\.\d+|\d+\s*$/, matches=true</span>
-<span class="odt-code-line">13. ----------- string=-0.6, pattern=/^\s*<span style="font-weight:bold">[+|-]</span>?\s*\d+\.\d*|\.\d+|\d+\s*$/, matches=true</span>
-<span class="odt-code-line">14. ----------- string=4, pattern=/^\s*<span style="font-weight:bold">[+|-]</span>?\s*\d+\.\d*|\.\d+|\d+\s*$/, matches=true</span>
-<span class="odt-code-line">15. ----------- string=.6, pattern=/^\s*<span style="font-weight:bold">[+|-]</span>?\s*\d+\.\d*|\.\d+|\d+\s*$/, matches=true</span>
-<span class="odt-code-line">16. ----------- string=4., pattern=/^\s*<span style="font-weight:bold">[+|-]</span>?\s*\d+\.\d*|\.\d+|\d+\s*$/, matches=true</span>
-<span class="odt-code-line">17. ----------- string= + 4, pattern=/^\s*<span style="font-weight:bold">[+|-]</span>?\s*\d+\.\d*|\.\d+|\d+\s*$/, matches=true</span>
-<span class="odt-code-line">18. </span>
-<span class="odt-code-line">19. <span style="font-weight:bold"><span style="color:#316bcd">[Done] </span></span><span style="color:#a31515">exited with </span><span style="color:#800080">code=0 </span><span style="color:#a31515">in</span><span style="color:#09885a"> 0.269 </span><span style="color:#a31515">seconds</span></span>
+<p><span>Los resultados de la ejecución son los siguientes:</span></p>
+<div class="docx-code-rich" data-linenums="true" style="counter-reset: docxline 0;"><pre><code class="language-text">
+<span class="docx-code-line"><span style="font-weight:bold;color:#316BCD">[Running] </span><span style="color:#A31515">C:\myprograms\laragon-lite\bin\nodejs\node-v10\node.exe -r esm &quot;c:\Data\st-2019\dev\es6\cours\regexp\regexp-02.js&quot;</span></span>
+<span class="docx-code-line">regular expression type:  object</span>
+<span class="docx-code-line">----------- string=xyz1234abcd, pattern=/\d+/, match=true</span>
+<span class="docx-code-line">----------- string=12 34, pattern=/\d+/, match=true</span>
+<span class="docx-code-line">----------- string=abcd, pattern=/\d+/, match=false</span>
+<span class="docx-code-line">----------- string=xyz1234abcd, pattern=/^.*?\d+.*?$/, matches=true</span>
+<span class="docx-code-line">----------- string=12 34, pattern=/^.*?\d+.*?$/, matches=true</span>
+<span class="docx-code-line">----------- string=abcd, pattern=/^.*?\d+.*?$/, matches=false</span>
+<span class="docx-code-line">----------- string=10/05/97, pattern=/^\s*\d\d\/\d\d\/\d\d\s*$/, matches=true</span>
+<span class="docx-code-line">----------- string=  04/04/01  , pattern=/^\s*\d\d\/\d\d\/\d\d\s*$/, matches=true</span>
+<span class="docx-code-line">----------- string=5/1/01, pattern=/^\s*\d\d\/\d\d\/\d\d\s*$/, matches=false</span>
+<span class="docx-code-line">----------- string=187.8, pattern=/^\s*<span style="font-weight:bold">[+|-]</span>?\s*\d+\.\d*|\.\d+|\d+\s*$/, matches=true</span>
+<span class="docx-code-line">----------- string=-0.6, pattern=/^\s*<span style="font-weight:bold">[+|-]</span>?\s*\d+\.\d*|\.\d+|\d+\s*$/, matches=true</span>
+<span class="docx-code-line">----------- string=4, pattern=/^\s*<span style="font-weight:bold">[+|-]</span>?\s*\d+\.\d*|\.\d+|\d+\s*$/, matches=true</span>
+<span class="docx-code-line">----------- string=.6, pattern=/^\s*<span style="font-weight:bold">[+|-]</span>?\s*\d+\.\d*|\.\d+|\d+\s*$/, matches=true</span>
+<span class="docx-code-line">----------- string=4., pattern=/^\s*<span style="font-weight:bold">[+|-]</span>?\s*\d+\.\d*|\.\d+|\d+\s*$/, matches=true</span>
+<span class="docx-code-line">----------- string= + 4, pattern=/^\s*<span style="font-weight:bold">[+|-]</span>?\s*\d+\.\d*|\.\d+|\d+\s*$/, matches=true</span>
+<span class="docx-code-line"></span>
+<span class="docx-code-line"><span style="font-weight:bold;color:#316BCD">[Done] </span><span style="color:#A31515">exited with </span><span style="color:#800080">code=0 </span><span style="color:#A31515">in</span><span style="color:#09885A"> 0.269 </span><span style="color:#A31515">seconds</span></span>
 </code></pre></div>
 
 

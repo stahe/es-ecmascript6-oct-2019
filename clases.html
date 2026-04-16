@@ -690,7 +690,7 @@
   <a href="#131-script-class-00" class="md-nav__link">
     <span class="md-ellipsis">
       
-        13.1. script [class-00]
+        13.1. script &#91;class-00&#93;
       
     </span>
   </a>
@@ -701,7 +701,7 @@
   <a href="#132-script-class-01" class="md-nav__link">
     <span class="md-ellipsis">
       
-        13.2. script [class-01]
+        13.2. script &#91;class-01&#93;
       
     </span>
   </a>
@@ -712,7 +712,7 @@
   <a href="#133-script-class-02" class="md-nav__link">
     <span class="md-ellipsis">
       
-        13.3. script [class-02]
+        13.3. script &#91;class-02&#93;
       
     </span>
   </a>
@@ -723,7 +723,7 @@
   <a href="#134-script-class-03" class="md-nav__link">
     <span class="md-ellipsis">
       
-        13.4. script [class-03]
+        13.4. script &#91;class-03&#93;
       
     </span>
   </a>
@@ -734,7 +734,7 @@
   <a href="#135-script-class-04" class="md-nav__link">
     <span class="md-ellipsis">
       
-        13.5. script [class-04]
+        13.5. script &#91;class-04&#93;
       
     </span>
   </a>
@@ -796,377 +796,347 @@
   
 
 
-<p><a id="refheadingtoc225406640539168"></a></p>
-<h1 id="13-clases">13. Clases</h1>
-<p><img src="images/10000000000000EF000001677C3D49DE.png" style="width:2.859cm;height:4.29cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000000EF000001677C3D49DE.png" /></p>
-<p>Aquí introducimos las clases de ECMAScript 6. En primer lugar, mostramos que las funciones ya se pueden utilizar como clases.</p>
-<p><a id="refheadingtoc225408640539168"></a></p>
-<h2 id="131-script-class-00">13.1. script [class-00]</h2>
-<p>El siguiente script demuestra un uso inusual de las funciones. Aquí, se utilizan como objetos.</p>
-<div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
-<span class="odt-code-line">1. <span style="color:#a31515">&#x27;use strict&#x27;</span><span style="color:#000000">;</span></span>
-<span class="odt-code-line">2. // a function can be used as an object</span>
-<span class="odt-code-line">3. </span>
-<span class="odt-code-line">4. // an empty shell</span>
-<span class="odt-code-line">5. <span style="color:#0000ff">function </span><span style="color:#000000">f() {</span></span>
-<span class="odt-code-line">6. </span>
-<span class="odt-code-line">7. }</span>
-<span class="odt-code-line">8. // to which properties are assigned from the outside</span>
-<span class="odt-code-line">9. <span style="color:#000000">f.prop1 = </span><span style="color:#a31515">&quot;val1&quot;</span><span style="color:#000000">;</span></span>
-<span class="odt-code-line">10. <span style="color:#000000">f.show = </span><span style="color:#0000ff">function </span><span style="color:#000000">() {</span></span>
-<span class="odt-code-line">11. <span style="color:#000000">  console.log(</span><span style="color:#0000ff">this</span><span style="color:#000000">.prop1);</span></span>
-<span class="odt-code-line">12. }</span>
-<span class="odt-code-line">13. // using f</span>
-<span class="odt-code-line">14. f.show();</span>
-<span class="odt-code-line">15. </span>
-<span class="odt-code-line">16. // a function g acting as a class</span>
-<span class="odt-code-line">17. <span style="color:#0000ff">function </span><span style="color:#000000">g() {</span></span>
-<span class="odt-code-line">18. <span style="color:#000000">  </span><span style="color:#0000ff">this</span><span style="color:#000000">.prop2 = </span><span style="color:#a31515">&quot;val2&quot;</span><span style="color:#000000">;</span></span>
-<span class="odt-code-line">19. <span style="color:#000000">  </span><span style="color:#0000ff">this</span><span style="color:#000000">.show = </span><span style="color:#0000ff">function </span><span style="color:#000000">() {</span></span>
-<span class="odt-code-line">20. <span style="color:#000000">    console.log(</span><span style="color:#0000ff">this</span><span style="color:#000000">.prop2);</span></span>
-<span class="odt-code-line">21.   }</span>
-<span class="odt-code-line">22. }</span>
-<span class="odt-code-line">23. // Instantiate the function with <span style="font-weight:bold">[new]</span></span>
-<span class="odt-code-line">24. <span style="color:#0000ff">new </span><span style="color:#000000">g().show();</span></span>
+<h1 id="13-clases">13. <a id="refheadingtoc225406640539168"></a><span>Clases</span></h1>
+<p><img src="images/image105.png" class="docx-zoomable" style="width:108px;height:162px;" alt="Image" /></p>
+<p><span>Aquí introducimos las clases de ECMAScript 6. En primer lugar, mostramos que las funciones ya se pueden utilizar como clases.</span></p>
+<h2 id="131-script-class-00">13.1. <a id="refheadingtoc225408640539168"></a><span>script &#91;class-00&#93;</span></h2>
+<p><span>El siguiente script demuestra un uso inusual de las funciones. Aquí, se utilizan como objetos.</span></p>
+<div class="docx-code-rich" data-linenums="true" style="counter-reset: docxline 0;"><pre><code class="language-csharp">
+<span class="docx-code-line"><span style="color:#A31515">&#x27;use strict&#x27;</span><span style="color:#000000">;</span></span>
+<span class="docx-code-line">// a function can be used as an object</span>
+<span class="docx-code-line"></span>
+<span class="docx-code-line">// an empty shell</span>
+<span class="docx-code-line"><span style="color:#0000FF">function </span><span style="color:#000000">f() {</span></span>
+<span class="docx-code-line"></span>
+<span class="docx-code-line">}</span>
+<span class="docx-code-line">// to which properties are assigned from the outside</span>
+<span class="docx-code-line"><span style="color:#000000">f.prop1 = </span><span style="color:#A31515">&quot;val1&quot;</span><span style="color:#000000">;</span></span>
+<span class="docx-code-line"><span style="color:#000000">f.show = </span><span style="color:#0000FF">function </span><span style="color:#000000">() {</span></span>
+<span class="docx-code-line"><span style="color:#000000">  console.log(</span><span style="color:#0000FF">this</span><span style="color:#000000">.prop1);</span></span>
+<span class="docx-code-line">}</span>
+<span class="docx-code-line">// using f</span>
+<span class="docx-code-line">f.show();</span>
+<span class="docx-code-line"></span>
+<span class="docx-code-line">// a function g acting as a class</span>
+<span class="docx-code-line"><span style="color:#0000FF">function </span><span style="color:#000000">g() {</span></span>
+<span class="docx-code-line"><span style="color:#000000">  </span><span style="color:#0000FF">this</span><span style="color:#000000">.prop2 = </span><span style="color:#A31515">&quot;val2&quot;</span><span style="color:#000000">;</span></span>
+<span class="docx-code-line"><span style="color:#000000">  </span><span style="color:#0000FF">this</span><span style="color:#000000">.show = </span><span style="color:#0000FF">function </span><span style="color:#000000">() {</span></span>
+<span class="docx-code-line"><span style="color:#000000">    console.log(</span><span style="color:#0000FF">this</span><span style="color:#000000">.prop2);</span></span>
+<span class="docx-code-line">  }</span>
+<span class="docx-code-line">}</span>
+<span class="docx-code-line">// Instantiate the function with <span style="font-weight:bold">[new]</span></span>
+<span class="docx-code-line"><span style="color:#0000FF">new </span><span style="color:#000000">g().show();</span></span>
 </code></pre></div>
 
-<p><strong>Comentarios</strong></p>
+<p><b>Comentarios</b></p>
 <ul>
-  <li>líneas 5-7: el cuerpo de la función f no define ninguna propiedad;
-  </li>
-  <li>líneas 9-12: se asignan propiedades a la función f desde fuera;
-  </li>
-  <li>línea 14: uso de la función (objeto) f. Observa que no escribimos <b>[f()] </b>sino simplemente <b>[f]</b>. Esta es la notación para un objeto;
-  </li>
-  <li>líneas 17-22: definimos una función <b>[g] </b>como si fuera una clase con propiedades y métodos;
-  </li>
-  <li>línea 24: la función <b>[g] </b>es instanciada por <b>[new g()]</b>;
-  </li>
+<li><span>líneas 5-7: el cuerpo de la función f no define ninguna propiedad;</span></li>
+<li><span>líneas 9-12: se asignan propiedades a la función f desde fuera;</span></li>
+<li><span>línea 14: uso de la función (objeto) f. Observa que no escribimos </span><b>&#91;f()&#93; </b><span>sino simplemente </span><b>&#91;f&#93;</b><span>. Esta es la notación para un objeto;</span></li>
+<li><span>líneas 17-22: definimos una función </span><b>&#91;g&#93; </b><span>como si fuera una clase con propiedades y métodos;</span></li>
+<li><span>línea 24: la función </span><b>&#91;g&#93; </b><span>es instanciada por </span><b>&#91;new g()&#93;</b><span>;</span></li>
 </ul>
 
-<p><strong>Resultados de la ejecución</strong></p>
-<div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-text">
-<span class="odt-code-line">1. <span style="font-weight:bold"><span style="color:#316bcd">[Running] </span></span><span style="color:#a31515">C:\myprograms\laragon-lite\bin\nodejs\node-v10\node.exe -r esm &quot;c:\Data\st-2019\dev\es6\javascript\classes\class-00.js&quot;</span></span>
-<span class="odt-code-line">2. val1</span>
-<span class="odt-code-line">3. val2</span>
+<p><b>Resultados de la ejecución</b></p>
+<div class="docx-code-rich" data-linenums="true" style="counter-reset: docxline 0;"><pre><code class="language-text">
+<span class="docx-code-line"><span style="font-weight:bold;color:#316BCD">[Running] </span><span style="color:#A31515">C:\myprograms\laragon-lite\bin\nodejs\node-v10\node.exe -r esm &quot;c:\Data\st-2019\dev\es6\javascript\classes\class-00.js&quot;</span></span>
+<span class="docx-code-line">val1</span>
+<span class="docx-code-line">val2</span>
 </code></pre></div>
 
-<p>ES6 introdujo el concepto de clases, que ahora nos permite evitar el uso de funciones para crear clases.</p>
-<p><a id="refheadingtoc225410640539168"></a></p>
-<h2 id="132-script-class-01">13.2. script [class-01]</h2>
-<p>El <strong>[class-01]</strong> script presenta una <strong>[Persona]</strong> class:</p>
-<div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
-<span class="odt-code-line">1. // class</span>
-<span class="odt-code-line">2. <span style="color:#0000ff">class </span><span style="color:#2b91af">Person </span><span style="color:#000000">{</span></span>
-<span class="odt-code-line">3. </span>
-<span class="odt-code-line">4. <span style="color:#000000">  </span><span style="color:#008000">// constructor</span></span>
-<span class="odt-code-line">5. <span style="color:#000000">  </span><span style="color:#0000ff">constructor</span><span style="color:#000000">(lastName, firstName, age) {</span></span>
-<span class="odt-code-line">6. <span style="color:#000000">    </span><span style="color:#0000ff">this</span><span style="color:#000000">.lastName = lastName;</span></span>
-<span class="odt-code-line">7. <span style="color:#000000">    </span><span style="color:#0000ff">this</span><span style="color:#000000">.firstName = firstName;</span></span>
-<span class="odt-code-line">8. <span style="color:#000000">    </span><span style="color:#0000ff">this</span><span style="color:#000000">.age = age;</span></span>
-<span class="odt-code-line">9.   }</span>
-<span class="odt-code-line">10. </span>
-<span class="odt-code-line">11. <span style="color:#000000">  </span><span style="color:#008000">// getters and setters</span></span>
-<span class="odt-code-line">12. <span style="color:#000000">  </span><span style="color:#0000ff">get </span><span style="color:#000000">name() {</span></span>
-<span class="odt-code-line">13. <span style="color:#000000">    </span><span style="color:#0000ff">return this</span><span style="color:#000000">._name;</span></span>
-<span class="odt-code-line">14.   }</span>
-<span class="odt-code-line">15. <span style="color:#000000">  </span><span style="color:#0000ff">set </span><span style="color:#000000">name(value) {</span></span>
-<span class="odt-code-line">16. <span style="color:#000000">    </span><span style="color:#0000ff">this</span><span style="color:#000000">._name = value;</span></span>
-<span class="odt-code-line">17.   }</span>
-<span class="odt-code-line">18. </span>
-<span class="odt-code-line">19. <span style="color:#000000">  </span><span style="color:#0000ff">get </span><span style="color:#000000">firstName() {</span></span>
-<span class="odt-code-line">20. <span style="color:#000000">    </span><span style="color:#0000ff">return this</span><span style="color:#000000">._first_name;</span></span>
-<span class="odt-code-line">21.   }</span>
-<span class="odt-code-line">22. <span style="color:#000000">  </span><span style="color:#0000ff">set </span><span style="color:#000000">firstName(value) {</span></span>
-<span class="odt-code-line">23. <span style="color:#000000">    </span><span style="color:#0000ff">this</span><span style="color:#000000">._first_name = value;</span></span>
-<span class="odt-code-line">24.   }</span>
-<span class="odt-code-line">25. </span>
-<span class="odt-code-line">26. <span style="color:#000000">  </span><span style="color:#0000ff">get </span><span style="color:#000000">age() {</span></span>
-<span class="odt-code-line">27. <span style="color:#000000">    </span><span style="color:#0000ff">return this</span><span style="color:#000000">._age;</span></span>
-<span class="odt-code-line">28.   }</span>
-<span class="odt-code-line">29. <span style="color:#000000">  </span><span style="color:#0000ff">set </span><span style="color:#000000">age(value) {</span></span>
-<span class="odt-code-line">30. <span style="color:#000000">    </span><span style="color:#0000ff">this</span><span style="color:#000000">._age = value;</span></span>
-<span class="odt-code-line">31.   }</span>
-<span class="odt-code-line">32. </span>
-<span class="odt-code-line">33. <span style="color:#000000">  </span><span style="color:#008000">// toString as JSON</span></span>
-<span class="odt-code-line">34.   toString() {</span>
-<span class="odt-code-line">35. <span style="color:#000000">    </span><span style="color:#0000ff">return </span><span style="color:#000000">JSON.stringify(</span><span style="color:#0000ff">this</span><span style="color:#000000">);</span></span>
-<span class="odt-code-line">36.   }</span>
-<span class="odt-code-line">37. }</span>
-<span class="odt-code-line">38. </span>
-<span class="odt-code-line">39. // Call the class</span>
-<span class="odt-code-line">40. <span style="color:#0000ff">function </span><span style="color:#000000">main() {</span></span>
-<span class="odt-code-line">41. <span style="color:#000000">  </span><span style="color:#0000ff">const </span><span style="color:#000000">person = </span><span style="color:#0000ff">new </span><span style="color:#000000">Person(</span><span style="color:#a31515">&quot;Poirot&quot;</span><span style="color:#000000">, </span><span style="color:#a31515">&quot;Hercule&quot;</span><span style="color:#000000">, 66);</span></span>
-<span class="odt-code-line">42. <span style="color:#000000">  console.log(</span><span style="color:#a31515">&quot;person=&quot;</span><span style="color:#000000">, person.toString(), </span><span style="color:#0000ff">typeof</span><span style="color:#000000">(person), person </span><span style="color:#0000ff">instanceof</span><span style="color:#000000">(Person));</span></span>
-<span class="odt-code-line">43. }</span>
-<span class="odt-code-line">44. </span>
-<span class="odt-code-line">45. // call to main</span>
-<span class="odt-code-line">46. main();</span>
+<p><span>ES6 introdujo el concepto de clases, que ahora nos permite evitar el uso de funciones para crear clases.</span></p>
+<h2 id="132-script-class-01">13.2. <a id="refheadingtoc225410640539168"></a><span>script &#91;class-01&#93;</span></h2>
+<p><span>El </span><b>&#91;class-01&#93; </b><span>script presenta una </span><b>&#91;Persona&#93; </b><span>class:</span></p>
+<div class="docx-code-rich" data-linenums="true" style="counter-reset: docxline 0;"><pre><code class="language-javascript">
+<span class="docx-code-line">// class</span>
+<span class="docx-code-line"><span style="color:#0000FF">class </span><span style="color:#2B91AF">Person </span><span style="color:#000000">{</span></span>
+<span class="docx-code-line"></span>
+<span class="docx-code-line"><span style="color:#000000">  </span><span style="color:#008000">// constructor</span></span>
+<span class="docx-code-line"><span style="color:#000000">  </span><span style="color:#0000FF">constructor</span><span style="color:#000000">(lastName, firstName, age) {</span></span>
+<span class="docx-code-line"><span style="color:#000000">    </span><span style="color:#0000FF">this</span><span style="color:#000000">.lastName = lastName;</span></span>
+<span class="docx-code-line"><span style="color:#000000">    </span><span style="color:#0000FF">this</span><span style="color:#000000">.firstName = firstName;</span></span>
+<span class="docx-code-line"><span style="color:#000000">    </span><span style="color:#0000FF">this</span><span style="color:#000000">.age = age;</span></span>
+<span class="docx-code-line">  }</span>
+<span class="docx-code-line"></span>
+<span class="docx-code-line"><span style="color:#000000">  </span><span style="color:#008000">// getters and setters</span></span>
+<span class="docx-code-line"><span style="color:#000000">  </span><span style="color:#0000FF">get </span><span style="color:#000000">name() {</span></span>
+<span class="docx-code-line"><span style="color:#000000">    </span><span style="color:#0000FF">return this</span><span style="color:#000000">._name;</span></span>
+<span class="docx-code-line">  }</span>
+<span class="docx-code-line"><span style="color:#000000">  </span><span style="color:#0000FF">set </span><span style="color:#000000">name(value) {</span></span>
+<span class="docx-code-line"><span style="color:#000000">    </span><span style="color:#0000FF">this</span><span style="color:#000000">._name = value;</span></span>
+<span class="docx-code-line">  }</span>
+<span class="docx-code-line"></span>
+<span class="docx-code-line"><span style="color:#000000">  </span><span style="color:#0000FF">get </span><span style="color:#000000">firstName() {</span></span>
+<span class="docx-code-line"><span style="color:#000000">    </span><span style="color:#0000FF">return this</span><span style="color:#000000">._first_name;</span></span>
+<span class="docx-code-line">  }</span>
+<span class="docx-code-line"><span style="color:#000000">  </span><span style="color:#0000FF">set </span><span style="color:#000000">firstName(value) {</span></span>
+<span class="docx-code-line"><span style="color:#000000">    </span><span style="color:#0000FF">this</span><span style="color:#000000">._first_name = value;</span></span>
+<span class="docx-code-line">  }</span>
+<span class="docx-code-line"></span>
+<span class="docx-code-line"><span style="color:#000000">  </span><span style="color:#0000FF">get </span><span style="color:#000000">age() {</span></span>
+<span class="docx-code-line"><span style="color:#000000">    </span><span style="color:#0000FF">return this</span><span style="color:#000000">._age;</span></span>
+<span class="docx-code-line">  }</span>
+<span class="docx-code-line"><span style="color:#000000">  </span><span style="color:#0000FF">set </span><span style="color:#000000">age(value) {</span></span>
+<span class="docx-code-line"><span style="color:#000000">    </span><span style="color:#0000FF">this</span><span style="color:#000000">._age = value;</span></span>
+<span class="docx-code-line">  }</span>
+<span class="docx-code-line"></span>
+<span class="docx-code-line"><span style="color:#000000">  </span><span style="color:#008000">// toString as JSON</span></span>
+<span class="docx-code-line">  toString() {</span>
+<span class="docx-code-line"><span style="color:#000000">    </span><span style="color:#0000FF">return </span><span style="color:#000000">JSON.stringify(</span><span style="color:#0000FF">this</span><span style="color:#000000">);</span></span>
+<span class="docx-code-line">  }</span>
+<span class="docx-code-line">}</span>
+<span class="docx-code-line"></span>
+<span class="docx-code-line">// Call the class</span>
+<span class="docx-code-line"><span style="color:#0000FF">function </span><span style="color:#000000">main() {</span></span>
+<span class="docx-code-line"><span style="color:#000000">  </span><span style="color:#0000FF">const </span><span style="color:#000000">person = </span><span style="color:#0000FF">new </span><span style="color:#000000">Person(</span><span style="color:#A31515">&quot;Poirot&quot;</span><span style="color:#000000">, </span><span style="color:#A31515">&quot;Hercule&quot;</span><span style="color:#000000">, 66);</span></span>
+<span class="docx-code-line"><span style="color:#000000">  console.log(</span><span style="color:#A31515">&quot;person=&quot;</span><span style="color:#000000">, person.toString(), </span><span style="color:#0000FF">typeof</span><span style="color:#000000">(person), person </span><span style="color:#0000FF">instanceof</span><span style="color:#000000">(Person));</span></span>
+<span class="docx-code-line">}</span>
+<span class="docx-code-line"></span>
+<span class="docx-code-line">// call to main</span>
+<span class="docx-code-line">main();</span>
 </code></pre></div>
 
-<p><strong>Comentarios</strong></p>
+<p><b>Comentarios</b></p>
 <ul>
-  <li>línea 2: la palabra clave <b>[clase] </b>denota una clase;
-  </li>
-  <li>líneas 5-9: la palabra clave <b>[constructor] </b>denota el constructor de la clase. Puede haber como máximo uno. Se utiliza para construir e inicializar una instancia de la clase. Nótese que no hay declaración de las propiedades <b>[apellido, nombre, edad]</b>;
-  </li>
-  <li>líneas 11-36: propiedades de la clase. Aquí vemos elementos ya tratados en la sección de objetos 4, página<a href="#refheadingtoc2042093980233556"><u><span style="color: #0563c1"> 44</span></u></a>. Sólo difiere la sintaxis;
-  </li>
-  <li>línea 41: creación de un objeto de tipo <b>[Person]</b>. A partir de ahora, el objeto <b>[persona] </b>se utiliza como objeto literal. <b>[typeof (persona)] </b>evalúa a &quot;objeto&quot; y la expresión <b>[persona instanceof (Person)] </b>es verdadera. Por lo tanto, es posible determinar el tipo exacto de una instancia de clase;
-  </li>
+<li><span>línea 2: la palabra clave </span><b>&#91;clase&#93; </b><span>denota una clase;</span></li>
+<li><span>líneas 5-9: la palabra clave </span><b>&#91;constructor&#93; </b><span>denota el constructor de la clase. Puede haber como máximo uno. Se utiliza para construir e inicializar una instancia de la clase. Nótese que no hay declaración de las propiedades </span><b>&#91;apellido, nombre, edad&#93;</b><span>;</span></li>
+<li><span>líneas 11-36: propiedades de la clase. Aquí vemos elementos ya tratados en la sección de objetos 4, página</span><a href="objetos-literales.html#refheadingtoc2042093980233556"><span style="color:#0563C1"><u> 44</u></span></a><span>. Sólo difiere la sintaxis;</span></li>
+<li><span>línea 41: creación de un objeto de tipo </span><b>&#91;Person&#93;</b><span>. A partir de ahora, el objeto </span><b>&#91;persona&#93; </b><span>se utiliza como objeto literal. </span><b>&#91;typeof (persona)&#93; </b><span>evalúa a &quot;objeto&quot; y la expresión </span><b>&#91;persona instanceof (Person)&#93; </b><span>es verdadera. Por lo tanto, es posible determinar el tipo exacto de una instancia de clase;</span></li>
 </ul>
 
-<p><strong>Resultados de la ejecución</strong></p>
-<div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-text">
-<span class="odt-code-line">1. <span style="font-weight:bold"><span style="color:#316bcd">[Running] </span></span><span style="color:#a31515">C:\myprograms\laragon-lite\bin\nodejs\node-v10\node.exe -r esm &quot;c:\Data\st-2019\dev\es6\javascript\classes\class-01.js&quot;</span></span>
-<span class="odt-code-line">2. person = {&quot;_lastName&quot;:&quot;Poirot&quot;,&quot;_firstName&quot;:&quot;Hercule&quot;,&quot;_age&quot;:66} object true</span>
+<p><b>Resultados de la ejecución</b></p>
+<div class="docx-code-rich" data-linenums="true" style="counter-reset: docxline 0;"><pre><code class="language-text">
+<span class="docx-code-line"><span style="font-weight:bold;color:#316BCD">[Running] </span><span style="color:#A31515">C:\myprograms\laragon-lite\bin\nodejs\node-v10\node.exe -r esm &quot;c:\Data\st-2019\dev\es6\javascript\classes\class-01.js&quot;</span></span>
+<span class="docx-code-line">person = {&quot;_lastName&quot;:&quot;Poirot&quot;,&quot;_firstName&quot;:&quot;Hercule&quot;,&quot;_age&quot;:66} object true</span>
 </code></pre></div>
 
-<p><a id="refheadingtoc225412640539168"></a></p>
-<h2 id="133-script-class-02">13.3. script [class-02]</h2>
-<p>Este script demuestra la capacidad de heredar de una clase utilizando la <strong>[extends]</strong> palabra clave.</p>
-<p>Primero, movemos la clase <strong>[Persona]</strong> a un módulo <strong>llamado [Person.js]</strong>:</p>
-<div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-python">
-<span class="odt-code-line">1. // class</span>
-<span class="odt-code-line">2. <span style="color:#0000ff">class </span><span style="color:#2b91af">Person </span><span style="color:#000000">{</span></span>
-<span class="odt-code-line">3. </span>
-<span class="odt-code-line">4. <span style="color:#000000">  </span><span style="color:#008000">// constructor</span></span>
-<span class="odt-code-line">5. <span style="color:#000000">  </span><span style="color:#0000ff">constructor</span><span style="color:#000000">(lastName, firstName, age) {</span></span>
-<span class="odt-code-line">6. <span style="color:#000000">    </span><span style="color:#0000ff">this</span><span style="color:#000000">.lastName = lastName;</span></span>
-<span class="odt-code-line">7. <span style="color:#000000">    </span><span style="color:#0000ff">this</span><span style="color:#000000">.firstName = firstName;</span></span>
-<span class="odt-code-line">8. <span style="color:#000000">    </span><span style="color:#0000ff">this</span><span style="color:#000000">.age = age;</span></span>
-<span class="odt-code-line">9.   }</span>
-<span class="odt-code-line">10. </span>
-<span class="odt-code-line">11. <span style="color:#000000">  </span><span style="color:#008000">// getters and setters</span></span>
-<span class="odt-code-line">12. <span style="color:#000000">  </span><span style="color:#0000ff">get </span><span style="color:#000000">lastName() {</span></span>
-<span class="odt-code-line">13. <span style="color:#000000">    </span><span style="color:#0000ff">return this</span><span style="color:#000000">._lastName;</span></span>
-<span class="odt-code-line">14.   }</span>
-<span class="odt-code-line">15. <span style="color:#000000">  </span><span style="color:#0000ff">set </span><span style="color:#000000">name(value) {</span></span>
-<span class="odt-code-line">16. <span style="color:#000000">    </span><span style="color:#0000ff">this</span><span style="color:#000000">._name = value;</span></span>
-<span class="odt-code-line">17.   }</span>
-<span class="odt-code-line">18. </span>
-<span class="odt-code-line">19. <span style="color:#000000">  </span><span style="color:#0000ff">get </span><span style="color:#000000">firstName() {</span></span>
-<span class="odt-code-line">20. <span style="color:#000000">    </span><span style="color:#0000ff">return this</span><span style="color:#000000">._first_name;</span></span>
-<span class="odt-code-line">21.   }</span>
-<span class="odt-code-line">22. <span style="color:#000000">  </span><span style="color:#0000ff">set </span><span style="color:#000000">firstName(value) {</span></span>
-<span class="odt-code-line">23. <span style="color:#000000">    </span><span style="color:#0000ff">this</span><span style="color:#000000">._first_name = value;</span></span>
-<span class="odt-code-line">24.   }</span>
-<span class="odt-code-line">25. </span>
-<span class="odt-code-line">26. <span style="color:#000000">  </span><span style="color:#0000ff">get </span><span style="color:#000000">age() {</span></span>
-<span class="odt-code-line">27. <span style="color:#000000">    </span><span style="color:#0000ff">return this</span><span style="color:#000000">._age;</span></span>
-<span class="odt-code-line">28.   }</span>
-<span class="odt-code-line">29. <span style="color:#000000">  </span><span style="color:#0000ff">set </span><span style="color:#000000">age(value) {</span></span>
-<span class="odt-code-line">30. <span style="color:#000000">    </span><span style="color:#0000ff">this</span><span style="color:#000000">._age = value;</span></span>
-<span class="odt-code-line">31.   }</span>
-<span class="odt-code-line">32. </span>
-<span class="odt-code-line">33. <span style="color:#000000">  </span><span style="color:#008000">// toString as JSON</span></span>
-<span class="odt-code-line">34.   toString() {</span>
-<span class="odt-code-line">35. <span style="color:#000000">    </span><span style="color:#0000ff">return </span><span style="color:#000000">JSON.stringify(</span><span style="color:#0000ff">this</span><span style="color:#000000">);</span></span>
-<span class="odt-code-line">36.   }</span>
-<span class="odt-code-line">37. }</span>
-<span class="odt-code-line">38. // export class</span>
-<span class="odt-code-line">39. <span style="color:#0000ff">export default </span><span style="color:#000000">Person;</span></span>
+<h2 id="133-script-class-02">13.3. <a id="refheadingtoc225412640539168"></a><span>script &#91;class-02&#93;</span></h2>
+<p><span>Este script demuestra la capacidad de heredar de una clase utilizando la </span><b>&#91;extends&#93; </b><span>palabra clave.</span></p>
+<p><span>Primero, movemos la clase </span><b>&#91;Persona&#93; </b><span>a un módulo </span><b>llamado &#91;Person.js&#93;</b><span>:</span></p>
+<div class="docx-code-rich" data-linenums="true" style="counter-reset: docxline 0;"><pre><code class="language-python">
+<span class="docx-code-line">// class</span>
+<span class="docx-code-line"><span style="color:#0000FF">class </span><span style="color:#2B91AF">Person </span><span style="color:#000000">{</span></span>
+<span class="docx-code-line"></span>
+<span class="docx-code-line"><span style="color:#000000">  </span><span style="color:#008000">// constructor</span></span>
+<span class="docx-code-line"><span style="color:#000000">  </span><span style="color:#0000FF">constructor</span><span style="color:#000000">(lastName, firstName, age) {</span></span>
+<span class="docx-code-line"><span style="color:#000000">    </span><span style="color:#0000FF">this</span><span style="color:#000000">.lastName = lastName;</span></span>
+<span class="docx-code-line"><span style="color:#000000">    </span><span style="color:#0000FF">this</span><span style="color:#000000">.firstName = firstName;</span></span>
+<span class="docx-code-line"><span style="color:#000000">    </span><span style="color:#0000FF">this</span><span style="color:#000000">.age = age;</span></span>
+<span class="docx-code-line">  }</span>
+<span class="docx-code-line"></span>
+<span class="docx-code-line"><span style="color:#000000">  </span><span style="color:#008000">// getters and setters</span></span>
+<span class="docx-code-line"><span style="color:#000000">  </span><span style="color:#0000FF">get </span><span style="color:#000000">lastName() {</span></span>
+<span class="docx-code-line"><span style="color:#000000">    </span><span style="color:#0000FF">return this</span><span style="color:#000000">._lastName;</span></span>
+<span class="docx-code-line">  }</span>
+<span class="docx-code-line"><span style="color:#000000">  </span><span style="color:#0000FF">set </span><span style="color:#000000">name(value) {</span></span>
+<span class="docx-code-line"><span style="color:#000000">    </span><span style="color:#0000FF">this</span><span style="color:#000000">._name = value;</span></span>
+<span class="docx-code-line">  }</span>
+<span class="docx-code-line"></span>
+<span class="docx-code-line"><span style="color:#000000">  </span><span style="color:#0000FF">get </span><span style="color:#000000">firstName() {</span></span>
+<span class="docx-code-line"><span style="color:#000000">    </span><span style="color:#0000FF">return this</span><span style="color:#000000">._first_name;</span></span>
+<span class="docx-code-line">  }</span>
+<span class="docx-code-line"><span style="color:#000000">  </span><span style="color:#0000FF">set </span><span style="color:#000000">firstName(value) {</span></span>
+<span class="docx-code-line"><span style="color:#000000">    </span><span style="color:#0000FF">this</span><span style="color:#000000">._first_name = value;</span></span>
+<span class="docx-code-line">  }</span>
+<span class="docx-code-line"></span>
+<span class="docx-code-line"><span style="color:#000000">  </span><span style="color:#0000FF">get </span><span style="color:#000000">age() {</span></span>
+<span class="docx-code-line"><span style="color:#000000">    </span><span style="color:#0000FF">return this</span><span style="color:#000000">._age;</span></span>
+<span class="docx-code-line">  }</span>
+<span class="docx-code-line"><span style="color:#000000">  </span><span style="color:#0000FF">set </span><span style="color:#000000">age(value) {</span></span>
+<span class="docx-code-line"><span style="color:#000000">    </span><span style="color:#0000FF">this</span><span style="color:#000000">._age = value;</span></span>
+<span class="docx-code-line">  }</span>
+<span class="docx-code-line"></span>
+<span class="docx-code-line"><span style="color:#000000">  </span><span style="color:#008000">// toString as JSON</span></span>
+<span class="docx-code-line">  toString() {</span>
+<span class="docx-code-line"><span style="color:#000000">    </span><span style="color:#0000FF">return </span><span style="color:#000000">JSON.stringify(</span><span style="color:#0000FF">this</span><span style="color:#000000">);</span></span>
+<span class="docx-code-line">  }</span>
+<span class="docx-code-line">}</span>
+<span class="docx-code-line">// export class</span>
+<span class="docx-code-line"><span style="color:#0000FF">export default </span><span style="color:#000000">Person;</span></span>
 </code></pre></div>
 
 <ul>
-  <li>línea 39: exportamos la <b>[Persona] </b>clase para que los scripts puedan importarla;
-  </li>
+<li><span>línea 39: exportamos la </span><b>&#91;Persona&#93; </b><span>clase para que los scripts puedan importarla;</span></li>
 </ul>
 
-<p>El <strong>[clase-02]</strong> script crea una <strong>[Profesor]</strong> clase derivada de la <strong>[Persona]</strong> clase:</p>
-<div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-python">
-<span class="odt-code-line">1. // imports</span>
-<span class="odt-code-line">2. <span style="color:#0000ff">import </span><span style="color:#000000">Person </span><span style="color:#0000ff">from </span><span style="color:#a31515">&#x27;./Person&#x27;</span><span style="color:#000000">;</span></span>
-<span class="odt-code-line">3. </span>
-<span class="odt-code-line">4. // class</span>
-<span class="odt-code-line">5. <span style="color:#0000ff">class </span><span style="color:#2b91af">Teacher </span><span style="font-weight:bold;text-decoration:underline"><span style="color:#0000ff">extends </span></span><span style="color:#000000">Person {</span></span>
-<span class="odt-code-line">6. </span>
-<span class="odt-code-line">7. <span style="color:#000000">  </span><span style="color:#008000">// constructor</span></span>
-<span class="odt-code-line">8. <span style="color:#000000">  </span><span style="color:#0000ff">constructor</span><span style="color:#000000">(lastName, firstName, age, subject) {</span></span>
-<span class="odt-code-line">9. <span style="color:#000000">    </span><span style="color:#0000ff">super</span><span style="color:#000000">(lastName, firstName, age);</span></span>
-<span class="odt-code-line">10. <span style="color:#000000">    </span><span style="color:#0000ff">this</span><span style="color:#000000">.subject = subject;</span></span>
-<span class="odt-code-line">11.   }</span>
-<span class="odt-code-line">12. </span>
-<span class="odt-code-line">13. <span style="color:#000000">  </span><span style="color:#008000">// getters and setters</span></span>
-<span class="odt-code-line">14. <span style="color:#000000">  </span><span style="color:#0000ff">get </span><span style="color:#000000">discipline() {</span></span>
-<span class="odt-code-line">15. <span style="color:#000000">    </span><span style="color:#0000ff">return this</span><span style="color:#000000">._discipline;</span></span>
-<span class="odt-code-line">16.   }</span>
-<span class="odt-code-line">17. <span style="color:#000000">  </span><span style="color:#0000ff">set </span><span style="color:#000000">discipline(value) {</span></span>
-<span class="odt-code-line">18. <span style="color:#000000">    </span><span style="color:#0000ff">this</span><span style="color:#000000">._discipline = value;</span></span>
-<span class="odt-code-line">19.   }</span>
-<span class="odt-code-line">20. </span>
-<span class="odt-code-line">21. }</span>
-<span class="odt-code-line">22. </span>
-<span class="odt-code-line">23. // call the class</span>
-<span class="odt-code-line">24. <span style="color:#0000ff">function </span><span style="color:#000000">main() {</span></span>
-<span class="odt-code-line">25. <span style="color:#000000">  </span><span style="color:#0000ff">const </span><span style="color:#000000">teacher = </span><span style="color:#0000ff">new </span><span style="color:#000000">Teacher(</span><span style="color:#a31515">&quot;Poirot&quot;</span><span style="color:#000000">, </span><span style="color:#a31515">&quot;Hercule&quot;</span><span style="color:#000000">, 66, </span><span style="color:#a31515">&quot;detective&quot;</span><span style="color:#000000">);</span></span>
-<span class="odt-code-line">26. <span style="color:#000000">  console.log(</span><span style="color:#a31515">&quot;teacher=&quot;</span><span style="color:#000000">, teacher.toString(), </span><span style="color:#0000ff">typeof </span><span style="color:#000000">(teacher), teacher </span><span style="color:#0000ff">instanceof </span><span style="color:#000000">Teacher);</span></span>
-<span class="odt-code-line">27. }</span>
-<span class="odt-code-line">28. </span>
-<span class="odt-code-line">29. // call to main</span>
-<span class="odt-code-line">30. main();</span>
+<p><span>El </span><b>&#91;clase-02&#93; </b><span>script crea una </span><b>&#91;Profesor&#93; </b><span>clase derivada de la </span><b>&#91;Persona&#93; </b><span>clase:</span></p>
+<div class="docx-code-rich" data-linenums="true" style="counter-reset: docxline 0;"><pre><code class="language-python">
+<span class="docx-code-line">// imports</span>
+<span class="docx-code-line"><span style="color:#0000FF">import </span><span style="color:#000000">Person </span><span style="color:#0000FF">from </span><span style="color:#A31515">&#x27;./Person&#x27;</span><span style="color:#000000">;</span></span>
+<span class="docx-code-line"></span>
+<span class="docx-code-line">// class</span>
+<span class="docx-code-line"><span style="color:#0000FF">class </span><span style="color:#2B91AF">Teacher </span><span style="font-weight:bold;text-decoration:underline;color:#0000FF">extends </span><span style="color:#000000">Person {</span></span>
+<span class="docx-code-line"></span>
+<span class="docx-code-line"><span style="color:#000000">  </span><span style="color:#008000">// constructor</span></span>
+<span class="docx-code-line"><span style="color:#000000">  </span><span style="color:#0000FF">constructor</span><span style="color:#000000">(lastName, firstName, age, subject) {</span></span>
+<span class="docx-code-line"><span style="color:#000000">    </span><span style="color:#0000FF">super</span><span style="color:#000000">(lastName, firstName, age);</span></span>
+<span class="docx-code-line"><span style="color:#000000">    </span><span style="color:#0000FF">this</span><span style="color:#000000">.subject = subject;</span></span>
+<span class="docx-code-line">  }</span>
+<span class="docx-code-line"></span>
+<span class="docx-code-line"><span style="color:#000000">  </span><span style="color:#008000">// getters and setters</span></span>
+<span class="docx-code-line"><span style="color:#000000">  </span><span style="color:#0000FF">get </span><span style="color:#000000">discipline() {</span></span>
+<span class="docx-code-line"><span style="color:#000000">    </span><span style="color:#0000FF">return this</span><span style="color:#000000">._discipline;</span></span>
+<span class="docx-code-line">  }</span>
+<span class="docx-code-line"><span style="color:#000000">  </span><span style="color:#0000FF">set </span><span style="color:#000000">discipline(value) {</span></span>
+<span class="docx-code-line"><span style="color:#000000">    </span><span style="color:#0000FF">this</span><span style="color:#000000">._discipline = value;</span></span>
+<span class="docx-code-line">  }</span>
+<span class="docx-code-line"></span>
+<span class="docx-code-line">}</span>
+<span class="docx-code-line"></span>
+<span class="docx-code-line">// call the class</span>
+<span class="docx-code-line"><span style="color:#0000FF">function </span><span style="color:#000000">main() {</span></span>
+<span class="docx-code-line"><span style="color:#000000">  </span><span style="color:#0000FF">const </span><span style="color:#000000">teacher = </span><span style="color:#0000FF">new </span><span style="color:#000000">Teacher(</span><span style="color:#A31515">&quot;Poirot&quot;</span><span style="color:#000000">, </span><span style="color:#A31515">&quot;Hercule&quot;</span><span style="color:#000000">, 66, </span><span style="color:#A31515">&quot;detective&quot;</span><span style="color:#000000">);</span></span>
+<span class="docx-code-line"><span style="color:#000000">  console.log(</span><span style="color:#A31515">&quot;teacher=&quot;</span><span style="color:#000000">, teacher.toString(), </span><span style="color:#0000FF">typeof </span><span style="color:#000000">(teacher), teacher </span><span style="color:#0000FF">instanceof </span><span style="color:#000000">Teacher);</span></span>
+<span class="docx-code-line">}</span>
+<span class="docx-code-line"></span>
+<span class="docx-code-line">// call to main</span>
+<span class="docx-code-line">main();</span>
 </code></pre></div>
 
-<p><strong>Comentarios</strong></p>
+<p><b>Comentarios</b></p>
 <ul>
-  <li>línea 2: importamos la <b>[Persona] </b>clase del <b>[Person.js] </b>módulo, que se encuentra en la misma carpeta que <b>[class-02]</b>;
-  </li>
-  <li>línea 5: la <b>[Profesor] </b>clase extiende (hereda de) la <b>[Persona] </b>clase utilizando la <b>[extiende] </b>palabra clave: añade una <b>[_sujeto] </b>propiedad con los correspondientes métodos getter y setter;
-  </li>
-  <li>líneas 8-11: el constructor de la <b>[Profesor] </b>clase recibe cuatro valores para inicializar las cuatro propiedades de la clase;
-  </li>
-  <li>línea 9: la palabra clave <b>[super] </b>llama al constructor de la clase padre <b>[Persona], </b>que, por tanto, inicializará las propiedades <b>[apellido, _primer_nombre, _edad]</b>;
-  </li>
-  <li>línea 10: se inicializa la <b>[_disciplina] </b>propiedad perteneciente a la <b>[Profesor] </b>clase;
-  </li>
-  <li>líneas 14-19: el getter y setter para la <b>[_disciplina] </b>propiedad;
-  </li>
-  <li>línea 25: se crea un objeto de tipo <b>[Profesor] </b>;
-  </li>
-  <li>línea 26: utilizamos el método <b>[profesor.toString()]</b>. La clase <b>[Profesor] </b>no tiene este método. Por lo tanto, se utiliza automáticamente el método de su clase padre. Este método devuelve la expresión <b>[JSON.stringify(this)]</b>, donde <b>[this] </b>será aquí un <b>[Profesor] </b>objeto, no un <b>[Persona] </b>objeto. Esto es lo que en programación orientada a objetos se conoce como polimorfismo de clases. Palabras mayores para JavaScript, que no es un lenguaje orientado a objetos. No obstante, JavaScript hace aquí lo que se espera de él: muestra correctamente un profesor;
-  </li>
+<li><span>línea 2: importamos la </span><b>&#91;Persona&#93; </b><span>clase del </span><b>&#91;Person.js&#93; </b><span>módulo, que se encuentra en la misma carpeta que </span><b>&#91;class-02&#93;</b><span>;</span></li>
+<li><span>línea 5: la </span><b>&#91;Profesor&#93; </b><span>clase extiende (hereda de) la </span><b>&#91;Persona&#93; </b><span>clase utilizando la </span><b>&#91;extiende&#93; </b><span>palabra clave: añade una </span><b>&#91;&#95;sujeto&#93; </b><span>propiedad con los correspondientes métodos getter y setter;</span></li>
+<li><span>líneas 8-11: el constructor de la </span><b>&#91;Profesor&#93; </b><span>clase recibe cuatro valores para inicializar las cuatro propiedades de la clase;</span></li>
+<li><span>línea 9: la palabra clave </span><b>&#91;super&#93; </b><span>llama al constructor de la clase padre </span><b>&#91;Persona&#93;, </b><span>que, por tanto, inicializará las propiedades </span><b>&#91;apellido, &#95;primer&#95;nombre, &#95;edad&#93;</b><span>;</span></li>
+<li><span>línea 10: se inicializa la </span><b>&#91;&#95;disciplina&#93; </b><span>propiedad perteneciente a la </span><b>&#91;Profesor&#93; </b><span>clase;</span></li>
+<li><span>líneas 14-19: el getter y setter para la </span><b>&#91;&#95;disciplina&#93; </b><span>propiedad;</span></li>
+<li><span>línea 25: se crea un objeto de tipo </span><b>&#91;Profesor&#93; </b><span>;</span></li>
+<li><span>línea 26: utilizamos el método </span><b>&#91;profesor.toString()&#93;</b><span>. La clase </span><b>&#91;Profesor&#93; </b><span>no tiene este método. Por lo tanto, se utiliza automáticamente el método de su clase padre. Este método devuelve la expresión </span><b>&#91;JSON.stringify(this)&#93;</b><span>, donde </span><b>&#91;this&#93; </b><span>será aquí un </span><b>&#91;Profesor&#93; </b><span>objeto, no un </span><b>&#91;Persona&#93; </b><span>objeto. Esto </span><span>es lo que en programación orientada a objetos se conoce como polimorfismo de clases. Palabras mayores para JavaScript, que no es un lenguaje orientado a objetos. No obstante, JavaScript hace aquí lo que se espera de él: muestra correctamente un profesor;</span></li>
 </ul>
 
-<p>Los resultados de la ejecución son los siguientes:</p>
-<div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-text">
-<span class="odt-code-line">1. <span style="font-weight:bold"><span style="color:#316bcd">[Running] </span></span><span style="color:#a31515">C:\myprograms\laragon-lite\bin\nodejs\node-v10\node.exe -r esm &quot;c:\Data\st-2019\dev\es6\javascript\classes\class-02.js&quot;</span></span>
-<span class="odt-code-line">2. teacher = {&quot;_last_name&quot;:&quot;Poirot&quot;,&quot;_first_name&quot;:&quot;Hercule&quot;,&quot;_age&quot;:66,&quot;_profession&quot;:&quot;detective&quot;} object true</span>
+<p><span>Los resultados de la ejecución son los siguientes:</span></p>
+<div class="docx-code-rich" data-linenums="true" style="counter-reset: docxline 0;"><pre><code class="language-text">
+<span class="docx-code-line"><span style="font-weight:bold;color:#316BCD">[Running] </span><span style="color:#A31515">C:\myprograms\laragon-lite\bin\nodejs\node-v10\node.exe -r esm &quot;c:\Data\st-2019\dev\es6\javascript\classes\class-02.js&quot;</span></span>
+<span class="docx-code-line">teacher = {&quot;_last_name&quot;:&quot;Poirot&quot;,&quot;_first_name&quot;:&quot;Hercule&quot;,&quot;_age&quot;:66,&quot;_profession&quot;:&quot;detective&quot;} object true</span>
 </code></pre></div>
 
 <ul>
-  <li>línea 2: JavaScript reconoce correctamente que la variable <b>[profesor] </b>es de tipo <b>[Profesor]</b>;
-  </li>
+<li><span>línea 2: JavaScript reconoce correctamente que la variable </span><b>&#91;profesor&#93; </b><span>es de tipo </span><b>&#91;Profesor&#93;</b><span>;</span></li>
 </ul>
 
-<p><a id="refheadingtoc225414640539168"></a></p>
-<h2 id="134-script-class-03">13.4. script [class-03]</h2>
-<p>El <strong>[clase-03]</strong> script muestra que una clase hija puede anular propiedades y métodos de su clase padre. Aquí, sobrescribimos el <strong>[toString]</strong> método de la clase padre:</p>
-<div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-python">
-<span class="odt-code-line">1. // imports</span>
-<span class="odt-code-line">2. <span style="color:#0000ff">import </span><span style="color:#000000">Person </span><span style="color:#0000ff">from </span><span style="color:#a31515">&#x27;./Person&#x27;</span><span style="color:#000000">;</span></span>
-<span class="odt-code-line">3. </span>
-<span class="odt-code-line">4. // class</span>
-<span class="odt-code-line">5. <span style="color:#0000ff">class </span><span style="color:#2b91af">Teacher </span><span style="color:#0000ff">extends </span><span style="color:#000000">Person {</span></span>
-<span class="odt-code-line">6. </span>
-<span class="odt-code-line">7. <span style="color:#000000">  </span><span style="color:#008000">// constructor</span></span>
-<span class="odt-code-line">8. <span style="color:#000000">  </span><span style="color:#0000ff">constructor</span><span style="color:#000000">(lastName, firstName, age, subject) {</span></span>
-<span class="odt-code-line">9. <span style="color:#000000">    </span><span style="color:#0000ff">super</span><span style="color:#000000">(lastName, firstName, age);</span></span>
-<span class="odt-code-line">10. <span style="color:#000000">    </span><span style="color:#0000ff">this</span><span style="color:#000000">.subject = subject;</span></span>
-<span class="odt-code-line">11.   }</span>
-<span class="odt-code-line">12. </span>
-<span class="odt-code-line">13. <span style="color:#000000">  </span><span style="color:#008000">// getters and setters</span></span>
-<span class="odt-code-line">14. <span style="color:#000000">  </span><span style="color:#0000ff">get </span><span style="color:#000000">discipline() {</span></span>
-<span class="odt-code-line">15. <span style="color:#000000">    </span><span style="color:#0000ff">return this</span><span style="color:#000000">._discipline;</span></span>
-<span class="odt-code-line">16.   }</span>
-<span class="odt-code-line">17. <span style="color:#000000">  </span><span style="color:#0000ff">set </span><span style="color:#000000">discipline(value) {</span></span>
-<span class="odt-code-line">18. <span style="color:#000000">    </span><span style="color:#0000ff">this</span><span style="color:#000000">._discipline = value;</span></span>
-<span class="odt-code-line">19.   }</span>
-<span class="odt-code-line">20. </span>
-<span class="odt-code-line">21. <span style="color:#000000">  </span><span style="color:#008000">// redefinition of toString</span></span>
-<span class="odt-code-line">22.   toString() {</span>
-<span class="odt-code-line">23. <span style="color:#000000">    </span><span style="color:#0000ff">return </span><span style="color:#a31515">&quot;</span><span style="font-weight:bold"><span style="color:#a31515">[Teacher]</span></span><span style="color:#a31515">&quot; </span><span style="color:#000000">+ JSON.stringify(</span><span style="color:#0000ff">this</span><span style="color:#000000">);</span></span>
-<span class="odt-code-line">24.   }</span>
-<span class="odt-code-line">25. }</span>
-<span class="odt-code-line">26. </span>
-<span class="odt-code-line">27. // Call the class</span>
-<span class="odt-code-line">28. <span style="color:#0000ff">function </span><span style="color:#000000">main() {</span></span>
-<span class="odt-code-line">29. <span style="color:#000000">  </span><span style="color:#0000ff">const </span><span style="color:#000000">teacher = </span><span style="color:#0000ff">new </span><span style="color:#000000">Teacher(</span><span style="color:#a31515">&quot;Poirot&quot;</span><span style="color:#000000">, </span><span style="color:#a31515">&quot;Hercule&quot;</span><span style="color:#000000">, 66, </span><span style="color:#a31515">&quot;detective&quot;</span><span style="color:#000000">);</span></span>
-<span class="odt-code-line">30. <span style="color:#000000">  console.log(</span><span style="color:#a31515">&quot;teacher=&quot;</span><span style="color:#000000">, teacher.toString(), </span><span style="color:#0000ff">typeof </span><span style="color:#000000">(teacher), teacher </span><span style="color:#0000ff">instanceof </span><span style="color:#000000">Teacher);</span></span>
-<span class="odt-code-line">31. }</span>
-<span class="odt-code-line">32. </span>
-<span class="odt-code-line">33. // call to main</span>
-<span class="odt-code-line">34. main();</span>
+<h2 id="134-script-class-03">13.4. <a id="refheadingtoc225414640539168"></a><span>script &#91;class-03&#93;</span></h2>
+<p><span>El </span><b>&#91;clase-03&#93; </b><span>script muestra que una clase hija puede anular propiedades y métodos de su clase padre. Aquí, sobrescribimos el </span><b>&#91;toString&#93; </b><span>método de la clase padre:</span></p>
+<div class="docx-code-rich" data-linenums="true" style="counter-reset: docxline 0;"><pre><code class="language-python">
+<span class="docx-code-line">// imports</span>
+<span class="docx-code-line"><span style="color:#0000FF">import </span><span style="color:#000000">Person </span><span style="color:#0000FF">from </span><span style="color:#A31515">&#x27;./Person&#x27;</span><span style="color:#000000">;</span></span>
+<span class="docx-code-line"></span>
+<span class="docx-code-line">// class</span>
+<span class="docx-code-line"><span style="color:#0000FF">class </span><span style="color:#2B91AF">Teacher </span><span style="color:#0000FF">extends </span><span style="color:#000000">Person {</span></span>
+<span class="docx-code-line"></span>
+<span class="docx-code-line"><span style="color:#000000">  </span><span style="color:#008000">// constructor</span></span>
+<span class="docx-code-line"><span style="color:#000000">  </span><span style="color:#0000FF">constructor</span><span style="color:#000000">(lastName, firstName, age, subject) {</span></span>
+<span class="docx-code-line"><span style="color:#000000">    </span><span style="color:#0000FF">super</span><span style="color:#000000">(lastName, firstName, age);</span></span>
+<span class="docx-code-line"><span style="color:#000000">    </span><span style="color:#0000FF">this</span><span style="color:#000000">.subject = subject;</span></span>
+<span class="docx-code-line">  }</span>
+<span class="docx-code-line"></span>
+<span class="docx-code-line"><span style="color:#000000">  </span><span style="color:#008000">// getters and setters</span></span>
+<span class="docx-code-line"><span style="color:#000000">  </span><span style="color:#0000FF">get </span><span style="color:#000000">discipline() {</span></span>
+<span class="docx-code-line"><span style="color:#000000">    </span><span style="color:#0000FF">return this</span><span style="color:#000000">._discipline;</span></span>
+<span class="docx-code-line">  }</span>
+<span class="docx-code-line"><span style="color:#000000">  </span><span style="color:#0000FF">set </span><span style="color:#000000">discipline(value) {</span></span>
+<span class="docx-code-line"><span style="color:#000000">    </span><span style="color:#0000FF">this</span><span style="color:#000000">._discipline = value;</span></span>
+<span class="docx-code-line">  }</span>
+<span class="docx-code-line"></span>
+<span class="docx-code-line"><span style="color:#000000">  </span><span style="color:#008000">// redefinition of toString</span></span>
+<span class="docx-code-line">  toString() {</span>
+<span class="docx-code-line"><span style="color:#000000">    </span><span style="color:#0000FF">return </span><span style="color:#A31515">&quot;</span><span style="font-weight:bold;color:#A31515">[Teacher]</span><span style="color:#A31515">&quot; </span><span style="color:#000000">+ JSON.stringify(</span><span style="color:#0000FF">this</span><span style="color:#000000">);</span></span>
+<span class="docx-code-line">  }</span>
+<span class="docx-code-line">}</span>
+<span class="docx-code-line"></span>
+<span class="docx-code-line">// Call the class</span>
+<span class="docx-code-line"><span style="color:#0000FF">function </span><span style="color:#000000">main() {</span></span>
+<span class="docx-code-line"><span style="color:#000000">  </span><span style="color:#0000FF">const </span><span style="color:#000000">teacher = </span><span style="color:#0000FF">new </span><span style="color:#000000">Teacher(</span><span style="color:#A31515">&quot;Poirot&quot;</span><span style="color:#000000">, </span><span style="color:#A31515">&quot;Hercule&quot;</span><span style="color:#000000">, 66, </span><span style="color:#A31515">&quot;detective&quot;</span><span style="color:#000000">);</span></span>
+<span class="docx-code-line"><span style="color:#000000">  console.log(</span><span style="color:#A31515">&quot;teacher=&quot;</span><span style="color:#000000">, teacher.toString(), </span><span style="color:#0000FF">typeof </span><span style="color:#000000">(teacher), teacher </span><span style="color:#0000FF">instanceof </span><span style="color:#000000">Teacher);</span></span>
+<span class="docx-code-line">}</span>
+<span class="docx-code-line"></span>
+<span class="docx-code-line">// call to main</span>
+<span class="docx-code-line">main();</span>
 </code></pre></div>
 
-<p>Los resultados de la ejecución son los siguientes:</p>
-<div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-text">
-<span class="odt-code-line">1. <span style="font-weight:bold"><span style="color:#316bcd">[Running] </span></span><span style="color:#a31515">C:\myprograms\laragon-lite\bin\nodejs\node-v10\node.exe -r esm &quot;c:\Data\st-2019\dev\es6\javascript\classes\class-03.js&quot;</span></span>
-<span class="odt-code-line">2. teacher <span style="font-weight:bold">= [Teacher]</span>{&quot;_last_name&quot;:&quot;Poirot&quot;,&quot;_first_name&quot;:&quot;Hercule&quot;,&quot;_age&quot;:66,&quot;_profession&quot;:&quot;detective&quot;} object true</span>
+<p><span>Los resultados de la ejecución son los siguientes:</span></p>
+<div class="docx-code-rich" data-linenums="true" style="counter-reset: docxline 0;"><pre><code class="language-text">
+<span class="docx-code-line"><span style="font-weight:bold;color:#316BCD">[Running] </span><span style="color:#A31515">C:\myprograms\laragon-lite\bin\nodejs\node-v10\node.exe -r esm &quot;c:\Data\st-2019\dev\es6\javascript\classes\class-03.js&quot;</span></span>
+<span class="docx-code-line">teacher <span style="font-weight:bold">= [Teacher]</span>{&quot;_last_name&quot;:&quot;Poirot&quot;,&quot;_first_name&quot;:&quot;Hercule&quot;,&quot;_age&quot;:66,&quot;_profession&quot;:&quot;detective&quot;} object true</span>
 </code></pre></div>
 
-<p><a id="refheadingtoc225416640539168"></a></p>
-<h2 id="135-script-class-04">13.5. script [class-04]</h2>
-<p>El <strong>[clase-04]</strong> script demuestra de nuevo el polimorfismo en acción: donde una función espera un parámetro formal de tipo <strong>[Persona]</strong>, podemos pasar un tipo derivado como <strong>[Profesor]</strong>. En efecto, en virtud de la derivación, el tipo <strong>[Profesor]</strong> tiene todos los atributos del tipo <strong>[Persona]</strong> .</p>
-<p>Primero, aislamos el <strong>[Profesor]</strong> tipo en un <strong>[Profesor.js]</strong> módulo:</p>
-<div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-python">
-<span class="odt-code-line">1. // imports</span>
-<span class="odt-code-line">2. <span style="color:#0000ff">import </span><span style="color:#000000">Person </span><span style="color:#0000ff">from </span><span style="color:#a31515">&#x27;./Person&#x27;</span><span style="color:#000000">;</span></span>
-<span class="odt-code-line">3. </span>
-<span class="odt-code-line">4. // class</span>
-<span class="odt-code-line">5. <span style="color:#0000ff">class </span><span style="color:#2b91af">Teacher </span><span style="color:#0000ff">extends </span><span style="color:#000000">Person {</span></span>
-<span class="odt-code-line">6. </span>
-<span class="odt-code-line">7. <span style="color:#000000">  </span><span style="color:#008000">// constructor</span></span>
-<span class="odt-code-line">8. <span style="color:#000000">  </span><span style="color:#0000ff">constructor</span><span style="color:#000000">(last_name, first_name, age, subject) {</span></span>
-<span class="odt-code-line">9. <span style="color:#000000">    </span><span style="color:#0000ff">super</span><span style="color:#000000">(lastName, firstName, age);</span></span>
-<span class="odt-code-line">10. <span style="color:#000000">    </span><span style="color:#0000ff">this</span><span style="color:#000000">.subject = subject;</span></span>
-<span class="odt-code-line">11.   }</span>
-<span class="odt-code-line">12. </span>
-<span class="odt-code-line">13. <span style="color:#000000">  </span><span style="color:#008000">// getters and setters</span></span>
-<span class="odt-code-line">14. <span style="color:#000000">  </span><span style="color:#0000ff">get </span><span style="color:#000000">discipline() {</span></span>
-<span class="odt-code-line">15. <span style="color:#000000">    </span><span style="color:#0000ff">return this</span><span style="color:#000000">._discipline;</span></span>
-<span class="odt-code-line">16.   }</span>
-<span class="odt-code-line">17. <span style="color:#000000">  </span><span style="color:#0000ff">set </span><span style="color:#000000">discipline(value) {</span></span>
-<span class="odt-code-line">18. <span style="color:#000000">    </span><span style="color:#0000ff">this</span><span style="color:#000000">._discipline = value;</span></span>
-<span class="odt-code-line">19.   }</span>
-<span class="odt-code-line">20. </span>
-<span class="odt-code-line">21. }</span>
-<span class="odt-code-line">22. </span>
-<span class="odt-code-line">23. // export class</span>
-<span class="odt-code-line">24. <span style="color:#0000ff">export default </span><span style="color:#000000">Teacher;</span></span>
+<h2 id="135-script-class-04">13.5. <a id="refheadingtoc225416640539168"></a><span>script &#91;class-04&#93;</span></h2>
+<p><span>El </span><b>&#91;clase-04&#93; </b><span>script demuestra de nuevo el polimorfismo en acción: donde una función espera un parámetro formal de tipo </span><b>&#91;Persona&#93;</b><span>, podemos pasar un tipo derivado como </span><b>&#91;Profesor&#93;</b><span>. En efecto, en virtud de la derivación, el tipo </span><b>&#91;Profesor&#93; </b><span> tiene todos los atributos del tipo </span><b>&#91;Persona&#93; </b><span>.</span></p>
+<p><span>Primero, aislamos el </span><b>&#91;Profesor&#93; </b><span>tipo en un </span><b>&#91;Profesor.js&#93; </b><span>módulo:</span></p>
+<div class="docx-code-rich" data-linenums="true" style="counter-reset: docxline 0;"><pre><code class="language-python">
+<span class="docx-code-line">// imports</span>
+<span class="docx-code-line"><span style="color:#0000FF">import </span><span style="color:#000000">Person </span><span style="color:#0000FF">from </span><span style="color:#A31515">&#x27;./Person&#x27;</span><span style="color:#000000">;</span></span>
+<span class="docx-code-line"></span>
+<span class="docx-code-line">// class</span>
+<span class="docx-code-line"><span style="color:#0000FF">class </span><span style="color:#2B91AF">Teacher </span><span style="color:#0000FF">extends </span><span style="color:#000000">Person {</span></span>
+<span class="docx-code-line"></span>
+<span class="docx-code-line"><span style="color:#000000">  </span><span style="color:#008000">// constructor</span></span>
+<span class="docx-code-line"><span style="color:#000000">  </span><span style="color:#0000FF">constructor</span><span style="color:#000000">(last_name, first_name, age, subject) {</span></span>
+<span class="docx-code-line"><span style="color:#000000">    </span><span style="color:#0000FF">super</span><span style="color:#000000">(lastName, firstName, age);</span></span>
+<span class="docx-code-line"><span style="color:#000000">    </span><span style="color:#0000FF">this</span><span style="color:#000000">.subject = subject;</span></span>
+<span class="docx-code-line">  }</span>
+<span class="docx-code-line"></span>
+<span class="docx-code-line"><span style="color:#000000">  </span><span style="color:#008000">// getters and setters</span></span>
+<span class="docx-code-line"><span style="color:#000000">  </span><span style="color:#0000FF">get </span><span style="color:#000000">discipline() {</span></span>
+<span class="docx-code-line"><span style="color:#000000">    </span><span style="color:#0000FF">return this</span><span style="color:#000000">._discipline;</span></span>
+<span class="docx-code-line">  }</span>
+<span class="docx-code-line"><span style="color:#000000">  </span><span style="color:#0000FF">set </span><span style="color:#000000">discipline(value) {</span></span>
+<span class="docx-code-line"><span style="color:#000000">    </span><span style="color:#0000FF">this</span><span style="color:#000000">._discipline = value;</span></span>
+<span class="docx-code-line">  }</span>
+<span class="docx-code-line"></span>
+<span class="docx-code-line">}</span>
+<span class="docx-code-line"></span>
+<span class="docx-code-line">// export class</span>
+<span class="docx-code-line"><span style="color:#0000FF">export default </span><span style="color:#000000">Teacher;</span></span>
 </code></pre></div>
 
 <ul>
-  <li>línea 24: la <b>[Profesor] </b>clase se exporta para que otros scripts puedan importarla;
-  </li>
+<li><span>línea 24: la </span><b>&#91;Profesor&#93; </b><span>clase se exporta para que otros scripts puedan importarla;</span></li>
 </ul>
 
-<p>El <strong>[class-04]</strong> script es el siguiente:</p>
-<div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-python">
-<span class="odt-code-line">1. // imports</span>
-<span class="odt-code-line">2. <span style="color:#0000ff">import </span><span style="color:#000000">Teacher </span><span style="color:#0000ff">from </span><span style="color:#a31515">&#x27;./Teacher&#x27;</span><span style="color:#000000">;</span></span>
-<span class="odt-code-line">3. <span style="color:#0000ff">import </span><span style="color:#000000">Person </span><span style="color:#0000ff">from </span><span style="color:#a31515">&#x27;./Person&#x27;</span><span style="color:#000000">;</span></span>
-<span class="odt-code-line">4. </span>
-<span class="odt-code-line">5. // function accepting a person as a parameter</span>
-<span class="odt-code-line">6. <span style="color:#0000ff">function </span><span style="color:#000000">show(person) {</span></span>
-<span class="odt-code-line">7. <span style="color:#000000">  </span><span style="color:#008000">// in all cases</span></span>
-<span class="odt-code-line">8. <span style="color:#000000">  console.log(</span><span style="color:#a31515">&quot;parameter=&quot;</span><span style="color:#000000">, person.toString(), </span><span style="color:#0000ff">typeof</span><span style="color:#000000">(person));</span></span>
-<span class="odt-code-line">9. <span style="color:#000000">  </span><span style="color:#008000">// instance of Person</span></span>
-<span class="odt-code-line">10. <span style="color:#000000">  </span><span style="color:#0000ff">if </span><span style="color:#000000">(person </span><span style="color:#0000ff">instanceof </span><span style="color:#000000">Person) {</span></span>
-<span class="odt-code-line">11. <span style="color:#000000">    console.log(</span><span style="color:#a31515">&quot;person=&quot;</span><span style="color:#000000">, person.toString());</span></span>
-<span class="odt-code-line">12.   }</span>
-<span class="odt-code-line">13. <span style="color:#000000">  </span><span style="color:#008000">// instance of Teacher</span></span>
-<span class="odt-code-line">14. <span style="color:#000000">  </span><span style="color:#0000ff">if </span><span style="color:#000000">(person </span><span style="color:#0000ff">is an instance of </span><span style="color:#000000">Teacher) {</span></span>
-<span class="odt-code-line">15. <span style="color:#000000">    console.log(</span><span style="color:#a31515">&quot;teacher=&quot;</span><span style="color:#000000">, person.toString());</span></span>
-<span class="odt-code-line">16.   }</span>
-<span class="odt-code-line">17. }</span>
-<span class="odt-code-line">18. </span>
-<span class="odt-code-line">19. // Call show with a Teacher</span>
-<span class="odt-code-line">20. <span style="color:#000000">show(</span><span style="color:#0000ff">new </span><span style="color:#000000">Teacher(</span><span style="color:#a31515">&quot;Poirot&quot;</span><span style="color:#000000">, </span><span style="color:#a31515">&quot;Hercule&quot;</span><span style="color:#000000">, 66, </span><span style="color:#a31515">&quot;detective&quot;</span><span style="color:#000000">));</span></span>
-<span class="odt-code-line">21. <span style="color:#000000">show(</span><span style="color:#0000ff">new </span><span style="color:#000000">Person(</span><span style="color:#a31515">&quot;Marple&quot;</span><span style="color:#000000">, </span><span style="color:#a31515">&quot;Miss&quot;</span><span style="color:#000000">, 70));</span></span>
+<p><span>El </span><b>&#91;class-04&#93; </b><span>script es el siguiente:</span></p>
+<div class="docx-code-rich" data-linenums="true" style="counter-reset: docxline 0;"><pre><code class="language-python">
+<span class="docx-code-line">// imports</span>
+<span class="docx-code-line"><span style="color:#0000FF">import </span><span style="color:#000000">Teacher </span><span style="color:#0000FF">from </span><span style="color:#A31515">&#x27;./Teacher&#x27;</span><span style="color:#000000">;</span></span>
+<span class="docx-code-line"><span style="color:#0000FF">import </span><span style="color:#000000">Person </span><span style="color:#0000FF">from </span><span style="color:#A31515">&#x27;./Person&#x27;</span><span style="color:#000000">;</span></span>
+<span class="docx-code-line"></span>
+<span class="docx-code-line">// function accepting a person as a parameter</span>
+<span class="docx-code-line"><span style="color:#0000FF">function </span><span style="color:#000000">show(person) {</span></span>
+<span class="docx-code-line"><span style="color:#000000">  </span><span style="color:#008000">// in all cases</span></span>
+<span class="docx-code-line"><span style="color:#000000">  console.log(</span><span style="color:#A31515">&quot;parameter=&quot;</span><span style="color:#000000">, person.toString(), </span><span style="color:#0000FF">typeof</span><span style="color:#000000">(person));</span></span>
+<span class="docx-code-line"><span style="color:#000000">  </span><span style="color:#008000">// instance of Person</span></span>
+<span class="docx-code-line"><span style="color:#000000">  </span><span style="color:#0000FF">if </span><span style="color:#000000">(person </span><span style="color:#0000FF">instanceof </span><span style="color:#000000">Person) {</span></span>
+<span class="docx-code-line"><span style="color:#000000">    console.log(</span><span style="color:#A31515">&quot;person=&quot;</span><span style="color:#000000">, person.toString());</span></span>
+<span class="docx-code-line">  }</span>
+<span class="docx-code-line"><span style="color:#000000">  </span><span style="color:#008000">// instance of Teacher</span></span>
+<span class="docx-code-line"><span style="color:#000000">  </span><span style="color:#0000FF">if </span><span style="color:#000000">(person </span><span style="color:#0000FF">is an instance of </span><span style="color:#000000">Teacher) {</span></span>
+<span class="docx-code-line"><span style="color:#000000">    console.log(</span><span style="color:#A31515">&quot;teacher=&quot;</span><span style="color:#000000">, person.toString());</span></span>
+<span class="docx-code-line">  }</span>
+<span class="docx-code-line">}</span>
+<span class="docx-code-line"></span>
+<span class="docx-code-line">// Call show with a Teacher</span>
+<span class="docx-code-line"><span style="color:#000000">show(</span><span style="color:#0000FF">new </span><span style="color:#000000">Teacher(</span><span style="color:#A31515">&quot;Poirot&quot;</span><span style="color:#000000">, </span><span style="color:#A31515">&quot;Hercule&quot;</span><span style="color:#000000">, 66, </span><span style="color:#A31515">&quot;detective&quot;</span><span style="color:#000000">));</span></span>
+<span class="docx-code-line"><span style="color:#000000">show(</span><span style="color:#0000FF">new </span><span style="color:#000000">Person(</span><span style="color:#A31515">&quot;Marple&quot;</span><span style="color:#000000">, </span><span style="color:#A31515">&quot;Miss&quot;</span><span style="color:#000000">, 70));</span></span>
 </code></pre></div>
 
 <ul>
-  <li>línea 6: la <b>[show] </b>función espera un <b>[Persona] </b>tipo o un tipo derivado;
-  </li>
-  <li>línea 8: se muestra la cadena del parámetro y su tipo. Encontraremos <b>[objeto]</b>;
-  </li>
-  <li>líneas 10-16: podemos determinar si se trata de un <b>[Persona] </b>tipo o de un <b>[Profesor] </b>tipo. Por tanto, el código puede adaptarse al tipo real del parámetro;
-  </li>
+<li><span>línea 6: la </span><b>&#91;show&#93; </b><span>función espera un </span><b>&#91;Persona&#93; </b><span>tipo o un tipo derivado;</span></li>
+<li><span>línea 8: se muestra la cadena del parámetro y su tipo. Encontraremos </span><b>&#91;objeto&#93;</b><span>;</span></li>
+<li><span>líneas 10-16: podemos determinar si se trata de un </span><b>&#91;Persona&#93; </b><span>tipo o de un </span><b>&#91;Profesor&#93; </b><span>tipo. Por tanto, el código puede adaptarse al tipo real del parámetro;</span></li>
 </ul>
 
-<p>Los resultados de la ejecución son los siguientes:</p>
-<div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-text">
-<span class="odt-code-line">1. <span style="font-weight:bold"><span style="color:#316bcd">[Running] </span></span><span style="color:#a31515">C:\myprograms\laragon-lite\bin\nodejs\node-v10\node.exe -r esm &quot;c:\Data\st-2019\dev\es6\javascript\classes\class-04.js&quot;</span></span>
-<span class="odt-code-line">2. parameter= {&quot;_last_name&quot;:&quot;Poirot&quot;,&quot;_first_name&quot;:&quot;Hercule&quot;,&quot;_age&quot;:66,&quot;_profession&quot;:&quot;detective&quot;} object</span>
-<span class="odt-code-line">3. person = {&quot;_last_name&quot;: &quot;Poirot&quot;, &quot;_first_name&quot;: &quot;Hercule&quot;, &quot;_age&quot;: 66, &quot;_profession&quot;: &quot;detective&quot;}</span>
-<span class="odt-code-line">4. teacher = {&quot;_last_name&quot;:&quot;Poirot&quot;,&quot;_first_name&quot;:&quot;Hercule&quot;,&quot;_age&quot;:66,&quot;_profession&quot;:&quot;detective&quot;}</span>
-<span class="odt-code-line">5. parameter = {&quot;_last_name&quot;: &quot;Marple&quot;, &quot;_first_name&quot;: &quot;Miss&quot;, &quot;_age&quot;: 70} object</span>
-<span class="odt-code-line">6. person= {&quot;_last_name&quot;:&quot;Marple&quot;,&quot;_first_name&quot;:&quot;Miss&quot;,&quot;_age&quot;:70}</span>
+<p><span>Los resultados de la ejecución son los siguientes:</span></p>
+<div class="docx-code-rich" data-linenums="true" style="counter-reset: docxline 0;"><pre><code class="language-text">
+<span class="docx-code-line"><span style="font-weight:bold;color:#316BCD">[Running] </span><span style="color:#A31515">C:\myprograms\laragon-lite\bin\nodejs\node-v10\node.exe -r esm &quot;c:\Data\st-2019\dev\es6\javascript\classes\class-04.js&quot;</span></span>
+<span class="docx-code-line">parameter= {&quot;_last_name&quot;:&quot;Poirot&quot;,&quot;_first_name&quot;:&quot;Hercule&quot;,&quot;_age&quot;:66,&quot;_profession&quot;:&quot;detective&quot;} object</span>
+<span class="docx-code-line">person = {&quot;_last_name&quot;: &quot;Poirot&quot;, &quot;_first_name&quot;: &quot;Hercule&quot;, &quot;_age&quot;: 66, &quot;_profession&quot;: &quot;detective&quot;}</span>
+<span class="docx-code-line">teacher = {&quot;_last_name&quot;:&quot;Poirot&quot;,&quot;_first_name&quot;:&quot;Hercule&quot;,&quot;_age&quot;:66,&quot;_profession&quot;:&quot;detective&quot;}</span>
+<span class="docx-code-line">parameter = {&quot;_last_name&quot;: &quot;Marple&quot;, &quot;_first_name&quot;: &quot;Miss&quot;, &quot;_age&quot;: 70} object</span>
+<span class="docx-code-line">person= {&quot;_last_name&quot;:&quot;Marple&quot;,&quot;_first_name&quot;:&quot;Miss&quot;,&quot;_age&quot;:70}</span>
 </code></pre></div>
 
 <ul>
-  <li>líneas 4 y 6: JavaScript reconoce correctamente el tipo de instancias de clase;
-  </li>
+<li><span>líneas 4 y 6: JavaScript reconoce correctamente el tipo de instancias de clase;</span></li>
 </ul>
 
 
