@@ -57,6 +57,8 @@
     
       <link rel="stylesheet" href="stylesheets/focus.css">
     
+      <link rel="stylesheet" href="stylesheets/bidi.css">
+    
     <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -330,14 +332,14 @@
   
   
     <li class="md-nav__item">
-      <a href="configuracion-de-un-entorno-de-desarrollo.html" class="md-nav__link">
+      <a href="instalacion-de-un-entorno-de-trabajo.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    2. Configuración de un entorno de desarrollo
+    2. Instalación de un entorno de trabajo
   
 
     
@@ -357,14 +359,14 @@
   
   
     <li class="md-nav__item">
-      <a href="conceptos-basicos-de-javascript.html" class="md-nav__link">
+      <a href="los-fundamentos-de-javascript.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    3. Conceptos básicos de JavaScript
+    3. Los fundamentos de Javascript
   
 
     
@@ -384,14 +386,14 @@
   
   
     <li class="md-nav__item">
-      <a href="tablas.html" class="md-nav__link">
+      <a href="las-tablas.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    4. Tablas
+    4. Las tablas
   
 
     
@@ -411,14 +413,14 @@
   
   
     <li class="md-nav__item">
-      <a href="objetos-literales.html" class="md-nav__link">
+      <a href="los-objetos-literales.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    5. Objetos literales
+    5. Los objetos literales
   
 
     
@@ -438,14 +440,14 @@
   
   
     <li class="md-nav__item">
-      <a href="cadenas.html" class="md-nav__link">
+      <a href="las-cadenas-de-caracteres.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    6. Cadenas
+    6. Las cadenas de caracteres
   
 
     
@@ -648,14 +650,14 @@
   
   
     <li class="md-nav__item">
-      <a href="modulos-es6.html" class="md-nav__link">
+      <a href="los-modulos-es6.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    10. Módulos ES6
+    10. Los módulos ES6
   
 
     
@@ -702,14 +704,14 @@
   
   
     <li class="md-nav__item">
-      <a href="funciones-http-de-javascript.html" class="md-nav__link">
+      <a href="las-funciones-http-de-javascript.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    12. Funciones HTTP de JavaScript
+    12. Las funciones HTTP de Javascript
   
 
     
@@ -729,14 +731,14 @@
   
   
     <li class="md-nav__item">
-      <a href="clases.html" class="md-nav__link">
+      <a href="las-clases.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    13. Clases
+    13. Las clases
   
 
     
@@ -756,14 +758,14 @@
   
   
     <li class="md-nav__item">
-      <a href="clientes-http-de-javascript-del-servicio-de-calculo-de-impuestos.html" class="md-nav__link">
+      <a href="clients-http-javascript-del-servicio-de-calculo-de-impuestos.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    14. Clientes HTTP de JavaScript del servicio de cálculo de impuestos
+    14. Clients HTTP Javascript del servicio de cálculo de impuestos
   
 
     
@@ -796,79 +798,79 @@
   
 
 
-<p><a id="refheadingtoc2042413980233556"></a></p>
-<h1 id="8-las-funciones">8. <span style="color: #365f91">Las funciones</span></h1>
+<p><span id="refheadingtoc2042413980233556" name="refheadingtoc2042413980233556" class="odt-bookmark-anchor"></span></p>
+<h1 id="8-las-funciones">8. <span style="color: #365f91"><strong>Las funciones</strong></span></h1>
 <p><img src="images/10000000000000E0000000E3B1A0C324.png" width="90" height="91" style="width:2.371cm;height:2.402cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000000E0000000E3B1A0C324.png" /></p>
-<p><a id="refheadingtoc2042433980233556"></a></p>
+<p><span id="refheadingtoc2042433980233556" name="refheadingtoc2042433980233556" class="odt-bookmark-anchor"></span></p>
 <h2 id="81-script-func-01">8.1. <span style="color: #4f81bd">script [func-01]</span></h2>
-<p>El script examina cómo se pasan los parámetros a una función:</p>
+<p>El script se centra en el modo de paso de los parámetros de una función:</p>
 <ul>
-  <li>por valor para números, cadenas y valores booleanos;
+  <li>paso por valor para números, cadenas y booleanos;
   </li>
   <li>paso por referencia para matrices, objetos literales y funciones;
   </li>
 </ul>
 
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#a31515">&#x27;use strict&#x27;;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// how to pass function parameters</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// -----------------------nombre - passing by value</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">&#x27;use strict&#x27;;</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// cómo pasar parámetros de una función</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// -----------------------nombre - paso por valor</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">function</span><span style="color:#000000"> doSomethingWithNumber(param) {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  param++;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  console.log(</span><span style="color:#a31515">&quot;</span><span style="font-weight:bold;color:#a31515">[param inside function]</span><span style="color:#a31515">=&quot;</span><span style="color:#000000">, param, </span><span style="color:#a31515">&quot;</span><span style="font-weight:bold;color:#a31515">[type]</span><span style="color:#a31515">=&quot;</span><span style="color:#000000">, </span><span style="color:#0000ff">typeof</span><span style="color:#000000"> (param), </span><span style="color:#a31515">&quot;</span><span style="font-weight:bold;color:#a31515">[passage par référence]</span><span style="color:#a31515">=&quot;</span><span style="color:#000000">, param === count);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// call code</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// código de llamada</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">let</span><span style="color:#000000"> count = 10;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">doSomethingWithNumber(count);</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;</span><span style="font-weight:bold;color:#a31515">[count outside function]</span><span style="color:#a31515">=&quot;</span><span style="color:#000000">, count);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// --------------------- chain - passing by value</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// --------------------- cadena - pasando por valor</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">function</span><span style="color:#000000"> doSomethingWithString(param) {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  param += </span><span style="color:#a31515">&quot; xyz&quot;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  console.log(</span><span style="color:#a31515">&quot;</span><span style="font-weight:bold;color:#a31515">[param inside function]</span><span style="color:#a31515">=&quot;</span><span style="color:#000000">, param, </span><span style="color:#a31515">&quot;</span><span style="font-weight:bold;color:#a31515">[type]</span><span style="color:#a31515">=&quot;</span><span style="color:#000000">, </span><span style="color:#0000ff">typeof</span><span style="color:#000000"> (param), </span><span style="color:#a31515">&quot;</span><span style="font-weight:bold;color:#a31515">[passage par référence]</span><span style="color:#a31515">=&quot;</span><span style="color:#000000">, param === text);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// call code</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// código de llamada</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">let</span><span style="color:#000000"> text = </span><span style="color:#a31515">&quot;abcd&quot;</span><span style="color:#000000">;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">doSomethingWithString(text);</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;</span><span style="font-weight:bold;color:#a31515">[text outside function]</span><span style="color:#a31515">=&quot;</span><span style="color:#000000">, text);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// --------------------- Boolean - passing by value</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// --------------------- Boolean - paso por valor</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">function</span><span style="color:#000000"> doSomethingWithBoolean(param) {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  param = !param;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  console.log(</span><span style="color:#a31515">&quot;</span><span style="font-weight:bold;color:#a31515">[param inside function]</span><span style="color:#a31515">=&quot;</span><span style="color:#000000">, param, </span><span style="color:#a31515">&quot;</span><span style="font-weight:bold;color:#a31515">[type]</span><span style="color:#a31515">=&quot;</span><span style="color:#000000">, </span><span style="color:#0000ff">typeof</span><span style="color:#000000"> (param), </span><span style="color:#a31515">&quot;</span><span style="font-weight:bold;color:#a31515">[passage par référence]</span><span style="color:#a31515">=&quot;</span><span style="color:#000000">, param === bool);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// call code</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// código de llamada</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">let</span><span style="color:#000000"> bool = </span><span style="color:#0000ff">true</span><span style="color:#000000">;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">doSomethingWithBoolean(bool);</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;bool </span><span style="font-weight:bold;color:#a31515">[outside function]</span><span style="color:#a31515">=&quot;</span><span style="color:#000000">, bool);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// --------------------- table - passage by reference</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// --------------------- tabla - paso por referencia</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">function</span><span style="color:#000000"> doSomethingWithArray(param) {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  param.push(1000);</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  console.log(</span><span style="color:#a31515">&quot;</span><span style="font-weight:bold;color:#a31515">[param inside function]</span><span style="color:#a31515">=&quot;</span><span style="color:#000000">, param, </span><span style="color:#a31515">&quot;</span><span style="font-weight:bold;color:#a31515">[type]</span><span style="color:#a31515">=&quot;</span><span style="color:#000000">, </span><span style="color:#0000ff">typeof</span><span style="color:#000000"> (param), </span><span style="color:#a31515">&quot;</span><span style="font-weight:bold;color:#a31515">[passage par référence]</span><span style="color:#a31515">=&quot;</span><span style="color:#000000">, param === tab);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// call code</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// código de llamada</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">const</span><span style="color:#000000"> tab = </span><span style="font-weight:bold;color:#000000">[10, 20, 30]</span><span style="color:#000000">;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">doSomethingWithArray(tab);</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;</span><span style="font-weight:bold;color:#a31515">[tab outside function]</span><span style="color:#a31515">=&quot;</span><span style="color:#000000">, tab);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// --------------------- object - passing by reference</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// --------------------- objeto - paso por referencia</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">function</span><span style="color:#000000"> doSomethingWithObject(param) {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  param.unePropriétéNouvelle = </span><span style="color:#a31515">&quot;xyz&quot;</span><span style="color:#000000">;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  console.log(</span><span style="color:#a31515">&quot;</span><span style="font-weight:bold;color:#a31515">[param inside function]</span><span style="color:#a31515">=&quot;</span><span style="color:#000000">, param, </span><span style="color:#a31515">&quot;</span><span style="font-weight:bold;color:#a31515">[type]</span><span style="color:#a31515">=&quot;</span><span style="color:#000000">, </span><span style="color:#0000ff">typeof</span><span style="color:#000000"> (param), </span><span style="color:#a31515">&quot;</span><span style="font-weight:bold;color:#a31515">[passage par référence]</span><span style="color:#a31515">=&quot;</span><span style="color:#000000">, param === obj);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// call code</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// código de llamada</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">const</span><span style="color:#000000"> obj = </span><span style="font-weight:bold;color:#000000">[10, 20, 30]</span><span style="color:#000000">;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">doSomethingWithObject(obj);</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;</span><span style="font-weight:bold;color:#a31515">[obj outside function]</span><span style="color:#a31515">=&quot;</span><span style="color:#000000">, obj);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// --------------------- function - pass by reference</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// --------------------- función - paso por referencia</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">function</span><span style="color:#000000"> doSomethingWithFunction(param) {</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// a rather bizarre thing that works</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// una cosa bastante extraña que funciona</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  param.unePropriétéNouvelle = </span><span style="color:#a31515">&quot;xyz&quot;</span><span style="color:#000000">;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  console.log(</span><span style="color:#a31515">&quot;</span><span style="font-weight:bold;color:#a31515">[param inside function]</span><span style="color:#a31515">=&quot;</span><span style="color:#000000">, param, </span><span style="color:#a31515">&quot;</span><span style="font-weight:bold;color:#a31515">[type]</span><span style="color:#a31515">=&quot;</span><span style="color:#000000">, </span><span style="color:#0000ff">typeof</span><span style="color:#000000"> (param), </span><span style="color:#a31515">&quot;</span><span style="font-weight:bold;color:#a31515">[passage par référence]</span><span style="color:#a31515">=&quot;</span><span style="color:#000000">, param === f);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// call code</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// código de llamada</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">const</span><span style="color:#000000"> f = x =&gt; x + 4;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">doSomethingWithFunction(f);</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;</span><span style="font-weight:bold;color:#a31515">[f outside function]</span><span style="color:#a31515">=&quot;</span><span style="color:#000000">, f, f.unePropriétéNouvelle, </span><span style="color:#0000ff">typeof</span><span style="color:#000000"> (f));</span></span></span>
@@ -891,32 +893,32 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold">[f outside function]</span>= x =&gt; x + 4 xyz function</span></span>
 </code></pre></div>
 
-<p><a id="refheadingtoc2042453980233556"></a></p>
-<h2 id="82-script-func-02">8.2. <span style="color: #4f81bd">script [func-02]</span></h2>
-<p>El siguiente script muestra que el tipo <strong>[función]</strong> es un tipo de datos como cualquier otro y que una variable puede tener este tipo. También muestra dos formas de definir una función:</p>
+<p><span id="refheadingtoc2042453980233556" name="refheadingtoc2042453980233556" class="odt-bookmark-anchor"></span></p>
+<h2 id="82-script-func-02">8.2. <span style="color: #4f81bd"><strong>script [func-02]</strong></span></h2>
+<p>El siguiente script muestra que el tipo <strong>[function]</strong> es un tipo de datos como cualquier otro y que una variable puede tener este tipo. También muestra dos formas de definir una función:</p>
 <ul>
-  <li>una utilizando la palabra clave<b> [función]</b>;
+  <li>una con la palabra clave <b>[function]</b>;
   </li>
-  <li>la otra utilizando la notación de «flecha» =&gt;;
+  <li>la otra con la notación «flecha» =&gt;;
   </li>
 </ul>
 
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
 <span class="odt-code-line"><span class="odt-code-line-content">&#x27;use strict&#x27;;</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// you can assign a function to a variable</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// puede asignar una función a una variable</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">const</span> variable1 = <span style="color:#0000ff">function</span> (a, b) {</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">  return</span> a + b;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">};</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">console.log(&quot;typeof(variable1)=&quot;, <span style="color:#0000ff">typeof</span> (variable1));</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// the variable can then be used as a function</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// la variable puede utilizarse como una función</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">console.log(&quot;variable1(10,12)=&quot;, variable1(10, 12));</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// the function can be defined using the notation =&gt;</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// la función puede definirse utilizando la notación =&gt;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">const</span> variable2 = (a, b, c) =&gt; {</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">  return</span> a - b + c;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">};</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">console.log(&quot;variable2(10,12,14)=&quot;, variable2(10, 12, 14));</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// braces can be omitted if there is only one expression in the function code</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// this expression is then the return value of the</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// puede omitir las llaves si sólo hay una expresión en el código de la función</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// esta expresión es entonces el valor de retorno de la función</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">const</span> variable3 = (a, b, c) =&gt; a + b + c;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">console.log(&quot;variable3(10,12,14)=&quot;, variable3(10, 12, 14));</span></span>
 </code></pre></div>
@@ -930,33 +932,33 @@
 <span class="odt-code-line"><span class="odt-code-line-content">variable3(10,12,14)= 36</span></span>
 </code></pre></div>
 
-<p><a id="refheadingtoc2042473980233556"></a></p>
+<p><span id="refheadingtoc2042473980233556" name="refheadingtoc2042473980233556" class="odt-bookmark-anchor"></span></p>
 <h2 id="83-script-func-03">8.3. <span style="color: #4f81bd">script [func-03]</span></h2>
-<p>Este script muestra la capacidad de pasar una función como parámetro a otra función. Esta técnica se utiliza ampliamente en los marcos de trabajo de JavaScript.</p>
+<p>Este script aborda la posibilidad de pasar una función como parámetro a otra función. Este procedimiento se utiliza ampliamente en los frameworks Javascript.</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#a31515">&#x27;use strict&#x27;;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// function parameters can be of type [function]</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">&#x27;use strict&#x27;;</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// los parámetros de una función pueden ser del tipo [fonction]</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// function f1</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// función f1</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">function</span><span style="color:#000000"> f1(param1, param2) {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">return</span><span style="color:#000000"> param1 + param2 + 10;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// function f2</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// función f2</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">function</span><span style="color:#000000"> f2(param1, param2) {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">return</span><span style="color:#000000"> param1 + param2 + 20;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// function g with a function f as parameter</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// función g con una función f como parámetro</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">function</span><span style="color:#000000"> g(param1, param2, f) {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">return</span><span style="color:#000000"> f(param1, param2) + 100;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// uses of g</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// usos de g</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">console.log(g(0, 10, f1));</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">console.log(g(0, 10, f2));</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// the function-type effective parameter can be passed directly - form 1</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// el parámetro efectivo de tipo función puede pasarse directamente - forma 1</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">console.log(g(0, 10, (param1, param2) =&gt; {</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">return</span><span style="color:#000000"> param1 + param2 + 30;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">}));</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// the function-type effective parameter can be passed directly - form 2</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// el parámetro efectivo de tipo función puede pasarse directamente - forma 2</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(g(0, 10, </span><span style="color:#0000ff">function</span><span style="color:#000000"> (param1, param2) {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">return</span><span style="color:#000000"> param1 + param2 + 40;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">}));</span></span>
@@ -971,47 +973,47 @@
 <span class="odt-code-line"><span class="odt-code-line-content">150</span></span>
 </code></pre></div>
 
-<p><a id="refheadingtoc259303196815120"></a></p>
+<p><span id="refheadingtoc259303196815120" name="refheadingtoc259303196815120" class="odt-bookmark-anchor"></span></p>
 <h2 id="84-script-func-04">8.4. <span style="color: #4f81bd">script [func-04]</span></h2>
-<p>El siguiente script muestra que una función de JavaScript puede comportarse como una clase:</p>
+<p>El siguiente script muestra que una función Javascript puede comportarse como una clase:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#a31515">&#x27;use strict&#x27;;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// a function can be used as an object</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">&#x27;use strict&#x27;;</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// una función puede utilizarse como objeto</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// an empty shell</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// una cáscara vacía</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">function</span><span style="color:#000000"> f() {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// to which external properties are attributed</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// a las que se atribuyen propiedades externas</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">f.prop1 = </span><span style="color:#a31515">&quot;val1&quot;</span><span style="color:#000000">;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">f.show = </span><span style="color:#0000ff">function</span><span style="color:#000000"> () {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  console.log(</span><span style="color:#0000ff">this</span><span style="color:#000000">.prop1);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// use of f</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// uso de f</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">f.show();</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// a function g operating as a class</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// una función g que opera como una clase</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">function</span><span style="color:#000000"> g() {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">this</span><span style="color:#000000">.prop2 = </span><span style="color:#a31515">&quot;val2&quot;</span><span style="color:#000000">;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">this</span><span style="color:#000000">.show = </span><span style="color:#0000ff">function</span><span style="color:#000000"> () {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    console.log(</span><span style="color:#0000ff">this</span><span style="color:#000000">.prop2);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  }</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// instantiate the function with [new]</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// instanciar la función con [new]</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">new</span><span style="color:#000000"> g().show();</span></span></span>
 </code></pre></div>
 
 <p><strong>Comentarios</strong></p>
 <ul>
-  <li>líneas 5–7: el cuerpo de la función f no define ninguna propiedad;
+  <li>líneas 5-7: el cuerpo de la función f no define ninguna propiedad;
   </li>
-  <li>líneas 9–12: las propiedades se asignan a la función f desde fuera;
+  <li>líneas 9-12: se asignan propiedades a la función f desde el exterior;
   </li>
-  <li>línea 14: uso de la función (objeto) f. Obsérvese que no escribimos <b>[f()] </b>sino simplemente <b>[f]</b>. Esta es la notación para un objeto;
+  <li>línea 14: uso de la función (objeto) f. Obsérvese que no se escribe <b>[f()], </b>sino simplemente <b>[f]</b>. Aquí tenemos la notación de un objeto;
   </li>
-  <li>líneas 17–22: definimos una función <b>[g] </b>como si fuera una clase con propiedades y métodos;
+  <li>líneas 17-22: se define una función <b>[g] </b>como si fuera una clase con propiedades y métodos;
   </li>
-  <li>línea 24: la función <b>[g] </b>se instancia mediante <b>[new g()]</b>;
+  <li>línea 24: la función <b>[g] </b>es instanciada por <b>[new g()]</b>;
   </li>
 </ul>
 
@@ -1022,17 +1024,17 @@
 <span class="odt-code-line"><span class="odt-code-line-content">val2</span></span>
 </code></pre></div>
 
-<p>ES6 introdujo el concepto de clases, lo que ahora nos permite evitar el uso de funciones para crear clases.</p>
-<p><a id="refheadingtoc5458671626043720"></a></p>
+<p>ES6 ha introducido el concepto de clase, lo que nos permite ahora evitar el uso de funciones para obtener clases.</p>
+<p><span id="refheadingtoc5458671626043720" name="refheadingtoc5458671626043720" class="odt-bookmark-anchor"></span></p>
 <h2 id="85-script-func-05">8.5. <span style="color: #4f81bd">script [func-05]</span></h2>
-<p>El script [func-05] muestra el uso de un operador llamado [operador resto]:</p>
+<p>El script [func-05] muestra el uso de un operador llamado [rest operator]:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#a31515">&#x27;use strict&#x27;;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// rest operator</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">&#x27;use strict&#x27;;</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// rest operador</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">function</span><span style="color:#000000"> f(arg1, ...otherArgs) {</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// 1st argument</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// 1er argumento</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  console.log(</span><span style="color:#a31515">&quot;arg1=&quot;</span><span style="color:#000000">, arg1);</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// other arguments</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// otros argumentos</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">let</span><span style="color:#000000"> i = 0;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  otherArgs.forEach(element =&gt; {</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    console.log(</span><span style="color:#a31515">&quot;otherArguments[&quot;</span><span style="color:#000000">, i, </span><span style="color:#a31515">&quot;]=&quot;</span><span style="color:#000000">, element);</span></span></span>
@@ -1040,16 +1042,16 @@
 <span class="odt-code-line"><span class="odt-code-line-content">  });</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// call</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// llame a</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">f(1, </span><span style="color:#a31515">&quot;deux&quot;</span><span style="color:#000000">, </span><span style="color:#a31515">&quot;trois&quot;</span><span style="color:#000000">, { x: 2, y: 3 })</span></span></span>
 </code></pre></div>
 
 <ul>
-  <li>línea 3: la notación [...otherArgs] significa que con una llamada de la forma f(param1, param2, param3), tendremos la línea 3:
+  <li>línea 3: la notación [...otherArgs] hace que con una llamada del tipo f(param1, param2, param3) tengamos la línea 3:
     <ul>
       <li>arg1=param1
       </li>
-      <li>otherArgs = [param2, param3]. [otherArgs] es, por lo tanto, una matriz que recoge todos los parámetros reales pasados después de [param1];
+      <li>otherArgs = [param2, param3]. [otherArgs] es, por lo tanto, una matriz que reúne todos los parámetros efectivos pasados detrás de [param1];
       </li>
     </ul>
   </li>

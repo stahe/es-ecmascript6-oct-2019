@@ -15,7 +15,7 @@
         <link rel="canonical" href="https://stahe.github.io/es-ecmascript6-oct-2019/expresiones-regulares.html">
       
       
-        <link rel="prev" href="cadenas.html">
+        <link rel="prev" href="las-cadenas-de-caracteres.html">
       
       
         <link rel="next" href="las-funciones.html">
@@ -56,6 +56,8 @@
     
     
       <link rel="stylesheet" href="stylesheets/focus.css">
+    
+      <link rel="stylesheet" href="stylesheets/bidi.css">
     
     <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
@@ -330,14 +332,14 @@
   
   
     <li class="md-nav__item">
-      <a href="configuracion-de-un-entorno-de-desarrollo.html" class="md-nav__link">
+      <a href="instalacion-de-un-entorno-de-trabajo.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    2. Configuración de un entorno de desarrollo
+    2. Instalación de un entorno de trabajo
   
 
     
@@ -357,14 +359,14 @@
   
   
     <li class="md-nav__item">
-      <a href="conceptos-basicos-de-javascript.html" class="md-nav__link">
+      <a href="los-fundamentos-de-javascript.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    3. Conceptos básicos de JavaScript
+    3. Los fundamentos de Javascript
   
 
     
@@ -384,14 +386,14 @@
   
   
     <li class="md-nav__item">
-      <a href="tablas.html" class="md-nav__link">
+      <a href="las-tablas.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    4. Tablas
+    4. Las tablas
   
 
     
@@ -411,14 +413,14 @@
   
   
     <li class="md-nav__item">
-      <a href="objetos-literales.html" class="md-nav__link">
+      <a href="los-objetos-literales.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    5. Objetos literales
+    5. Los objetos literales
   
 
     
@@ -438,14 +440,14 @@
   
   
     <li class="md-nav__item">
-      <a href="cadenas.html" class="md-nav__link">
+      <a href="las-cadenas-de-caracteres.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    6. Cadenas
+    6. Las cadenas de caracteres
   
 
     
@@ -615,14 +617,14 @@
   
   
     <li class="md-nav__item">
-      <a href="modulos-es6.html" class="md-nav__link">
+      <a href="los-modulos-es6.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    10. Módulos ES6
+    10. Los módulos ES6
   
 
     
@@ -669,14 +671,14 @@
   
   
     <li class="md-nav__item">
-      <a href="funciones-http-de-javascript.html" class="md-nav__link">
+      <a href="las-funciones-http-de-javascript.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    12. Funciones HTTP de JavaScript
+    12. Las funciones HTTP de Javascript
   
 
     
@@ -696,14 +698,14 @@
   
   
     <li class="md-nav__item">
-      <a href="clases.html" class="md-nav__link">
+      <a href="las-clases.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    13. Clases
+    13. Las clases
   
 
     
@@ -723,14 +725,14 @@
   
   
     <li class="md-nav__item">
-      <a href="clientes-http-de-javascript-del-servicio-de-calculo-de-impuestos.html" class="md-nav__link">
+      <a href="clients-http-javascript-del-servicio-de-calculo-de-impuestos.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    14. Clientes HTTP de JavaScript del servicio de cálculo de impuestos
+    14. Clients HTTP Javascript del servicio de cálculo de impuestos
   
 
     
@@ -763,43 +765,43 @@
   
 
 
-<p><a id="refheadingtoc2042393980233556"></a></p>
+<p><span id="refheadingtoc2042393980233556" name="refheadingtoc2042393980233556" class="odt-bookmark-anchor"></span></p>
 <h1 id="7-expresiones-regulares">7. <span style="color: #365f91">Expresiones regulares</span></h1>
 <p><img src="images/1000000000000111000000913AD7CFA8.png" width="109" height="58" style="width:2.889cm;height:1.535cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/1000000000000111000000913AD7CFA8.png" /></p>
-<p><a id="refheadingtoc259299196815120"></a></p>
+<p><span id="refheadingtoc259299196815120" name="refheadingtoc259299196815120" class="odt-bookmark-anchor"></span></p>
 <h2 id="71-script-regex-01">7.1. <span style="color: #4f81bd">script [regex-01]</span></h2>
-<p>En el curso de PHP, utilizamos el siguiente código para ilustrar las expresiones regulares de PHP 7:</p>
+<p>En el curso PHP, utilizamos el siguiente código para ilustrar las expresiones regulares de PHP 7:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-php">
 <span class="odt-code-line"><span class="odt-code-line-content">&lt;?php</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// strict type for function parameters</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// tipo estricto para parámetros de función</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#000000">declare</span><span style="color:#008080"> </span><span style="color:#000000">(strict_types=</span><span style="color:#000080">1</span><span style="color:#000000">);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// regular expressions in php</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// retrieve the various fields of a string</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// the model: a sequence of numbers surrounded by any characters</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// you only want to retrieve the sequence of digits</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// expresiones regulares en php</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// recuperar los distintos campos de una cadena</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// el modelo: una secuencia de números rodeados de cualquier carácter</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// sólo queremos recuperar la secuencia de números</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">$modèle</span><span style="color:#008080"> </span><span style="color:#000000">=</span><span style="color:#008080"> </span><span style="color:#008000">&quot;/(\d+)/&quot;</span><span style="color:#000000">;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// the chain is compared with the</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// la cadena se compara con el modelo</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">compareModele2Chaine(</span><span style="color:#0000ff">$modèle</span><span style="color:#000000">,</span><span style="color:#008080"> </span><span style="color:#008000">&quot;xyz1234abcd&quot;</span><span style="color:#000000">);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">compareModele2Chaine(</span><span style="color:#0000ff">$modèle</span><span style="color:#000000">,</span><span style="color:#008080"> </span><span style="color:#008000">&quot;12 34&quot;</span><span style="color:#000000">);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">compareModele2Chaine(</span><span style="color:#0000ff">$modèle</span><span style="color:#000000">,</span><span style="color:#008080"> </span><span style="color:#008000">&quot;abcd&quot;</span><span style="color:#000000">);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// the model: a sequence of numbers surrounded by any characters</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// we want the sequence of numbers and the fields that follow and precede them</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// el modelo: una secuencia de números rodeados de cualquier carácter</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// queremos la secuencia de números y los campos que les siguen y preceden</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">$modèle</span><span style="color:#008080"> </span><span style="color:#000000">=</span><span style="color:#008080"> </span><span style="color:#008000">&quot;/^(.*?)(\d+)(.*?)$/&quot;</span><span style="color:#000000">;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// the chain is compared with the model</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// la cadena se compara con el modelo</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">compareModele2Chaine(</span><span style="color:#0000ff">$modèle</span><span style="color:#000000">,</span><span style="color:#008080"> </span><span style="color:#008000">&quot;xyz1234abcd&quot;</span><span style="color:#000000">);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">compareModele2Chaine(</span><span style="color:#0000ff">$modèle</span><span style="color:#000000">,</span><span style="color:#008080"> </span><span style="color:#008000">&quot;12 34&quot;</span><span style="color:#000000">);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">compareModele2Chaine(</span><span style="color:#0000ff">$modèle</span><span style="color:#000000">,</span><span style="color:#008080"> </span><span style="color:#008000">&quot;abcd&quot;</span><span style="color:#000000">);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// the template - a date in dd/mm/yy format</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// la plantilla - una fecha en formato dd/mm/aa</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">$modèle</span><span style="color:#008080"> </span><span style="color:#000000">=</span><span style="color:#008080"> </span><span style="color:#008000">&quot;/^\s*(\d\d)\/(\d\d)\/(\d\d)\s*$/&quot;</span><span style="color:#000000">;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">compareModele2Chaine(</span><span style="color:#0000ff">$modèle</span><span style="color:#000000">,</span><span style="color:#008080"> </span><span style="color:#008000">&quot;10/05/97&quot;</span><span style="color:#000000">);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">compareModele2Chaine(</span><span style="color:#0000ff">$modèle</span><span style="color:#000000">,</span><span style="color:#008080"> </span><span style="color:#008000">&quot;  04/04/01  &quot;</span><span style="color:#000000">);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">compareModele2Chaine(</span><span style="color:#0000ff">$modèle</span><span style="color:#000000">,</span><span style="color:#008080"> </span><span style="color:#008000">&quot;5/1/01&quot;</span><span style="color:#000000">);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// the model - a decimal number</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// el modelo - un número decimal</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">$modèle</span><span style="color:#008080"> </span><span style="color:#000000">=</span><span style="color:#008080"> </span><span style="color:#008000">&quot;/^\s*(</span><span style="font-weight:bold;color:#008000">[+|-]</span><span style="color:#008000">?)\s*(\d+\.\d*|\.\d+|\d+)\s*/&quot;</span><span style="color:#000000">;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">compareModele2Chaine(</span><span style="color:#0000ff">$modèle</span><span style="color:#000000">,</span><span style="color:#008080"> </span><span style="color:#008000">&quot;187.8&quot;</span><span style="color:#000000">);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">compareModele2Chaine(</span><span style="color:#0000ff">$modèle</span><span style="color:#000000">,</span><span style="color:#008080"> </span><span style="color:#008000">&quot;-0.6&quot;</span><span style="color:#000000">);</span></span></span>
@@ -808,16 +810,16 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">compareModele2Chaine(</span><span style="color:#0000ff">$modèle</span><span style="color:#000000">,</span><span style="color:#008080"> </span><span style="color:#008000">&quot;4.&quot;</span><span style="color:#000000">);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">compareModele2Chaine(</span><span style="color:#0000ff">$modèle</span><span style="color:#000000">,</span><span style="color:#008080"> </span><span style="color:#008000">&quot; + 4&quot;</span><span style="color:#000000">);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// end</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// fin</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#000000">exit</span><span style="color:#000000">;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">// --------------------------------------------------------------------------</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#000000">function</span><span style="color:#008080"> </span><span style="color:#000000">compareModele2Chaine(</span><span style="font-weight:bold;color:#000000">string</span><span style="color:#008080"> </span><span style="color:#0000ff">$modèle</span><span style="color:#000000">,</span><span style="color:#008080"> </span><span style="font-weight:bold;color:#000000">string</span><span style="color:#008080"> </span><span style="color:#0000ff">$chaîne</span><span style="color:#000000">):</span><span style="color:#008080"> </span><span style="color:#000000">void</span><span style="color:#008080"> </span><span style="color:#000000">{</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#008080">// compares the $chaîne string with the $modèle model</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#008080">// the chain is compared with the model</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#008080">// compara la cadena $chaîne con el modelo $modèle</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#008080">// la cadena se compara con el modelo</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">  </span><span style="color:#0000ff">$champs</span><span style="color:#008080"> </span><span style="color:#000000">=</span><span style="color:#008080"> </span><span style="color:#000000">[];</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">  </span><span style="color:#0000ff">$correspond</span><span style="color:#008080"> </span><span style="color:#000000">=</span><span style="color:#008080"> </span><span style="color:#000000">preg_match(</span><span style="color:#0000ff">$modèle</span><span style="color:#000000">,</span><span style="color:#008080"> </span><span style="color:#0000ff">$chaîne</span><span style="color:#000000">,</span><span style="color:#008080"> </span><span style="color:#0000ff">$champs</span><span style="color:#000000">);</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#008080">// displaying results</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#008080">// visualización de resultados</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">print</span><span style="color:#008080"> </span><span style="color:#008000">&quot;\nRésultats(</span><span style="color:#0000ff">$modèle</span><span style="color:#008000">,</span><span style="color:#0000ff">$chaîne</span><span style="color:#008000">)\n&quot;</span><span style="color:#000000">;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">if</span><span style="color:#008080"> </span><span style="color:#000000">(</span><span style="color:#0000ff">$correspond</span><span style="color:#000000">)</span><span style="color:#008080"> </span><span style="color:#000000">{</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">    </span><span style="font-weight:bold;color:#000000">for</span><span style="color:#008080"> </span><span style="color:#000000">(</span><span style="color:#0000ff">$i</span><span style="color:#008080"> </span><span style="color:#000000">=</span><span style="color:#008080"> </span><span style="color:#000080">0</span><span style="color:#000000">;</span><span style="color:#008080"> </span><span style="color:#0000ff">$i</span><span style="color:#008080"> </span><span style="color:#000000">&lt;</span><span style="color:#008080"> </span><span style="color:#000000">count(</span><span style="color:#0000ff">$champs</span><span style="color:#000000">);</span><span style="color:#008080"> </span><span style="color:#0000ff">$i</span><span style="color:#000000">++)</span><span style="color:#008080"> </span><span style="color:#000000">{</span></span></span>
@@ -829,35 +831,35 @@
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
 </code></pre></div>
 
-<p>Convertimos este código a JavaScript de la siguiente manera:</p>
+<p>Transponemos este código a Javascript de la siguiente manera:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#a31515">&#x27;use strict&#x27;;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">&#x27;use strict&#x27;;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">/// regular expressions in javascript</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// retrieve the various fields of a string</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// the model: a sequence of numbers surrounded by any characters</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// you only want to retrieve the sequence of digits</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">/// expresiones regulares en javascript</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// recuperar los distintos campos de una cadena</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// el modelo: una secuencia de números rodeados de cualquier carácter</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// sólo queremos recuperar la secuencia de números</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">let</span><span style="color:#000000"> modèle =</span><span style="color:#a31515"> /(\d+)/</span><span style="color:#000000">;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// the chain is compared with the</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// la cadena se compara con el modelo</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">compareModèleToChaîne(modèle, </span><span style="color:#a31515">&quot;xyz1234abcd&quot;</span><span style="color:#000000">);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">compareModèleToChaîne(modèle, </span><span style="color:#a31515">&quot;12 34&quot;</span><span style="color:#000000">);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">compareModèleToChaîne(modèle, </span><span style="color:#a31515">&quot;abcd&quot;</span><span style="color:#000000">);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// the model: a sequence of numbers surrounded by any characters</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// we want the sequence of numbers and the fields that follow and precede them</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// el modelo: una secuencia de números rodeados de cualquier carácter</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// queremos la secuencia de números y los campos que les siguen y preceden</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">modèle =</span><span style="color:#a31515"> /^(.*?)(\d+)(.*?)$/</span><span style="color:#000000">;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// the chain is compared with the</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// la cadena se compara con el modelo</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">compareModèleToChaîne(modèle, </span><span style="color:#a31515">&quot;xyz1234abcd&quot;</span><span style="color:#000000">);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">compareModèleToChaîne(modèle, </span><span style="color:#a31515">&quot;12 34&quot;</span><span style="color:#000000">);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">compareModèleToChaîne(modèle, </span><span style="color:#a31515">&quot;abcd&quot;</span><span style="color:#000000">);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// the template - a date in dd/mm/yy format</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// la plantilla - una fecha en formato dd/mm/aa</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">modèle =</span><span style="color:#a31515"> /^\s*(\d\d)\/(\d\d)\/(\d\d)\s*$/</span><span style="color:#000000">;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">compareModèleToChaîne(modèle, </span><span style="color:#a31515">&quot;10/05/97&quot;</span><span style="color:#000000">);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">compareModèleToChaîne(modèle, </span><span style="color:#a31515">&quot;  04/04/01  &quot;</span><span style="color:#000000">);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">compareModèleToChaîne(modèle, </span><span style="color:#a31515">&quot;5/1/01&quot;</span><span style="color:#000000">);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// the model - a decimal number</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// el modelo - un número decimal</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">modèle =</span><span style="color:#a31515"> /^\s*(</span><span style="font-weight:bold;color:#a31515">[+|-]</span><span style="color:#a31515">?)\s*(\d+\.\d*|\.\d+|\d+)\s*$/</span><span style="color:#000000">;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">compareModèleToChaîne(modèle, </span><span style="color:#a31515">&quot;187.8&quot;</span><span style="color:#000000">);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">compareModèleToChaîne(modèle, </span><span style="color:#a31515">&quot;-0.6&quot;</span><span style="color:#000000">);</span></span></span>
@@ -868,12 +870,12 @@
 <span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">// --------------------------------------------------------------------------</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">function</span><span style="color:#000000"> compareModèleToChaîne(modèle, chaîne) {</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// compares the string [string] with the model [model]</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  console.log(</span><span style="color:#a31515">`----------- chaîne=</span><span style="color:#0000ff">${</span><span style="color:#000000">chaîne</span><span style="color:#0000ff">}</span><span style="color:#a31515">, modèle=</span><span style="color:#0000ff">${</span><span style="color:#000000">modèle</span><span style="color:#0000ff">}</span><span style="color:#a31515">`</span><span style="color:#000000">)</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// the chain is compared with the</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// compara la cadena [chaîne] con el modelo [modèle]</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  console.log(`----------- cadena=${cadena}, modelo=${modelo}`)</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// la cadena se compara con el modelo</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">const</span><span style="color:#000000"> result1 = modèle.exec(chaîne);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  console.log(</span><span style="color:#a31515">`comparaison avec exec=`</span><span style="color:#000000">, result1);</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// another way of doing things</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// otra forma de hacer las cosas</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">const</span><span style="color:#000000"> result2 = chaîne.match(modèle);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  console.log(</span><span style="color:#a31515">`comparaison avec match=`</span><span style="color:#000000">, result2);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
@@ -881,11 +883,11 @@
 
 <p><strong>Comentarios</strong></p>
 <ul>
-  <li>El código PHP y JavaScript son muy similares;
+  <li>los códigos PHP y Javascript son muy similares entre sí;
   </li>
-  <li>línea 7: Ten en cuenta que, en JavaScript, una expresión regular no es una cadena, sino un objeto. No pongas comillas ni apóstrofos alrededor de la expresión;
+  <li>línea 7: cabe señalar que en Javascript la expresión regular no es una cadena de caracteres, sino un objeto. No se ponen comillas ni apóstrofos alrededor de la expresión;
   </li>
-  <li>Líneas 41 y 44: Hay dos formas de conseguir el mismo resultado;
+  <li>líneas 41 y 44: hay dos métodos para obtener el mismo resultado;
   </li>
 </ul>
 
@@ -893,7 +895,7 @@
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#316bcd">[Running]</span><span style="color:#a31515"> C:\myprograms\laragon-lite\bin\nodejs\node-v10\node.exe -r esm &quot;c:\Data\st-2019\dev\es6\javascript\regexp\regexp-01.js&quot;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">type d&#x27;une expression régulière : object</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">----------- chaîne=xyz1234abcd, modèle=/(\d+)/</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">----------- chain=xyz1234abcd, model=/(\d+)/</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">comparaison avec exec= [ &#x27;1234&#x27;,</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">&#x27;1234&#x27;,</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">index: 3,</span></span>
@@ -904,13 +906,13 @@
 <span class="odt-code-line"><span class="odt-code-line-content">index: 3,</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">input: &#x27;xyz1234abcd&#x27;,</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">groups: undefined ]</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">----------- chaîne=12 34, modèle=/(\d+)/</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">----------- cadena=12 34, modelo=/(\d+)/</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">comparaison avec exec= <span style="font-weight:bold">[ &#x27;12&#x27;, &#x27;12&#x27;, index: 0, input: &#x27;12 34&#x27;, groups: undefined ]</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">comparaison avec match= <span style="font-weight:bold">[ &#x27;12&#x27;, &#x27;12&#x27;, index: 0, input: &#x27;12 34&#x27;, groups: undefined ]</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">----------- chaîne=abcd, modèle=/(\d+)/</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">----------- cadena=abcd, modelo=/(\d+)/</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">comparaison avec exec= null</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">comparaison avec match= null</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">----------- chaîne=xyz1234abcd, modèle=/^(.*?)(\d+)(.*?)$/</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">----------- string=xyz1234abcd, model=/^(.*?)(\d+)(.*?)$/</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">comparaison avec exec= [ &#x27;xyz1234abcd&#x27;,</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">&#x27;xyz&#x27;,</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">&#x27;1234&#x27;,</span></span>
@@ -925,7 +927,7 @@
 <span class="odt-code-line"><span class="odt-code-line-content">index: 0,</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">input: &#x27;xyz1234abcd&#x27;,</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">groups: undefined ]</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">----------- chaîne=12 34, modèle=/^(.*?)(\d+)(.*?)$/</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">----------- string=12 34, model=/^(.*?)(\d+)(.*?)$/</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">comparaison avec exec= [ &#x27;12 34&#x27;,</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">&#x27;&#x27;,</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">&#x27;12&#x27;,</span></span>
@@ -940,7 +942,7 @@
 <span class="odt-code-line"><span class="odt-code-line-content">index: 0,</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">input: &#x27;12 34&#x27;,</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">groups: undefined ]</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">----------- chaîne=abcd, modèle=/^(.*?)(\d+)(.*?)$/</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">----------- string=abcd, model=/^(.*?)(\d+)(.*?)$/</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">comparaison avec exec= null</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">comparaison avec match= null</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">----------- chaîne=10/05/97, modèle=/^\s*(\d\d)\/(\d\d)\/(\d\d)\s*$/</span></span>
@@ -958,7 +960,7 @@
 <span class="odt-code-line"><span class="odt-code-line-content">index: 0,</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">input: &#x27;10/05/97&#x27;,</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">groups: undefined ]</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">----------- chaîne= 04/04/01 , modèle=/^\s*(\d\d)\/(\d\d)\/(\d\d)\s*$/</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">----------- chain= 04/04/01 , model=/^\s*(\d\d)\/(\d\d)\/(\d\d)\s*$/</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">comparaison avec exec= [ &#x27; 04/04/01 &#x27;,</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">&#x27;04&#x27;,</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">&#x27;04&#x27;,</span></span>
@@ -976,7 +978,7 @@
 <span class="odt-code-line"><span class="odt-code-line-content">----------- chaîne=5/1/01, modèle=/^\s*(\d\d)\/(\d\d)\/(\d\d)\s*$/</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">comparaison avec exec= null</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">comparaison avec match= null</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold">----------- chaîne=187.8, modèle=/^\s*([+|-]?)\s*(\d+\.\d*|\.\d+|\d+)\s*$/</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">----------- chaîne=187.8, modèle=/^\s*([+|-]?)\s*(\d+\.\d*|\.\d+|\d+)\s*$/</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">comparaison avec exec= [ &#x27;187.8&#x27;,</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">&#x27;&#x27;,</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">&#x27;187.8&#x27;,</span></span>
@@ -989,74 +991,74 @@
 <span class="odt-code-line"><span class="odt-code-line-content">index: 0,</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">input: &#x27;187.8&#x27;,</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">groups: undefined ]</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold">----------- chaîne=-0.6, modèle=/^\s*([+|-]?)\s*(\d+\.\d*|\.\d+|\d+)\s*$/</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">----------- chaîne=-0.6, modèle=/^\s*([+|-]?)\s*(\d+\.\d*|\.\d+|\d+)\s*$/</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">comparaison avec exec= <span style="font-weight:bold">[ &#x27;-0.6&#x27;, &#x27;-&#x27;, &#x27;0.6&#x27;, index: 0, input: &#x27;-0.6&#x27;, groups: undefined ]</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">comparaison avec match= <span style="font-weight:bold">[ &#x27;-0.6&#x27;, &#x27;-&#x27;, &#x27;0.6&#x27;, index: 0, input: &#x27;-0.6&#x27;, groups: undefined ]</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold">----------- chaîne=4, modèle=/^\s*([+|-]?)\s*(\d+\.\d*|\.\d+|\d+)\s*$/</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">----------- chaîne=4, modèle=/^\s*([+|-]?)\s*(\d+\.\d*|\.\d+|\d+)\s*$/</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">comparaison avec exec= <span style="font-weight:bold">[ &#x27;4&#x27;, &#x27;&#x27;, &#x27;4&#x27;, index: 0, input: &#x27;4&#x27;, groups: undefined ]</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">comparaison avec match= <span style="font-weight:bold">[ &#x27;4&#x27;, &#x27;&#x27;, &#x27;4&#x27;, index: 0, input: &#x27;4&#x27;, groups: undefined ]</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold">----------- chaîne=.6, modèle=/^\s*([+|-]?)\s*(\d+\.\d*|\.\d+|\d+)\s*$/</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">----------- chaîne=.6, modèle=/^\s*([+|-]?)\s*(\d+\.\d*|\.\d+|\d+)\s*$/</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">comparaison avec exec= <span style="font-weight:bold">[ &#x27;.6&#x27;, &#x27;&#x27;, &#x27;.6&#x27;, index: 0, input: &#x27;.6&#x27;, groups: undefined ]</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">comparaison avec match= <span style="font-weight:bold">[ &#x27;.6&#x27;, &#x27;&#x27;, &#x27;.6&#x27;, index: 0, input: &#x27;.6&#x27;, groups: undefined ]</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold">----------- chaîne=4., modèle=/^\s*([+|-]?)\s*(\d+\.\d*|\.\d+|\d+)\s*$/</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">----------- chaîne=4., modèle=/^\s*([+|-]?)\s*(\d+\.\d*|\.\d+|\d+)\s*$/</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">comparaison avec exec= <span style="font-weight:bold">[ &#x27;4.&#x27;, &#x27;&#x27;, &#x27;4.&#x27;, index: 0, input: &#x27;4.&#x27;, groups: undefined ]</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">comparaison avec match= <span style="font-weight:bold">[ &#x27;4.&#x27;, &#x27;&#x27;, &#x27;4.&#x27;, index: 0, input: &#x27;4.&#x27;, groups: undefined ]</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold">----------- chaîne= + 4, modèle=/^\s*([+|-]?)\s*(\d+\.\d*|\.\d+|\d+)\s*$/</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">----------- chain= + 4, model=/^\s*([+|-]?)\s*(\d+\.\d*||.\d+|\d+)\s*$/</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">comparaison avec exec= <span style="font-weight:bold">[ &#x27; + 4&#x27;, &#x27;+&#x27;, &#x27;4&#x27;, index: 0, input: &#x27; + 4&#x27;, groups: undefined ]</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">comparaison avec match= <span style="font-weight:bold">[ &#x27; + 4&#x27;, &#x27;+&#x27;, &#x27;4&#x27;, index: 0, input: &#x27; + 4&#x27;, groups: undefined ]</span></span></span>
 </code></pre></div>
 
-<p>Los métodos <strong>[regexp.exec]</strong> y <strong>[string.match]</strong> devuelven los mismos resultados:</p>
+<p>Los métodos <strong>[regexp.exec]</strong> y <strong>[string.match]</strong> dan los mismos resultados:</p>
 <ul>
   <li><b>[null] </b>si no hay coincidencias entre la cadena y su patrón;
   </li>
-  <li>una matriz t, si hay una coincidencia con:
+  <li>una matriz t, si hay coincidencia con:
     <ul>
-      <li>t<b>[0]</b>: la cadena que coincide con el patrón;
+      <li><b>t[0]</b>: la cadena que corresponde al patrón;
       </li>
-      <li>t<b>[1]</b>: la cadena que coincide con el primer paréntesis del patrón;
+      <li><b>t[1]</b>: la cadena que corresponde al primer paréntesis del patrón;
       </li>
-      <li>t<b>[2]</b>: la cadena que coincide con el segundo paréntesis del patrón;
+      <li><b>t[2]</b>: la cadena que corresponde al segundo paréntesis del modelo;
       </li>
       <li>…
       </li>
-      <li>t<b>[input]</b>: la cadena completa en la que se buscó el patrón;
+      <li><b>t[input]</b>: la cadena completa en la que se ha buscado el patrón;
       </li>
     </ul>
   </li>
 </ul>
-<p><a id="refheadingtoc259301196815120"></a></p>
+<p><span id="refheadingtoc259301196815120" name="refheadingtoc259301196815120" class="odt-bookmark-anchor"></span></p>
 <h2 id="72-script-regexp-02">7.2. <span style="color: #4f81bd">script [regexp-02]</span></h2>
-<p>A veces no quieres extraer elementos de la cadena analizada, sino solo saber si coincide con el patrón:</p>
+<p>A veces no se desea recuperar elementos de la cadena probada, sino solo saber si se ajusta al patrón:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#a31515">&#x27;use strict&#x27;;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">&#x27;use strict&#x27;;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">/// regular expressions in javascript</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// retrieve the various fields of a string</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// the model: a sequence of numbers surrounded by any characters</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// you only want to retrieve the sequence of digits</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">/// expresiones regulares en javascript</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// recuperar los distintos campos de una cadena</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// el modelo: una secuencia de números rodeados de cualquier carácter</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// sólo queremos recuperar la secuencia de números</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">let</span><span style="color:#000000"> modèle =</span><span style="color:#a31515"> /\d+/</span><span style="color:#000000">;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;type d&#x27;une expression régulière : &quot;</span><span style="color:#000000">, </span><span style="color:#0000ff">typeof</span><span style="color:#000000"> (modèle));</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// the chain is compared with the</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// la cadena se compara con el modelo</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">compareModèleToChaîne(modèle, </span><span style="color:#a31515">&quot;xyz1234abcd&quot;</span><span style="color:#000000">);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">compareModèleToChaîne(modèle, </span><span style="color:#a31515">&quot;12 34&quot;</span><span style="color:#000000">);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">compareModèleToChaîne(modèle, </span><span style="color:#a31515">&quot;abcd&quot;</span><span style="color:#000000">);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// the model: a sequence of numbers surrounded by any characters</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// we want the sequence of numbers and the fields that follow and precede them</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// el modelo: una secuencia de números rodeados de cualquier carácter</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// queremos la secuencia de números y los campos que les siguen y preceden</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">modèle =</span><span style="color:#a31515"> /^.*?\d+.*?$/</span><span style="color:#000000">;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// the chain is compared with the</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// la cadena se compara con el modelo</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">compareModèleToChaîne(modèle, </span><span style="color:#a31515">&quot;xyz1234abcd&quot;</span><span style="color:#000000">);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">compareModèleToChaîne(modèle, </span><span style="color:#a31515">&quot;12 34&quot;</span><span style="color:#000000">);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">compareModèleToChaîne(modèle, </span><span style="color:#a31515">&quot;abcd&quot;</span><span style="color:#000000">);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// the template - a date in dd/mm/yy format</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// la plantilla - una fecha en formato dd/mm/aa</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">modèle =</span><span style="color:#a31515"> /^\s*\d\d\/\d\d\/\d\d\s*$/</span><span style="color:#000000">;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">compareModèleToChaîne(modèle, </span><span style="color:#a31515">&quot;10/05/97&quot;</span><span style="color:#000000">);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">compareModèleToChaîne(modèle, </span><span style="color:#a31515">&quot;  04/04/01  &quot;</span><span style="color:#000000">);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">compareModèleToChaîne(modèle, </span><span style="color:#a31515">&quot;5/1/01&quot;</span><span style="color:#000000">);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// the model - a decimal number</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// el modelo - un número decimal</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">modèle =</span><span style="color:#a31515"> /^\s*</span><span style="font-weight:bold;color:#a31515">[+|-]</span><span style="color:#a31515">?\s*\d+\.\d*|\.\d+|\d+\s*$/</span><span style="color:#000000">;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">compareModèleToChaîne(modèle, </span><span style="color:#a31515">&quot;187.8&quot;</span><span style="color:#000000">);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">compareModèleToChaîne(modèle, </span><span style="color:#a31515">&quot;-0.6&quot;</span><span style="color:#000000">);</span></span></span>
@@ -1067,20 +1069,20 @@
 <span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">// --------------------------------------------------------------------------</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">function</span><span style="color:#000000"> compareModèleToChaîne(modèle, chaîne) {</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// test</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// prueba</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">const</span><span style="color:#000000"> correspond = modèle.test(chaîne);</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// compares the string [string] with the model [model]</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  console.log(</span><span style="color:#a31515">`----------- chaîne=</span><span style="color:#0000ff">${</span><span style="color:#000000">chaîne</span><span style="color:#0000ff">}</span><span style="color:#a31515">, modèle=</span><span style="color:#0000ff">${</span><span style="color:#000000">modèle</span><span style="color:#0000ff">}</span><span style="color:#a31515">, correspond=</span><span style="color:#0000ff">${</span><span style="color:#000000">correspond</span><span style="color:#0000ff">}</span><span style="color:#a31515">`</span><span style="color:#000000">);</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// compara la cadena [chaîne] con el modelo [modèle]</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  console.log(`----------- string=${string}, model=${model}, match=${match}`);</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
 </code></pre></div>
 
 <p><strong>Comentarios</strong></p>
 <ul>
-  <li><b>[regexp-02] </b>utiliza el código de <b>[regexp-01] </b>con las siguientes diferencias:
+  <li><b>[regexp-02] </b>retoma el código de <b>[regexp-01] </b>con las siguientes diferencias:
     <ul>
-      <li>no queremos extraer elementos de la cadena analizada. Por lo tanto, hemos eliminado los paréntesis de las expresiones regulares utilizadas;
+      <li>no se desea recuperar elementos de la cadena probada. Por lo tanto, se han eliminado los paréntesis de las expresiones regulares utilizadas;
       </li>
-      <li>Línea 40: Utilizamos el método<b> [Regexp.test] </b>para determinar si una cadena coincide con una expresión regular;
+      <li>línea 40: se utiliza el método <b>[Regexp.test] </b>para saber si una cadena de caracteres cumple una expresión regular;
       </li>
     </ul>
   </li>
@@ -1090,21 +1092,21 @@
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#316bcd">[Running]</span><span style="color:#a31515"> C:\myprograms\laragon-lite\bin\nodejs\node-v10\node.exe -r esm &quot;c:\Data\st-2019\dev\es6\cours\regexp\regexp-02.js&quot;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">type d&#x27;une expression régulière :  object</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">----------- chaîne=xyz1234abcd, modèle=/\d+/, correspond=true</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">----------- chaîne=12 34, modèle=/\d+/, correspond=true</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">----------- chaîne=abcd, modèle=/\d+/, correspond=false</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">----------- chaîne=xyz1234abcd, modèle=/^.*?\d+.*?$/, correspond=true</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">----------- chaîne=12 34, modèle=/^.*?\d+.*?$/, correspond=true</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">----------- chaîne=abcd, modèle=/^.*?\d+.*?$/, correspond=false</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">----------- chaîne=10/05/97, modèle=/^\s*\d\d\/\d\d\/\d\d\s*$/, correspond=true</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">----------- chaîne=  04/04/01  , modèle=/^\s*\d\d\/\d\d\/\d\d\s*$/, correspond=true</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">----------- chaîne=5/1/01, modèle=/^\s*\d\d\/\d\d\/\d\d\s*$/, correspond=false</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold">----------- chaîne=187.8, modèle=/^\s*[+|-]?\s*\d+\.\d*|\.\d+|\d+\s*$/, correspond=true</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold">----------- chaîne=-0.6, modèle=/^\s*[+|-]?\s*\d+\.\d*|\.\d+|\d+\s*$/, correspond=true</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold">----------- chaîne=4, modèle=/^\s*[+|-]?\s*\d+\.\d*|\.\d+|\d+\s*$/, correspond=true</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold">----------- chaîne=.6, modèle=/^\s*[+|-]?\s*\d+\.\d*|\.\d+|\d+\s*$/, correspond=true</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold">----------- chaîne=4., modèle=/^\s*[+|-]?\s*\d+\.\d*|\.\d+|\d+\s*$/, correspond=true</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold">----------- chaîne= + 4, modèle=/^\s*[+|-]?\s*\d+\.\d*|\.\d+|\d+\s*$/, correspond=true</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">----------- string=xyz1234abcd, model=/\d+/, match=true</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">----------- string=12 34, model=/\d+/, match=true</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">----------- string=abcd, model=/\d+/, match=false</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">----------- string=xyz1234abcd, model=/^.*?\d+.*?$/, match=true</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">----------- string=12 34, model=/^.*?\d+.*?$/, match=true</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">----------- string=abcd, model=/^.*?\d+.*?$/, match=false</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">----------- string=10/05/97, model=/^\s*\d\d\/\d\d\s*$/, match=true</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">----------- string= 04/04/01 , model=/^\s*\d\d\/\d\d\d\/\d\d\s*$/, match=true</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">----------- string=5/1/01, model=/^\s*\d\d\/\d\d\s*$/, match=false</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">----------- chaîne=187.8, modèle=/^\s*[+|-]?\s*\d+\.\d*|\.\d+|\d+\s*$/, correspond=true</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">----------- chaîne=-0.6, modèle=/^\s*[+|-]?\s*\d+\.\d*|\.\d+|\d+\s*$/, correspond=true</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">----------- string=4, model=/^\s*[+|-]?\s*\d+\d*|\.\d+|\d+\s*$/, match=true</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">----------- string=.6, model=/^\s*[+|-]?\s*\d+\d*||.\d+|\d+\s*$/, match=true</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">----------- string=4., model=/^\s*[+|-]?\s*\d+\d*||.\d+|\d+\s*$/, match=true</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">----------- string= + 4, model=/^\s*[+|-]?\s*\d+\d*||.\d+|\d+\s*$/, match=true</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#316bcd">[Done]</span><span style="color:#a31515"> exited with </span><span style="color:#800080">code=0</span><span style="color:#a31515"> in </span><span style="color:#09885a">0.269</span><span style="color:#a31515"> seconds</span></span></span>
 </code></pre></div>
