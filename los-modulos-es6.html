@@ -366,7 +366,7 @@
   <span class="md-ellipsis">
     
   
-    3. Los fundamentos de Javascript
+    3. Los fundamentos de JavaScript
   
 
     
@@ -689,7 +689,7 @@
   <span class="md-ellipsis">
     
   
-    12. Las funciones HTTP de Javascript
+    12. Las funciones HTTP de JavaScript
   
 
     
@@ -736,14 +736,14 @@
   
   
     <li class="md-nav__item">
-      <a href="clients-http-javascript-del-servicio-de-calculo-de-impuestos.html" class="md-nav__link">
+      <a href="clientes-http-javascript-del-servicio-de-calculo-de-impuestos.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    14. Clients HTTP Javascript del servicio de cálculo de impuestos
+    14. Clientes HTTP JavaScript del servicio de cálculo de impuestos
   
 
     
@@ -778,8 +778,8 @@
 
 <p><span id="refheadingtoc225368640539168" name="refheadingtoc225368640539168" class="odt-bookmark-anchor"></span></p>
 <h1 id="10-los-modulos-es6">10. <span style="color: #365f91">Los módulos ES6</span></h1>
-<p><img src="images/10000000000000FC0000013E566BAA86.png" width="101" height="127" style="width:2.671cm;height:3.371cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000000FC0000013E566BAA86.png" /></p>
-<p>Los módulos ES6 permiten crear aplicaciones Javascript estructuradas en módulos independientes y reutilizables.</p>
+<p><img src="images/10000000000000FC0000013E566BAA86.png" width="101" height="127" style="width:2.671cm;height:3.373cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000000FC0000013E566BAA86.png" /></p>
+<p>Los módulos ES6 permiten crear aplicaciones de JavaScript estructuradas en módulos independientes y reutilizables.</p>
 <p><span id="refheadingtoc225370640539168" name="refheadingtoc225370640539168" class="odt-bookmark-anchor"></span></p>
 <h2 id="101-scripts-import-01-export-01">10.1. <span style="color: #4f81bd">Scripts [import-01, export-01]</span></h2>
 <p>El script <strong>[import-01]</strong> utilizará el módulo <strong>[export-01]</strong>. Este se define de la siguiente manera:</p>
@@ -803,12 +803,12 @@
 
 <p>El módulo <strong>[export-01]</strong> es utilizado por el script <strong>[import-01]</strong> de la siguiente manera:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
-<span class="odt-code-line"><span class="odt-code-line-content">&#x27;use strict&#x27;;</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// importar un objeto exportado por defecto</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">&#x27;«use strict»;</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// importación de un objeto exportado por defecto</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">import</span><span style="color:#000000"> export01 </span><span style="color:#0000ff">from</span><span style="color:#000000"> </span><span style="color:#a31515">&#x27;./export-01&#x27;</span><span style="color:#000000">;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">// uso de este objeto</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">export01.do();</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// puede importar una exportación por defecto con cualquier nombre</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// se puede importar una exportación por defecto con cualquier nombre</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">import</span><span style="color:#000000"> data </span><span style="color:#0000ff">from</span><span style="color:#000000"> </span><span style="color:#a31515">&#x27;./export-01&#x27;</span><span style="color:#000000">;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">console.log(data.data);</span></span>
 </code></pre></div>
@@ -833,14 +833,14 @@
 <p>Estos scripts muestran la exportación de un objeto con nombre.</p>
 <p>El script <strong>[export-02]</strong> es el siguiente:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
-<span class="odt-code-line"><span class="odt-code-line-content">// exportación por defecto de un objeto denominado</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// exportación por defecto de un objeto con nombre</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">const</span><span style="color:#000000"> data = {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  data: 2,</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  do() {</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    console.log(</span><span style="color:#0000ff">this</span><span style="color:#000000">.data);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  }</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">};</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// exportar</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// exportación</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">export</span><span style="color:#000000"> </span><span style="color:#0000ff">default</span><span style="color:#000000"> data;</span></span></span>
 </code></pre></div>
 
@@ -849,14 +849,14 @@
   </li>
 </ul>
 
-<p>El hecho de que el objeto exportado tenga nombre o no no cambia nada en la operación de importación. El script <strong>[import-02]</strong> es el siguiente:</p>
+<p>El hecho de que el objeto exportado tenga nombre o no no afecta a la operación de importación. El script <strong>[import-02]</strong> es el siguiente:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
 <span class="odt-code-line"><span class="odt-code-line-content">&#x27;use strict&#x27;;</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// importar un objeto exportado por defecto</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// importación de un objeto exportado por defecto</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">import</span><span style="color:#000000"> module1 </span><span style="color:#0000ff">from</span><span style="color:#000000"> </span><span style="color:#a31515">&#x27;./export-02&#x27;</span><span style="color:#000000">;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">// uso de este objeto</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">module1.do();</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// puede importar una exportación por defecto con cualquier nombre</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// se puede importar una exportación por defecto con cualquier nombre</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">import</span><span style="color:#000000"> module2 </span><span style="color:#0000ff">from</span><span style="color:#000000"> </span><span style="color:#a31515">&#x27;./export-02&#x27;</span><span style="color:#000000">;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">console.log(module2.data);</span></span>
 </code></pre></div>
@@ -873,8 +873,8 @@
 <p>Un módulo puede exportar varios elementos.</p>
 <p>El script <strong>[export-03]</strong> es el siguiente:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
-<span class="odt-code-line"><span class="odt-code-line-content">// multiexportaciones</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// exportación de objetos</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// exportaciones múltiples</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// exportación de objeto</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">const</span><span style="color:#000000"> data = {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  data: 2,</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  do() {</span></span>
@@ -898,12 +898,12 @@
 <p>El script <strong>[import-03]</strong> utiliza el módulo <strong>[export-03]</strong> de la siguiente manera:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
 <span class="odt-code-line"><span class="odt-code-line-content">&#x27;use strict&#x27;;</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// importar un módulo [export03]</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// importación de un módulo [export03]</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">import</span><span style="color:#000000"> {data, doSomething} </span><span style="color:#0000ff">from</span><span style="color:#000000"> </span><span style="color:#a31515">&#x27;./export-03&#x27;</span><span style="color:#000000">;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// uso de importaciones</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// uso de las importaciones</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">data.do();</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">doSomething();</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// otros escritos</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// otra forma de escribirlo</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">import</span><span style="color:#000000"> * </span><span style="color:#0000ff">as</span><span style="color:#000000"> module </span><span style="color:#0000ff">from</span><span style="color:#000000"> </span><span style="color:#a31515">&#x27;./export-03&#x27;</span><span style="color:#000000">;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">// uso de la importación</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">console.log(module.data);</span></span>
@@ -913,7 +913,7 @@
 <ul>
   <li>línea 3: los <b>[imports] </b>se crean con los nombres exactos de los objetos exportados;
   </li>
-  <li>línea 8: se pueden importar todos los objetos exportados a un objeto con nombre (aquí <b>[module]</b>);
+  <li>línea 8: se pueden importar todos los objetos exportados a un objeto con nombre (en este caso, <b>[module]</b>);
   </li>
 </ul>
 

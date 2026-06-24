@@ -366,7 +366,7 @@
   <span class="md-ellipsis">
     
   
-    3. Los fundamentos de Javascript
+    3. Los fundamentos de JavaScript
   
 
     
@@ -700,7 +700,7 @@
   <span class="md-ellipsis">
     
   
-    12. Las funciones HTTP de Javascript
+    12. Las funciones HTTP de JavaScript
   
 
     
@@ -747,14 +747,14 @@
   
   
     <li class="md-nav__item">
-      <a href="clients-http-javascript-del-servicio-de-calculo-de-impuestos.html" class="md-nav__link">
+      <a href="clientes-http-javascript-del-servicio-de-calculo-de-impuestos.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    14. Clients HTTP Javascript del servicio de cálculo de impuestos
+    14. Clientes HTTP JavaScript del servicio de cálculo de impuestos
   
 
     
@@ -789,20 +789,20 @@
 
 <p><span id="refheadingtoc2041993980233556" name="refheadingtoc2041993980233556" class="odt-bookmark-anchor"></span></p>
 <h1 id="4-las-tablas">4. <span style="color: #365f91">Las tablas</span></h1>
-<p><img src="images/10000000000000F7000000DA0354C5DC.png" width="99" height="87" style="width:2.611cm;height:2.304cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000000F7000000DA0354C5DC.png" /></p>
+<p><img src="images/10000000000000F7000000DA0354C5DC.png" width="99" height="87" style="width:2.611cm;height:2.311cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000000F7000000DA0354C5DC.png" /></p>
 <p><span id="refheadingtoc2042013980233556" name="refheadingtoc2042013980233556" class="odt-bookmark-anchor"></span></p>
 <h2 id="41-script-tab-01">4.1. <span style="color: #4f81bd"><strong>script</strong> [tab-01]</span></h2>
-<p>El siguiente script ilustra algunas características de las tablas Javascript. Estas se parecen a las tablas PHP, pero con una gran diferencia: se manipulan mediante punteros y se consideran objetos.</p>
+<p>El siguiente script ilustra algunas características de las matrices de JavaScript. Estas se parecen a las matrices PHP, aunque con una gran diferencia: se manipulan mediante punteros y se consideran objetos.</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
-<span class="odt-code-line"><span class="odt-code-line-content">&#x27;use strict&#x27;;</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// un array es un objeto que se manipula a través de su dirección</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">&#x27;«use strict»;</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// un array es un objeto que se maneja a través de su dirección</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">const</span><span style="color:#000000"> tab1 = </span><span style="font-weight:bold;color:#000000">[1, 2, 3]</span><span style="color:#000000">;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// direcciones de copia</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// copia de direcciones</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">const</span><span style="color:#000000"> tab2 = tab1;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// tab1 y tab2 apuntan a la misma tabla</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// tab1 y tab2 apuntan al mismo array</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;tab1===tab2 :&quot;</span><span style="color:#000000">, tab1 === tab2);</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// la tabla puede modificarse utilizando la pestaña1 o la pestaña2</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// se puede modificar el array utilizando indistintamente tab1 o tab2</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">tab2<span style="font-weight:bold">[1]</span> = 10;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;tab1=&quot;</span><span style="color:#000000">, tab1);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;tab2=&quot;</span><span style="color:#000000">, tab2);</span></span></span>
@@ -818,47 +818,48 @@
 
 <p><strong>Comentarios</strong></p>
 <ul>
-  <li>la línea 2 de los resultados muestra que <b>[tab1] </b>y <b>[tab2] </b>son dos entidades iguales, de hecho dos punteros iguales;
+  <li>la línea 2 de los resultados muestra que <b>[tab1] </b>y <b>[tab2] </b>son dos entidades iguales, de hecho, dos punteros iguales;
   </li>
-  <li>las líneas 4 y 5 de los resultados muestran que estos dos punteros apuntan a la misma matriz;
+  <li>las líneas 4 y 5 de los resultados muestran que estos dos punteros apuntan al mismo array;
   </li>
 </ul>
+
 <p><span id="refheadingtoc2042033980233556" name="refheadingtoc2042033980233556" class="odt-bookmark-anchor"></span></p>
 <h2 id="42-script-tab-02">4.2. <span style="color: #4f81bd"><strong>script</strong> [tab-02]</span></h2>
-<p>Este script muestra que el array Javascript es diferente de los arrays de los lenguajes compilados.</p>
+<p>Este script muestra que el array de JavaScript es diferente de los arrays de los lenguajes compilados.</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
 <span class="odt-code-line"><span class="odt-code-line-content">&#x27;use strict&#x27;;</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// tabla</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// matriz</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">const</span><span style="color:#000000"> tab = [];</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;tab=&quot;</span><span style="color:#000000">, tab, </span><span style="color:#a31515">&quot;, longueur=</span><span style="font-weight:bold;color:#a31515">[&quot;, tab.length, &quot;]</span><span style="color:#a31515">&quot;</span><span style="color:#000000">);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;-------------------------------&quot;</span><span style="color:#000000">);</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// inicialización de elementos</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// inicialización de un elemento</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">tab<span style="font-weight:bold">[3]</span> = 100;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">tab</span><span style="font-weight:bold;color:#000000">[1]</span><span style="color:#000000"> = </span><span style="color:#a31515">&quot;huit&quot;</span><span style="color:#000000">;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// tabla</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// matriz</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;tab=&quot;</span><span style="color:#000000">, tab, </span><span style="color:#a31515">&quot;, longueur=</span><span style="font-weight:bold;color:#a31515">[&quot;, tab.length, &quot;]</span><span style="color:#a31515">&quot;</span><span style="color:#000000">);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;-------------------------------&quot;</span><span style="color:#000000">);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">// toString</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;tab.toString=</span><span style="font-weight:bold;color:#a31515">[&quot;, tab.toString(), &quot;]</span><span style="color:#a31515">&quot;</span><span style="color:#000000">);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;-------------------------------&quot;</span><span style="color:#000000">);</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// las claves de la tabla son sus índices</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// las claves de la matriz son sus índices</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">for</span><span style="color:#000000"> (</span><span style="color:#0000ff">let</span><span style="color:#000000"> key </span><span style="color:#0000ff">of</span><span style="color:#000000"> tab.keys()) {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  console.log(</span><span style="color:#a31515">&quot;clé=</span><span style="font-weight:bold;color:#a31515">[&quot;, key, &quot;]</span><span style="color:#a31515">, valeur=</span><span style="font-weight:bold;color:#a31515">[&quot;, tab[key]</span><span style="color:#000000">, </span><span style="color:#a31515">&quot;]&quot;</span><span style="color:#000000">);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;-------------------------------&quot;</span><span style="color:#000000">);</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// los valores de la tabla</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// los valores del array</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">for</span><span style="color:#000000"> (</span><span style="color:#0000ff">let</span><span style="color:#000000"> value </span><span style="color:#0000ff">of</span><span style="color:#000000"> tab.values()) {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  console.log(</span><span style="color:#a31515">&quot;valeur=</span><span style="font-weight:bold;color:#a31515">[&quot;, value, &quot;]</span><span style="color:#a31515">&quot;</span><span style="color:#000000">);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
 </code></pre></div>
 
 <ul>
-  <li>línea 4: una matriz vacía;
+  <li>línea 4: un array vacío;
   </li>
-  <li>línea 8: una matriz no tiene un tamaño fijo. Es simplemente una secuencia de elementos indexados por un número. Se puede inicializar el elemento n.º 3 aunque los elementos <b>[0, 1, 2] </b>aún no estén definidos;
+  <li>línea 8: un array no tiene un tamaño fijo. Es simplemente una secuencia de elementos indexados por un número. Se puede inicializar el elemento n.º 3 aunque los elementos <b>[0, 1, 2] </b>aún no estén definidos;
   </li>
-  <li>líneas 16-24: una matriz Javascript se comporta de manera análoga a la matriz PHP;
+  <li>líneas 16-24: un array de JavaScript se comporta de forma similar al array PHP;
   </li>
 </ul>
 
@@ -887,56 +888,56 @@
 <p>Este script muestra diferentes métodos del objeto <strong>[tableau]</strong>.</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
 <span class="odt-code-line"><span class="odt-code-line-content">&#x27;use strict&#x27;;</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// una tabla puede contener diferentes tipos de datos</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// un array puede contener diferentes tipos de datos</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">const</span><span style="color:#000000"> tab = </span><span style="font-weight:bold;color:#000000">[1, 2, &quot;un&quot;, &quot;deux&quot;, true, [10, 20]</span><span style="color:#000000">, { prop1: 10, prop2: </span><span style="color:#a31515">&quot;abc&quot;</span><span style="color:#000000"> }];</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// console.log puede mostrar el contenido de un array</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// console.log sabe mostrar el contenido de un array</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">show(1);</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;tab=&quot;</span><span style="color:#000000">, tab);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">show(2);</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// ruta de la tabla con foreach</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// recorrido de la matriz con «foreach»</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">tab.forEach(element =&gt; {</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  console.log(</span><span style="color:#a31515">&quot;élément=&quot;</span><span style="color:#000000">, element, </span><span style="color:#0000ff">typeof</span><span style="color:#000000"> (element));</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">});</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">show(</span><span style="color:#a31515">&quot;2b&quot;</span><span style="color:#000000">);</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// otra forma de hacer lo mismo</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// otra forma de escribir el mismo código</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">tab.forEach(</span><span style="color:#0000ff">function</span><span style="color:#000000"> (element) {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  console.log(</span><span style="color:#a31515">&quot;élément=&quot;</span><span style="color:#000000">, element, </span><span style="color:#0000ff">typeof</span><span style="color:#000000"> (element));</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">});</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">show(3);</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// ruta a bordo con for</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// recorrido de la matriz con «for»</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">for</span><span style="color:#000000"> (</span><span style="color:#0000ff">let</span><span style="color:#000000"> i = 0; i &lt; tab.length; i++) {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  console.log(</span><span style="color:#a31515">&quot;i=&quot;</span><span style="color:#000000">, i, </span><span style="color:#a31515">&quot;tab</span><span style="font-weight:bold;color:#a31515">[i]</span><span style="color:#a31515">=&quot;</span><span style="color:#000000">, tab</span><span style="font-weight:bold;color:#000000">[i]</span><span style="color:#000000">);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">show(4);</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// modificación tab[i]</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// modificación de tab[i]</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">tab<span style="font-weight:bold">[5]</span> = [];</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// mostrar</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// visualización</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;tab=&quot;</span><span style="color:#000000">, tab);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">show(5);</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// eliminar el último elemento</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// se elimina el último elemento</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">let</span><span style="color:#000000"> element = tab.pop(tab);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;élément=&quot;</span><span style="color:#000000">, element, </span><span style="color:#a31515">&quot;tab=&quot;</span><span style="color:#000000">, tab);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">show(6);</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// añadir un elemento al final de la matriz</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// se añade un elemento al final de la matriz</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">tab.push(</span><span style="color:#a31515">&#x27;xyz&#x27;</span><span style="color:#000000">);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;tab=&quot;</span><span style="color:#000000">, tab);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">show(7);</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// añadir un elemento al principio de la matriz</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// se añade un elemento al principio de la tabla</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">tab.unshift(1000);</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;tab=&quot;</span><span style="color:#000000">, tab);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">show(8);</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// eliminar el 1er elemento de la tabla</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// se elimina el primer elemento de la matriz</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">element = tab.shift();</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;élément=&quot;</span><span style="color:#000000">, element, </span><span style="color:#a31515">&quot;tab=&quot;</span><span style="color:#000000">, tab);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">show(9);</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// eliminar el elemento nº 2 de la tabla</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// se elimina el elemento n.º 2 de la tabla</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">element = tab.splice(2, 1);</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;élément=&quot;</span><span style="color:#000000">, element, </span><span style="color:#a31515">&quot;tab=&quot;</span><span style="color:#000000">, tab);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">show(10);</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// se eliminan dos elementos de la tabla, empezando por el elemento nº 1</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// se eliminan de la tabla dos elementos a partir del elemento n.º 1</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">element = tab.splice(1, 2);</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;élément=&quot;</span><span style="color:#000000">, element, </span><span style="color:#a31515">&quot;tab=&quot;</span><span style="color:#000000">, tab);</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">// función</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">function</span><span style="color:#000000"> show(param) {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  console.log(</span><span style="color:#a31515">&quot;</span><span style="font-weight:bold;color:#a31515">[&quot;, param, &quot;:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: ]</span><span style="color:#a31515">&quot;</span><span style="color:#000000">);</span></span></span>
@@ -945,7 +946,7 @@
 
 <p><strong>Comentarios</strong></p>
 <ul>
-  <li>La diferencia entre las matrices PHP y Javascript se ilustra en las líneas 3 y 24:
+  <li>La diferencia entre las matrices de PHP y las de JavaScript queda ilustrada en las líneas 3 y 24:
     <ul>
       <li>la línea 3 declara la variable <b>[tab] </b>como una constante;
       </li>
@@ -955,9 +956,9 @@
   </li>
 </ul>
 
-<p>En la línea 3, es el puntero que apunta a la matriz el que se declara constante, no la matriz en sí. Esta última puede modificarse.</p>
+<p>En la línea 3, lo que se declara como constante es el puntero que apunta al array, no el propio array. Este último puede modificarse.</p>
 <ul>
-  <li>líneas 14-16: el array <b>[tab] </b>se recorre utilizando un método <b>[forEach] </b>del array <b>[tab]</b>. Este método recibe como parámetro la definición de una función, que podríamos llamar función literal. Esta función parámetro recibe un parámetro: el elemento actual de la matriz <b>[tab]</b>. La función se invoca para cada elemento de la matriz. Este tipo de escritura es habitual en Javascript;
+  <li>Líneas 14-16: el array <b>[tab] </b>se recorre mediante un método <b>[forEach] </b>del array <b>[tab]</b>. Este método recibe como parámetro la definición de una función, a la que podríamos llamar función literal. Esta función parámetro recibe un parámetro: el elemento actual de la matriz <b>[tab]</b>. La función se invoca para cada elemento de la matriz. Este tipo de sintaxis es habitual en JavaScript;
   </li>
   <li>líneas 9-10: se utiliza otra sintaxis para definir la función de parámetro. En lugar de escribir:
     <ul>
@@ -971,7 +972,7 @@
 <ul>
   <li>(continuación)
     <ul>
-      <li><b>(p1,p2, ..,pn)=&gt;{.…}</b>. A esto se le llama notación «flecha» o «arrow»;
+      <li><b>(p1, p2, …, pn) =&gt; {…}</b>. A esto se le denomina notación «flecha» o «arrow»;
       </li>
     </ul>
   </li>
@@ -981,37 +982,38 @@
 
 <p>De este script, cabe destacar que:</p>
 <ul>
-  <li>una matriz es un objeto al que hace referencia un puntero;
+  <li>una matriz es un objeto al que se hace referencia mediante un puntero;
   </li>
   <li>que este objeto tiene métodos <b>[forEach, pop, push, shift, unshift]</b>;
   </li>
 </ul>
+
 <p><span id="refheadingtoc2042073980233556" name="refheadingtoc2042073980233556" class="odt-bookmark-anchor"></span></p>
 <h2 id="44-script-tab-04">4.4. <span style="color: #4f81bd"><strong>script</strong> [tab-04]</span></h2>
 <p>Este script presenta otros métodos de los objetos de matriz.</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
 <span class="odt-code-line"><span class="odt-code-line-content">&#x27;use strict&#x27;;</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// método de manipulación de tablas</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// una imagen</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// método de manipulación de matrices</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// un array</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">const</span><span style="color:#000000"> tab = [];</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">for</span><span style="color:#000000"> (</span><span style="color:#0000ff">let</span><span style="color:#000000"> i = 0; i &lt; 10; i++) {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  tab<span style="font-weight:bold">[i]</span> = i * 10;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// mostrar</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// visualización</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;tab=&quot;</span><span style="color:#000000">, tab);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">// mapa</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">const</span><span style="color:#000000"> tab2 = tab.map(element =&gt; {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">return</span><span style="color:#000000"> { prop1: element, prop2: element * element }</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">});</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// mostrar</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// visualización</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;tab=&quot;</span><span style="color:#000000">, tab);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;tab2=&quot;</span><span style="color:#000000">, tab2);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">// reducir sin valor inicial</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">const</span><span style="color:#000000"> somme = tab.reduce((accumulator, currentValue) =&gt; accumulator + currentValue);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;somme tab=&quot;</span><span style="color:#000000">, somme);</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// reducir con valor inicial</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// reducción con valor inicial</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">const</span><span style="color:#000000"> somme2 = tab.reduce((accumulator, currentValue) =&gt; accumulator + currentValue, 10);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;somme2 tab=&quot;</span><span style="color:#000000">, somme2);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">// filtro</span></span>
@@ -1021,7 +1023,7 @@
 <span class="odt-code-line"><span class="odt-code-line-content">  }</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">});</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;tab4=&quot;</span><span style="color:#000000">, tab4);</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// encontrar</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// buscar</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">const</span><span style="color:#000000"> element1 = tab.find((element) =&gt; (element &gt; 20));</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;élément1=&quot;</span><span style="color:#000000">, element1);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">// findIndex</span></span>
@@ -1035,10 +1037,10 @@
 <span class="odt-code-line"><span class="odt-code-line-content">// lastIndexOf</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">const</span><span style="color:#000000"> index4 = </span><span style="font-weight:bold;color:#000000">[4, 5, 4, 2]</span><span style="color:#000000">.lastIndexOf(4);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;index4 4=&quot;</span><span style="color:#000000">, index4);</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// hechizo</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// resultado</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">const</span><span style="color:#000000"> tab5 = </span><span style="font-weight:bold;color:#000000">[4, 5, 4, 2]</span><span style="color:#000000">.sort();</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;tab5=&quot;</span><span style="color:#000000">, tab5);</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// hechizo inverso</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// orden inverso</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">const</span><span style="color:#000000"> tab6 = </span><span style="font-weight:bold;color:#000000">[4, 5, 4, 2]</span><span style="color:#000000">.sort((e1, e2) =&gt; {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">if</span><span style="color:#000000"> (e1 &gt; e2) {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">return</span><span style="color:#000000"> -1;</span></span></span>
@@ -1054,7 +1056,7 @@
 
 <p><strong>Comentarios</strong></p>
 <ul>
-  <li>líneas 13-15: el método <b>[map] </b>admite una función de transformación como parámetro. Esta se invoca repetidamente para cada elemento de la matriz. Se encarga de transformar este en otra cosa, en este caso un objeto con las propiedades <b>[prop1, prop2]</b>. El método <b>[map] </b>devuelve una nueva matriz. La anterior no se modifica:
+  <li>líneas 13-15: el método <b>[map] </b>admite una función de transformación como parámetro. Esta función se invoca repetidamente para cada elemento de la matriz. Se encarga de transformar dicho elemento en otra cosa, en este caso un objeto con las propiedades <b>[prop1, prop2]</b>. El método <b>[map] </b>devuelve una nueva matriz. La anterior no se modifica:
   </li>
 </ul>
 
@@ -1073,13 +1075,13 @@
 </code></pre></div>
 
 <ul>
-  <li>línea 20: el método <b>[reduce] </b>admite como parámetro una función con dos parámetros que se invoca repetidamente para cada elemento de la matriz. Esta función admite dos parámetros:
+  <li>línea 20: el método <b>[reduce] </b>admite como parámetro una función con dos parámetros que se invoca repetidamente para cada elemento de la tabla. Esta función admite dos parámetros:
     <ul>
       <li><b>[currentValue] </b>es el elemento actual de la matriz;
       </li>
-      <li><b>[accumulator] </b>es el último resultado obtenido por la función. Si no se ha previsto ningún valor inicial para este acumulador, entonces será 0;
+      <li><b>[accumulator] </b>es el último resultado obtenido por la función. Si no se ha especificado ningún valor inicial para este acumulador, este será 0;
       </li>
-      <li>la primera vez que se invoca la función de acumulación, devuelve <b>[0+tab[0]</b>]. Es este valor el que se asigna al acumulador;
+      <li>la primera vez que se invoca la función de acumulación, devuelve <b>[0+tab[0]</b>]. Este es el valor que se asigna al acumulador;
       </li>
       <li>la segunda vez, devuelve <b>acumulador+tab[1]</b>, es decir, <b>tab[0]+tab[1]</b>;
       </li>
@@ -1089,7 +1091,7 @@
       </li>
     </ul>
   </li>
-  <li>línea 26: el método <b>[filter] </b>tiene como parámetro una función de filtrado. Esta se invoca repetidamente para cada elemento de la matriz y recibe dicho elemento como parámetro. Debe devolver:
+  <li>línea 26: el método <b>[filter] </b>tiene como parámetro una función de filtrado. Esta función se invoca repetidamente para cada elemento de la matriz y recibe dicho elemento como parámetro. Debe devolver:
     <ul>
       <li><b>[true] </b>si el elemento debe conservarse;
       </li>
@@ -1097,23 +1099,23 @@
       </li>
     </ul>
   </li>
-  <li>línea 33: el método <b>[find] </b>tiene como parámetro una función de búsqueda. Esta se invoca repetidamente para cada elemento de la matriz y recibe dicho elemento como parámetro. Debe devolver <b>[true] </b>si el elemento recibido cumple el criterio de búsqueda. En ese caso, la función se detiene. Por lo tanto, el método <b>[find] </b>devuelve 0 o 1 elemento;
+  <li>línea 33: el método <b>[find] </b>tiene como parámetro una función de búsqueda. Esta función se invoca repetidamente para cada elemento de la matriz y recibe dicho elemento como parámetro. Debe devolver <b>[true] </b>si el elemento recibido cumple el criterio de búsqueda. En ese caso, la función se detiene. Por lo tanto, el método <b>[find] </b>devuelve 0 o 1 elemento;
   </li>
-  <li>línea 36: el método <b>[findIndex] </b>funciona como el método <b>[find]</b>, pero en lugar de devolver el elemento encontrado, devuelve su índice en la matriz;
+  <li>línea 36: el método <b>[findIndex] </b>funciona igual que el método <b>[find], </b>pero en lugar de devolver el elemento encontrado, devuelve su índice en la matriz;
   </li>
   <li>líneas 39 y 41: el método <b>[indexOf(valeur)] </b>busca <b>[valeur] </b>en la matriz y devuelve su índice, o -1 si no lo encuentra;
   </li>
-  <li>línea 44: el método <b>[lastIndexOf(valeur)] </b>funciona como el método <b>[indexOf(valeur)], </b>pero comienza su búsqueda por el final de la matriz;
+  <li>línea 44: el método <b>[lastIndexOf(valeur)] </b>funciona igual que el método <b>[indexOf(valeur)], </b>pero comienza la búsqueda por el final de la matriz;
   </li>
-  <li>línea 47: el método <b>[sort] </b>sin parámetros devuelve una matriz ordenada en orden natural (números, cadenas);
+  <li>línea 47: el método <b>[sort] </b>sin parámetros devuelve una matriz ordenada según el orden natural (números, cadenas);
   </li>
-  <li>línea 50: cuando el orden natural no es adecuado, hay que pasar al método <b>[sort]</b>, una función con dos parámetros (e1, e2) que devuelve:
+  <li>línea 50: cuando el orden natural no es adecuado, hay que pasar al método <b>[sort] </b>una función con dos parámetros (e1, e2) que devuelve:
     <ul>
       <li>+1 si e1 debe clasificarse después de e2;
       </li>
       <li>-1 si e1 debe clasificarse antes que e2;
       </li>
-      <li>0 si ambos elementos deben tener la misma clasificación;
+      <li>0 si ambos elementos deben tener la misma posición;
       </li>
     </ul>
   </li>

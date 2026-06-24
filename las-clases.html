@@ -18,7 +18,7 @@
         <link rel="prev" href="las-funciones-http-de-javascript.html">
       
       
-        <link rel="next" href="clients-http-javascript-del-servicio-de-calculo-de-impuestos.html">
+        <link rel="next" href="clientes-http-javascript-del-servicio-de-calculo-de-impuestos.html">
       
       
         
@@ -366,7 +366,7 @@
   <span class="md-ellipsis">
     
   
-    3. Los fundamentos de Javascript
+    3. Los fundamentos de JavaScript
   
 
     
@@ -609,7 +609,7 @@
   <span class="md-ellipsis">
     
   
-    12. Las funciones HTTP de Javascript
+    12. Las funciones HTTP de JavaScript
   
 
     
@@ -758,14 +758,14 @@
   
   
     <li class="md-nav__item">
-      <a href="clients-http-javascript-del-servicio-de-calculo-de-impuestos.html" class="md-nav__link">
+      <a href="clientes-http-javascript-del-servicio-de-calculo-de-impuestos.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    14. Clients HTTP Javascript del servicio de cálculo de impuestos
+    14. Clientes HTTP JavaScript del servicio de cálculo de impuestos
   
 
     
@@ -800,35 +800,35 @@
 
 <p><span id="refheadingtoc225406640539168" name="refheadingtoc225406640539168" class="odt-bookmark-anchor"></span></p>
 <h1 id="13-las-clases">13. <span style="color: #365f91">Las clases</span></h1>
-<p><img src="images/10000000000000EF000001677C3D49DE.png" width="108" height="162" style="width:2.85cm;height:4.283cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000000EF000001677C3D49DE.png" /></p>
-<p>Aquí presentamos las clases de ECMAScript 6. En primer lugar, mostramos que las funciones ya se pueden utilizar como clases.</p>
+<p><img src="images/10000000000000EF000001677C3D49DE.png" width="108" height="161" style="width:2.85cm;height:4.27cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000000EF000001677C3D49DE.png" /></p>
+<p>Aquí presentamos las clases de ECMAScript 6. En primer lugar, mostramos que las funciones ya pueden utilizarse como clases.</p>
 <p><span id="refheadingtoc225408640539168" name="refheadingtoc225408640539168" class="odt-bookmark-anchor"></span></p>
 <h2 id="131-script-class-00">13.1. <span style="color: #4f81bd">script [class-00]</span></h2>
-<p>El siguiente script muestra un uso inusual de las funciones. Aquí se utilizan como objetos.</p>
+<p>El siguiente script muestra un uso poco habitual de las funciones. Aquí se utilizan como objetos.</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
 <span class="odt-code-line"><span class="odt-code-line-content">&#x27;use strict&#x27;;</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// una función puede utilizarse como objeto</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// una cáscara vacía</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// una función se puede utilizar como un objeto</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// una carcasa vacía</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">function</span><span style="color:#000000"> f() {</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// a las que se atribuyen propiedades externas</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// a la que se le asignan propiedades desde el exterior</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">f.prop1 = </span><span style="color:#a31515">&quot;val1&quot;</span><span style="color:#000000">;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">f.show = </span><span style="color:#0000ff">function</span><span style="color:#000000"> () {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  console.log(</span><span style="color:#0000ff">this</span><span style="color:#000000">.prop1);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">// uso de f</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">f.show();</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// una función g que opera como una clase</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// una función g que funciona como una clase</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">function</span><span style="color:#000000"> g() {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">this</span><span style="color:#000000">.prop2 = </span><span style="color:#a31515">&quot;val2&quot;</span><span style="color:#000000">;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">this</span><span style="color:#000000">.show = </span><span style="color:#0000ff">function</span><span style="color:#000000"> () {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    console.log(</span><span style="color:#0000ff">this</span><span style="color:#000000">.prop2);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  }</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// instanciar la función con [new]</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// instanciación de la función con [new]</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">new</span><span style="color:#000000"> g().show();</span></span></span>
 </code></pre></div>
 
@@ -838,7 +838,7 @@
   </li>
   <li>líneas 9-12: se asignan propiedades a la función f desde el exterior;
   </li>
-  <li>línea 14: uso de la función (objeto) f. Obsérvese que no se escribe <b>[f()], </b>sino simplemente <b>[f]</b>. Aquí tenemos la notación de un objeto;
+  <li>línea 14: uso de la función (objeto) f. Fíjate en que no se escribe <b>[f()], </b>sino simplemente <b>[f]</b>. Aquí se utiliza la notación de un objeto;
   </li>
   <li>líneas 17-22: se define una función <b>[g] </b>como si fuera una clase con propiedades y métodos;
   </li>
@@ -853,56 +853,56 @@
 <span class="odt-code-line"><span class="odt-code-line-content">val2</span></span>
 </code></pre></div>
 
-<p>ES6 ha introducido el concepto de clase, lo que nos permite ahora evitar el uso de funciones para obtener clases.</p>
+<p>ES6 ha introducido el concepto de clase, lo que nos permite ahora evitar tener que recurrir a funciones para obtener clases.</p>
 <p><span id="refheadingtoc225410640539168" name="refheadingtoc225410640539168" class="odt-bookmark-anchor"></span></p>
 <h2 id="132-script-class-01">13.2. <span style="color: #4f81bd">script [class-01]</span></h2>
 <p>El script <strong>[class-01]</strong> presenta una clase <strong>[Personne]</strong>:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
 <span class="odt-code-line"><span class="odt-code-line-content">// clase</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">class</span><span style="color:#000000"> </span><span style="color:#2b91af">Personne</span><span style="color:#000000"> {</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// fabricante</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// constructor</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">constructor</span><span style="color:#000000">(nom, prénom, âge) {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">this</span><span style="color:#000000">.nom = nom;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">this</span><span style="color:#000000">.prénom = prénom;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">this</span><span style="color:#000000">.âge = âge;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  }</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// getters y setters</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// métodos getter y setter</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">get</span><span style="color:#000000"> nom() {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">return</span><span style="color:#000000"> </span><span style="color:#0000ff">this</span><span style="color:#000000">._nom;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  }</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">set</span><span style="color:#000000"> nom(value) {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">this</span><span style="color:#000000">._nom = value;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  }</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">get</span><span style="color:#000000"> prénom() {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">return</span><span style="color:#000000"> </span><span style="color:#0000ff">this</span><span style="color:#000000">._prénom;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  }</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">set</span><span style="color:#000000"> prénom(value) {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">this</span><span style="color:#000000">._prénom = value;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  }</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">get</span><span style="color:#000000"> âge() {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">return</span><span style="color:#000000"> </span><span style="color:#0000ff">this</span><span style="color:#000000">._âge;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  }</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">set</span><span style="color:#000000"> âge(value) {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">this</span><span style="color:#000000">._âge = value;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  }</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// toString a JSON</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// toString en JSON</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  toString() {</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">return</span><span style="color:#000000"> JSON.stringify(</span><span style="color:#0000ff">this</span><span style="color:#000000">);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  }</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// llamada de clase</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// llamada a la clase</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">function</span><span style="color:#000000"> main() {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">const</span><span style="color:#000000"> personne = </span><span style="color:#0000ff">new</span><span style="color:#000000"> Personne(</span><span style="color:#a31515">&quot;Poirot&quot;</span><span style="color:#000000">, </span><span style="color:#a31515">&quot;Hercule&quot;</span><span style="color:#000000">, 66);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  console.log(</span><span style="color:#a31515">&quot;personne=&quot;</span><span style="color:#000000">, personne.toString(), </span><span style="color:#0000ff">typeof</span><span style="color:#000000"> (personne), personne </span><span style="color:#0000ff">instanceof</span><span style="color:#000000"> (Personne));</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// llamada manual</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// llamada a main</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">main();</span></span>
 </code></pre></div>
 
@@ -910,9 +910,9 @@
 <ul>
   <li>línea 2: la palabra clave <b>[class] </b>designa una clase;
   </li>
-  <li>líneas 5-9: la palabra clave <b>[constructor] </b>designa el constructor de la clase. Solo puede haber uno como máximo. Sirve para construir e inicializar una instancia de la clase. Tenga en cuenta que no hay declaración de las propiedades <b>[nom, prénom, âge]</b>;
+  <li>líneas 5-9: la palabra clave <b>[constructor] </b>designa el constructor de la clase. Solo puede haber uno como máximo. Sirve para crear e inicializar una instancia de la clase. Ten en cuenta que no hay ninguna declaración de las propiedades <b>[nom, prénom, âge]</b>;
   </li>
-  <li>líneas 11-36: propiedades de la clase. Aquí encontramos elementos ya vistos en el apartado de objetos 4, página<a href="los-objetos-literales.html#refheadingtoc2042093980233556"><u><span style="color: #0563c1"> 44</span></u></a>. Solo difiere la sintaxis;
+  <li>líneas 11-36: propiedades de la clase. Aquí encontramos elementos que ya hemos visto en el apartado sobre objetos 4, página<a href="los-objetos-literales.html#refheadingtoc2042093980233556"><u><span style="color: #0563c1"> 44</span></u></a>. Solo difiere la sintaxis;
   </li>
   <li>línea 41: creación de un objeto de tipo <b>[Personne]</b>. A partir de ahora, el objeto <b>[personne] </b>se utiliza como un objeto literal. <b>[typeof (personne)] </b>es igual a «object» y la expresión <b>[personne instanceof (Personne)] </b>es verdadera. Por lo tanto, es posible conocer el tipo exacto de una instancia de clase;
   </li>
@@ -931,14 +931,14 @@
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
 <span class="odt-code-line"><span class="odt-code-line-content">// clase</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">class</span><span style="color:#000000"> </span><span style="color:#2b91af">Personne</span><span style="color:#000000"> {</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// fabricante</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// constructor</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">constructor</span><span style="color:#000000">(nom, prénom, âge) {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">this</span><span style="color:#000000">.nom = nom;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">this</span><span style="color:#000000">.prénom = prénom;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">this</span><span style="color:#000000">.âge = âge;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  }</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// getters y setters</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">get</span><span style="color:#000000"> nom() {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">return</span><span style="color:#000000"> </span><span style="color:#0000ff">this</span><span style="color:#000000">._nom;</span></span></span>
@@ -946,32 +946,32 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">set</span><span style="color:#000000"> nom(value) {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">this</span><span style="color:#000000">._nom = value;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  }</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">get</span><span style="color:#000000"> prénom() {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">return</span><span style="color:#000000"> </span><span style="color:#0000ff">this</span><span style="color:#000000">._prénom;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  }</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">set</span><span style="color:#000000"> prénom(value) {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">this</span><span style="color:#000000">._prénom = value;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  }</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">get</span><span style="color:#000000"> âge() {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">return</span><span style="color:#000000"> </span><span style="color:#0000ff">this</span><span style="color:#000000">._âge;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  }</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">set</span><span style="color:#000000"> âge(value) {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">this</span><span style="color:#000000">._âge = value;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  }</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// toString a JSON</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// toString en JSON</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  toString() {</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">return</span><span style="color:#000000"> JSON.stringify(</span><span style="color:#0000ff">this</span><span style="color:#000000">);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  }</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// exportar clase</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// clase de exportación</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">export</span><span style="color:#000000"> </span><span style="color:#0000ff">default</span><span style="color:#000000"> Personne;</span></span></span>
 </code></pre></div>
 
 <ul>
-  <li>línea 39: exportamos la clase <b>[Personne] </b>para que los scripts puedan importarla;
+  <li>línea 39: exportamos la clase <b>[Personne] </b>para que otros scripts puedan importarla;
   </li>
 </ul>
 
@@ -979,16 +979,16 @@
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
 <span class="odt-code-line"><span class="odt-code-line-content">// importaciones</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">import</span><span style="color:#000000"> Personne </span><span style="color:#0000ff">from</span><span style="color:#000000"> </span><span style="color:#a31515">&#x27;./Personne&#x27;</span><span style="color:#000000">;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">// clase</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">class</span><span style="color:#000000"> </span><span style="color:#2b91af">Enseignant</span><span style="color:#000000"> </span><span style="font-weight:bold;text-decoration:underline;color:#0000ff">extends</span><span style="color:#000000"> Personne {</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// fabricante</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// constructor</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">constructor</span><span style="color:#000000">(nom, prénom, âge, discipline) {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">super</span><span style="color:#000000">(nom, prénom, âge);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">this</span><span style="color:#000000">.discipline = discipline;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  }</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// getters y setters</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">get</span><span style="color:#000000"> discipline() {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">return</span><span style="color:#000000"> </span><span style="color:#0000ff">this</span><span style="color:#000000">._discipline;</span></span></span>
@@ -996,16 +996,16 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">set</span><span style="color:#000000"> discipline(value) {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">this</span><span style="color:#000000">._discipline = value;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  }</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// llamada de clase</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// llamada a la clase</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">function</span><span style="color:#000000"> main() {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">const</span><span style="color:#000000"> enseignant = </span><span style="color:#0000ff">new</span><span style="color:#000000"> Enseignant(</span><span style="color:#a31515">&quot;Poirot&quot;</span><span style="color:#000000">, </span><span style="color:#a31515">&quot;Hercule&quot;</span><span style="color:#000000">, 66, </span><span style="color:#a31515">&quot;détective&quot;</span><span style="color:#000000">);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  console.log(</span><span style="color:#a31515">&quot;enseignant=&quot;</span><span style="color:#000000">, enseignant.toString(), </span><span style="color:#0000ff">typeof</span><span style="color:#000000"> (enseignant), enseignant </span><span style="color:#0000ff">instanceof</span><span style="color:#000000"> Enseignant);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// llamada manual</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// llamada a main</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">main();</span></span>
 </code></pre></div>
 
@@ -1013,19 +1013,19 @@
 <ul>
   <li>línea 2: se importa la clase <b>[Personne] </b>desde el módulo <b>[Personne.js], </b>que se encuentra en la misma carpeta que <b>[class-02]</b>;
   </li>
-  <li>línea 5: la clase <b>[Enseignant] </b>extiende (hereda de) la clase <b>[Personne] </b>con la palabra clave <b>[extends]</b>: le añade una propiedad <b>[_discipline] </b>con los getter/setter correspondientes;
+  <li>línea 5: la clase <b>[Enseignant] </b>extiende (hereda de) la clase <b>[Personne] </b>con la palabra clave <b>[extends]</b>: le añade una propiedad <b>[_discipline] </b>con los getter y setter correspondientes;
   </li>
   <li>líneas 8-11: el constructor de la clase <b>[Enseignant] </b>recibe cuatro valores para inicializar las cuatro propiedades de la clase;
   </li>
-  <li>línea 9: la palabra clave <b>[super] </b>llama al constructor de la clase padre <b>[Personne], </b>que, por lo tanto, inicializará las propiedades <b>[_nom, _prénom, _âge]</b>;
+  <li>línea 9: la palabra clave <b>[super] </b>invoca al constructor de la clase padre <b>[Personne], </b>que, por lo tanto, inicializará las propiedades <b>[_nom, _prénom, _âge]</b>;
   </li>
-  <li>línea 10: se inicializa la propiedad <b>[_discipline] </b>que pertenece a la clase <b>[Enseignant]</b>;
+  <li>línea 10: se inicializa la propiedad <b>[_discipline], </b>que pertenece a la clase <b>[Enseignant]</b>;
   </li>
   <li>líneas 14-19: el getter y el setter de la propiedad <b>[_discipline]</b>;
   </li>
   <li>línea 25: se crea un objeto de tipo <b>[Enseignant]</b>;
   </li>
-  <li>línea 26: se utiliza el método <b>[enseignant.toString()]</b>. La clase <b>[Enseignant] </b>no tiene este método. En ese caso, se utiliza automáticamente el de su clase padre. Este método hace que la expresión <b>[JSON.stringify(this)], </b>donde <b>[this] </b>será aquí un objeto <b>[Enseignant] </b>y no un objeto <b>[Personne]</b>. Esto es lo que en programación orientada a objetos se denomina polimorfismo de clases. Un término complicado para Javascript, que no es un lenguaje orientado a objetos. No obstante, Javascript hace aquí lo que se espera de él: muestra correctamente un profesor;
+  <li>línea 26: se utiliza el método <b>[enseignant.toString()]</b>. La clase <b>[Enseignant] </b>no dispone de este método. En ese caso, se utiliza automáticamente el de su clase padre. Este método hace que la expresión <b>[JSON.stringify(this)] </b>—donde <b>[this] </b>será aquí un objeto <b>[Enseignant] </b>y no un objeto <b>[Personne]</b>— se resuelva correctamente. Esto es lo que en programación orientada a objetos se denomina polimorfismo de clases. Un término complicado para JavaScript, que no es un lenguaje orientado a objetos. No obstante, JavaScript hace aquí lo que se espera de él: muestra correctamente a un profesor;
   </li>
 </ul>
 
@@ -1036,25 +1036,26 @@
 </code></pre></div>
 
 <ul>
-  <li>línea 2: Javascript reconoce correctamente que la variable <b>[enseignant] </b>es de tipo <b>[Enseignant]</b>;
+  <li>línea 2: JavaScript reconoce correctamente que la variable <b>[enseignant] </b>es de tipo <b>[Enseignant]</b>;
   </li>
 </ul>
+
 <p><span id="refheadingtoc225414640539168" name="refheadingtoc225414640539168" class="odt-bookmark-anchor"></span></p>
 <h2 id="134-script-class-03">13.4. <span style="color: #4f81bd">script [class-03]</span></h2>
-<p>El script <strong>[class-03]</strong> muestra que una clase hija puede redefinir propiedades y métodos de su clase padre. Aquí redefinimos el método <strong>[toString]</strong> de la clase padre:</p>
+<p>El script <strong>[class-03]</strong> muestra que una clase hija puede redefinir las propiedades y métodos de su clase padre. Aquí redefinimos el método <strong>[toString]</strong> de la clase padre:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
 <span class="odt-code-line"><span class="odt-code-line-content">// importaciones</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">import</span><span style="color:#000000"> Personne </span><span style="color:#0000ff">from</span><span style="color:#000000"> </span><span style="color:#a31515">&#x27;./Personne&#x27;</span><span style="color:#000000">;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">// clase</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">class</span><span style="color:#000000"> </span><span style="color:#2b91af">Enseignant</span><span style="color:#000000"> </span><span style="color:#0000ff">extends</span><span style="color:#000000"> Personne {</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// fabricante</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// constructor</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">constructor</span><span style="color:#000000">(nom, prénom, âge, discipline) {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">super</span><span style="color:#000000">(nom, prénom, âge);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">this</span><span style="color:#000000">.discipline = discipline;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  }</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// getters y setters</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">get</span><span style="color:#000000"> discipline() {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">return</span><span style="color:#000000"> </span><span style="color:#0000ff">this</span><span style="color:#000000">._discipline;</span></span></span>
@@ -1062,20 +1063,20 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">set</span><span style="color:#000000"> discipline(value) {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">this</span><span style="color:#000000">._discipline = value;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  }</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// redefinición de toString</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  toString() {</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">return</span><span style="color:#000000"> </span><span style="color:#a31515">&quot;</span><span style="font-weight:bold;color:#a31515">[Enseignant]</span><span style="color:#a31515">&quot;</span><span style="color:#000000"> + JSON.stringify(</span><span style="color:#0000ff">this</span><span style="color:#000000">);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  }</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// llamada de clase</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// llamada a la clase</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">function</span><span style="color:#000000"> main() {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">const</span><span style="color:#000000"> enseignant = </span><span style="color:#0000ff">new</span><span style="color:#000000"> Enseignant(</span><span style="color:#a31515">&quot;Poirot&quot;</span><span style="color:#000000">, </span><span style="color:#a31515">&quot;Hercule&quot;</span><span style="color:#000000">, 66, </span><span style="color:#a31515">&quot;détective&quot;</span><span style="color:#000000">);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  console.log(</span><span style="color:#a31515">&quot;enseignant=&quot;</span><span style="color:#000000">, enseignant.toString(), </span><span style="color:#0000ff">typeof</span><span style="color:#000000"> (enseignant), enseignant </span><span style="color:#0000ff">instanceof</span><span style="color:#000000"> Enseignant);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// llamada manual</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// llamada a main</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">main();</span></span>
 </code></pre></div>
 
@@ -1086,33 +1087,33 @@
 </code></pre></div>
 
 <p><span id="refheadingtoc225416640539168" name="refheadingtoc225416640539168" class="odt-bookmark-anchor"></span></p>
-<h2 id="135-script-class-04">13.5. <span style="color: #4f81bd">script [class-04]</span></h2>
-<p>El script <strong>[class-04]</strong> muestra de nuevo el polimorfismo en acción: cuando una función espera un parámetro formal de tipo <strong>[Personne]</strong>, se puede pasar un tipo derivado como <strong>[Enseignant]</strong>. De hecho, debido a la derivación, el tipo <strong>[Enseignant]</strong> tiene todos los atributos del tipo <strong>[Personne]</strong>.</p>
+<h2 id="135-script-class-04">13.5. <span style="color: #4f81bd"><strong>script [class-04]</strong></span></h2>
+<p>El script <strong>[class-04]</strong> vuelve a mostrar el polimorfismo en acción: cuando una función espera un parámetro formal de tipo <strong>[Personne]</strong>, se puede pasar un tipo derivado como <strong>[Enseignant]</strong>. De hecho, debido a la derivación, el tipo <strong>[Enseignant]</strong> tiene todos los atributos del tipo <strong>[Personne]</strong>.</p>
 <p>En primer lugar, aislamos el tipo <strong>[Enseignant]</strong> en un módulo <strong>[Enseignant.js]</strong>:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
 <span class="odt-code-line"><span class="odt-code-line-content">// importaciones</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">import</span><span style="color:#000000"> Personne </span><span style="color:#0000ff">from</span><span style="color:#000000"> </span><span style="color:#a31515">&#x27;./Personne&#x27;</span><span style="color:#000000">;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">// clase</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">class</span><span style="color:#000000"> </span><span style="color:#2b91af">Enseignant</span><span style="color:#000000"> </span><span style="color:#0000ff">extends</span><span style="color:#000000"> Personne {</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// fabricante</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// constructor</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">constructor</span><span style="color:#000000">(nom, prénom, âge, discipline) {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">super</span><span style="color:#000000">(nom, prénom, âge);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">this</span><span style="color:#000000">.discipline = discipline;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  }</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// getters y setters</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// getter y setter</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">get</span><span style="color:#000000"> discipline() {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">return</span><span style="color:#000000"> </span><span style="color:#0000ff">this</span><span style="color:#000000">._discipline;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  }</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">set</span><span style="color:#000000"> discipline(value) {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">this</span><span style="color:#000000">._discipline = value;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  }</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// exportar clase</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// clase de exportación</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">export</span><span style="color:#000000"> </span><span style="color:#0000ff">default</span><span style="color:#000000"> Enseignant;</span></span></span>
 </code></pre></div>
 
@@ -1126,7 +1127,7 @@
 <span class="odt-code-line"><span class="odt-code-line-content">// importaciones</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">import</span><span style="color:#000000"> Enseignant </span><span style="color:#0000ff">from</span><span style="color:#000000"> </span><span style="color:#a31515">&#x27;./Enseignant&#x27;</span><span style="color:#000000">;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">import</span><span style="color:#000000"> Personne </span><span style="color:#0000ff">from</span><span style="color:#000000"> </span><span style="color:#a31515">&#x27;./Personne&#x27;</span><span style="color:#000000">;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">// función que acepta una persona como parámetro</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">function</span><span style="color:#000000"> show(personne) {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// en todos los casos</span></span></span>
@@ -1140,8 +1141,8 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    console.log(</span><span style="color:#a31515">&quot;enseignant=&quot;</span><span style="color:#000000">, personne.toString());</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  }</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// show call con un profesor</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// llamada a «show» con un profesor</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">show(</span><span style="color:#0000ff">new</span><span style="color:#000000"> Enseignant(</span><span style="color:#a31515">&quot;Poirot&quot;</span><span style="color:#000000">, </span><span style="color:#a31515">&quot;Hercule&quot;</span><span style="color:#000000">, 66, </span><span style="color:#a31515">&quot;détective&quot;</span><span style="color:#000000">));</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">show(</span><span style="color:#0000ff">new</span><span style="color:#000000"> Personne(</span><span style="color:#a31515">&quot;Marple&quot;</span><span style="color:#000000">, </span><span style="color:#a31515">&quot;Miss&quot;</span><span style="color:#000000">, 70));</span></span></span>
 </code></pre></div>
@@ -1149,9 +1150,9 @@
 <ul>
   <li>línea 6: la función <b>[show] </b>espera un tipo <b>[Personne] </b>o derivado;
   </li>
-  <li>línea 8: se muestra la cadena del parámetro y su tipo. Encontraremos <b>[object]</b>;
+  <li>línea 8: se muestra la cadena del parámetro y su tipo. Aparecerá <b>[object]</b>;
   </li>
-  <li>líneas 10-16: podemos saber si se trata de un tipo <b>[Personne] </b>o de un tipo <b>[Enseignant]</b>. Por lo tanto, el código se puede adaptar al tipo real del parámetro;
+  <li>líneas 10-16: se puede determinar si se trata de un tipo <b>[Personne] </b>o de un tipo <b>[Enseignant]</b>. Por lo tanto, el código se puede adaptar al tipo real del parámetro;
   </li>
 </ul>
 
@@ -1166,7 +1167,7 @@
 </code></pre></div>
 
 <ul>
-  <li>líneas 4 y 6: Javascript reconoce correctamente el tipo de las instancias de clase;
+  <li>líneas 4 y 6: JavaScript reconoce correctamente el tipo de las instancias de clase;
   </li>
 </ul>
 
